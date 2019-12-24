@@ -1,0 +1,3 @@
+post-build=Android/cm_ovation/ovation:4.4.4/KTU84Q/eb385ffc96:userdebug/test-keys
+post-timestamp=1576110769
+pre-device=ovation
