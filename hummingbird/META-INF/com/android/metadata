@@ -1,0 +1,3 @@
+post-build=Android/cm_hummingbird/hummingbird:4.4.4/KTU84Q/eb385ffc96:userdebug/test-keys
+post-timestamp=1576110769
+pre-device=hummingbird
