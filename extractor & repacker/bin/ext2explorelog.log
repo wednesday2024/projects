@@ -1,0 +1,14 @@
+Error Opening \\.\PhysicalDrive6. Error Code 2
+No of disks 6
+Scanning \\.\PhysicalDrive0
+index 0 ID 7 size 1185792 
+index 1 ID 7 size 1952333824 
+Scanning \\.\PhysicalDrive1
+index 0 ID C size 120225728 
+Scanning \\.\PhysicalDrive2
+Scanning of \\.\PhysicalDrive2 failed: Scanning \\.\PhysicalDrive3
+Scanning of \\.\PhysicalDrive3 failed: Scanning \\.\PhysicalDrive4
+Scanning of \\.\PhysicalDrive4 failed: Scanning \\.\PhysicalDrive5
+Scanning of \\.\PhysicalDrive5 failed: Partition Table Error on C:/Users/jlude/Desktop/system.img
+Invalid End of sector markerBad Super Block. The drive  is not ext2 formatted.
+No valid Ext2 Partitions found in the disk image.
