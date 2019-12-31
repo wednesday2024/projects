@@ -5,7 +5,7 @@
 This extractor is for extracting system.new.dat in easy method without using commandline ,It is a set of commands which is written in batch script to speed up extraction of dat and IMG* files
 
 
-(*Every image files can't be extracted with this extractor ,because image binary has its limit)
+(*Every image files can't be extracted with this extractor, because the image binary has its limit)
 
 
 ## Requirements
@@ -22,7 +22,7 @@ This extractor is for extracting system.new.dat in easy method without using com
  * Repack for android nougat N does not works, The repack process is complicated and cannot be automated
    with the script better look for guide.
  
- * Repack of CM13, CM14 works fine- CM15 YET TO BE TESTED 
+ * Repack of CM13, CM14 works fine
   
  * Image repack does not works and will be removed from next script 
  
