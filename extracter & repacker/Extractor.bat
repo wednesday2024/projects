@@ -1,5 +1,5 @@
 @echo off
-title Extract and Repack images [0.9 beta]
+title Extract and Repack images [v1.0]
 setlocal EnableDelayedExpansion
 
 ::   System extractor
@@ -47,13 +47,10 @@ echo.
 bin\cecho       5 - {0b}Unpack{#} {0f}vendor.img{#}
 echo.
 echo.
-bin\cecho       6 - {0b}Unpack{#} {0f}recovery.img{#}
+bin\cecho       6 - {0b}Sign{#} {0f}ZIP files{#}
 echo.
 echo.
-bin\cecho       7 - {0b}Sign{#} {0f}ZIP files{#}
-echo.
-echo.
-bin\cecho       8 - {0b}Exit the application{#}  
+bin\cecho       7 - {0b}Exit the application{#}  
 echo.
 echo.
 set /p web=Type option:
@@ -62,9 +59,8 @@ if "%web%"=="2" goto extractor
 if "%web%"=="3" goto repack
 if "%web%"=="4" goto Image_unpack
 if "%web%"=="5" goto Vendor_unpack
-if "%web%"=="6" goto Recovery_unpack
-if "%web%"=="7" goto sign
-if "%web%"=="8" goto ex_t
+if "%web%"=="6" goto sign
+if "%web%"=="7" goto ex_t
 echo.
 echo Select a valid option.....
 echo ping -n 200 -w 200 127.0.0.1 > nul
@@ -334,21 +330,21 @@ SET /P "SIZE=TYPE THE SIZE IN MB : "
    pause
    cls
    echo.
-   ECHO                          IMPORTANT READ IT ALL
+   ECHO                          IMPORTANT, YOU MUST READ ALL OF THIS:
    echo.
-   echo   For flashing xyz_ROM.zip with dat files , you need to modify updater-script
+   echo   For flashing xyz_ROM.zip with dat files, you will need to modify the updater-script
    echo.
-   echo   Script, "of some roms" , because some roms contains a link b/w updateR-script 
+   echo   of some ROMs, because some ROMs contains a link b/w updater-script 
    echo.
    echo   and system.transfer.list. 
    echo.
-   echo.  The link includes following : There is a line in
+   echo.  The link includes the following: There is a line in the
    echo.
-   echo   updateR-script script called 'if range_sha1()' if you found this in 
+   echo   updater-script, called, 'if range_sha1()', if you find this in the
    echo.
-   echo   updateR-script then from here follow the guide Repack_INFO.txt OTHERWISE 
+   echo   updater-script, then from here, follow the guide, "Repack_INFO.md" OTHERWISE, 
    echo.
-   echo   copy UNMODIFIED system.transfer.list and system.new.dat to your desired folder
+   echo   copy the UNMODIFIED system.transfer.list and system.new.dat to your desired folder.
    echo.
    echo   Then do the flashing work.
    echo.
@@ -366,7 +362,7 @@ cls
    echo  ///////////////////////////////////////////////////////////////////////////
    echo  /                                                                        /
    echo  /                                                                        /
-   echo  /  Copy all your sub folders/files (like /app,/bin,/lib build.prop etc.) / 
+   echo  /  Copy all of your sub folders/files (like /app,/bin,/lib build.prop etc.) / 
    echo  /                                                                        /
    bin\cecho  /  to {0a}"system"{#} folder and press enter                            / 
    echo.                                                                          /
@@ -397,10 +393,10 @@ cls
   echo.
   echo.
   echo.
-  bin\cecho   {0c}"file_contexts" not found please copy it too current{#}
+  bin\cecho   {0c}"file_contexts" was not found. Please copy it to the current{#}
   echo.
   echo.
-  bin\cecho   {0c}directory{#}, Thanks for your cooperation ;)
+  bin\cecho   {0c}directory{#}. Thank you for your cooperation.
   echo.
   echo.
   echo.
@@ -414,13 +410,13 @@ echo.
   bin\make_ext4fs -T 0 -S file_contexts -l %cm_sixe% -a system system.img system >> bin\log_size.txt
 cls
   echo.
-  echo    Calculating Size Please Wait....
+  echo    Calculating the size please wait....
   echo    size %cm_sixe% (increament By 1048576(bytes)=1Mb(Megabytes))
   echo. 
   bin\cecho    {0f}If this goes on forever than QUIT this and{#}
   echo.
   echo.  
-  bin\cecho    {0f}PLEASE only copy file_contexts of your ROM{#}
+  bin\cecho    {0f}PLEASE only copy the file_contexts from your ROM.{#}
   echo.
   echo.
   if not exist system.img goto cm_calculate
@@ -547,39 +543,6 @@ pause
 goto home)
 ::        ----------------------End of script--------------------------   ::
 
-::                               RECOVERY UNPACK SCRIPT                        ::
-:Recovery_unpack
-cls
-echo.
-echo.
-echo.
-echo.                                                         
-echo   Copy recovery.img to the current folder. Thank you. and make sure it is  
-echo   named as recovery.img                                   
-echo.                                                       
-echo    * Current Folder = Folder where you have placed extractor.bat
-echo.
-echo.
-pause
-echo.
-if exist recovery.img echo     Found recovery.img
-if not exist recovery.img (cls &echo. &echo recovery.img not found , please try again with mentioned name &pause > NUL &goto :home)
-echo.
-echo  Please wait around 2 minutes for the process to finish. Thank you.
-::FOR 
-echo.
-bin\Imgextractor.exe recovery.img
-if "%errorlevel%"=="0" (if exist recovery rd /s /q recovery &MOVE recovery_ recovery &del recovery.img 
-echo.
-echo Files = "recovery" folder
-echo.
-echo  If the extraction failed then your Image file may be sparse format
-echo  try again by converting it to ext4 format by simg2img binary found in bin
-echo.
-pause
-goto home)
-::        ----------------------End of script--------------------------   ::
-
 ::                            Sign Zip Files Script                       ::                  
 :sign
 cls
@@ -593,9 +556,9 @@ cls
    echo.
    echo //////////////////////////////////////////////////////////////
    echo /                                                            /
-   echo / Place your zip file in the sign_files folder               /
+   echo / Place your zip file in the sign_files folder.              /
    echo /                                                            /
-   echo / and make sure your zip file does not contain any space     /
+   echo / and make sure your zip file does not contain any spaces.   /
    echo /                                                            /
    echo // JAVA SE DEVELOPMENT KIT 8 OR HIGHER MUST BE INSTALLED OR IT WILL NOT WORK //
    echo /                                                            /
@@ -682,7 +645,7 @@ goto nextsign
 cls
 echo.
 echo.
-bin\cecho       {0c}NO ZIP FILE FOUND, PLEASE TRY AGAIN.{#}
+bin\cecho       {0c}NO ZIP FILE FOUND, PLEASE COPY THE ZIP FILE TO THE DIRECTORY, AND TRY AGAIN. THANK YOU.{#}
 echo.
 echo.
 pause
@@ -759,7 +722,7 @@ echo.
 echo.
 echo     ///////////////////////////////////////////////////////
 echo.
-echo      It seems that the you have not copied sub folder 
+echo      It seems that the you have not copied the sub folder 
 bin\cecho      like /app,/bin,/lib build.prop etc. to {0c}"system"{#}
 echo. 
 echo      folder present in current directry please follow 
@@ -783,7 +746,7 @@ echo     ////////////////////////////////////////////////////////////
 echo.
 bin\cecho       {0f}"system.img"{#} is not found in current folder Please copy
 echo. 
-bin\cecho       {0f}system.img{#} to the current folder. Thank you. or rename your system image 
+bin\cecho       {0f}system.img{#} to the current folder, or rename your system image. Thank you.
 echo.
 bin\cecho       file to {0f}system.img{#}
 echo.
@@ -801,7 +764,7 @@ echo.
 echo        Something is missing from current folder please copy
 bin\cecho        {0c}"system.new.dat"{#} , {0c}"system.transfer.list"{#} and {0c}"file_contexts"{#}
 echo.
-echo        to the current folder. Thank you.  see help
+echo        to the current folder. Thank you.
 echo.
 echo      \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 echo.
@@ -846,8 +809,8 @@ goto home
 cls
 echo.
 echo  It seems like the extractor not worked with your 
-echo  provided system folder COMMENT ON XDA THOUGH
-ECHO  IT MAY BE DUE TO CORRUPTED SYSTEM.DAT OR UNKNOWN REASON
+echo  provided system folder.
+ECHO  IT MAY BE DUE TO A CORRUPTED SYSTEM.DAT OR UNKNOWN REASON
 echo.
 pause
 goto home
@@ -909,9 +872,10 @@ echo.
 echo.
 echo  ////////////////////////////////////////////
 echo  /                                          /
-echo  /    Not worked with your zip file please  /
-echo  /    use a simple name like                /
-echo  /    Eg. something_maker.zip               /
+echo  /    The program didn't work with your     /
+echo  /    zip file. Please use                  /
+echo  /    a simple name like                    /
+echo  /    Ex: something_maker.zip               /
 echo   Possible reason :  JAVA SE DEVELOPMENT KIT 7 OR HIGHER NOT INSTALLED
 echo  /                                          /
 echo  ////////////////////////////////////////////
