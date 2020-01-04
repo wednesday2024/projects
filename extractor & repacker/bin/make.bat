@@ -13,6 +13,8 @@ lz4.exe -d cache.img.lz4 cache.img
 pause
 lz4.exe -d hidden.img.lz4 hidden.img
 pause
+lz4.exe -d vendor.img.lz4 vendor.img
+pause
 echo Extraction done
 echo Script made by henrylife
 pause
