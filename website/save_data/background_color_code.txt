@@ -1,4 +1,0 @@
-    <body style="color: black;
-		 background-color: #53767d;
-		 font-size: 12pt;
-		 font-family: sans-serif;">
