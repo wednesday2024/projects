@@ -13,4 +13,4 @@ None at this time.
 Finished projects for the SM-T290:
 
 1) TWRP (tested, works)
-2) A custom ROM (currently in testing)
+2) A custom ROM (tested, works)
