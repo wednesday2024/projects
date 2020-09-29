@@ -2,6 +2,9 @@
 
 Future plans:
 
+None at this time.
+
+
 (GSIs now boot on this device. It must be AMD64, A/B)
 
 
