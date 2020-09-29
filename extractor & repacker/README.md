@@ -35,11 +35,11 @@ This extractor is for extracting system.new.dat in easy method without using com
  
 ## DOWNLOAD
 
-     git clone https://github.com/secretwolf98/project.git
+     git clone https://github.com/Ryzen5-3600/project.git
      
 _OR_
                                                      
-     https://codeload.github.com/secretwolf98/project/zip/master
+     https://codeload.github.com/Ryzen5-3600/project/zip/master
  
 ## Contributors
  
@@ -53,4 +53,4 @@ _OR_
 
 - xpirit  (sdat2img.py script): https://github.com/xpirt/sdat2img
  
-- secretwolf98
+- Ryzen5-3600
