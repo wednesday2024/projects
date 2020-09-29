@@ -2,8 +2,6 @@
 
 Future plans:
 
-I plan to get Android 10 GSI Project Treble to install and boot fine on the Samsung Galaxy Tab A 8.0" wifi 2019 (SM-T290) (gtowifi).
-
 (GSIs now boot on this device. It must be AMD64, A/B)
 
 
