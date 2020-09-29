@@ -1,9 +1,9 @@
 @echo off
-title Extract and Repack images [v1.0]
+title Extract and Repack images [v2.0]
 setlocal EnableDelayedExpansion
 
 ::   System extractor
-::   Copyright (C) 2020  secretwolf98 
+::   Copyright (C) 2020  Ryzen5-3600 
 
 
 ::mode con:cols=82 lines=27
@@ -18,7 +18,7 @@ echo.
 echo #                   Extractor and Repacker    
 bin\cecho #               {0f}System extractor{#}
 echo.
-bin\cecho #                      {0a}(by: secretwolf98){#} 
+bin\cecho #                      {0a}(by: Ryzen5-3600){#} 
 echo.                                                                                    
 echo.
 bin\cecho #                      {0a}(based on matrix's system extractor){#}                                                                                     
@@ -241,7 +241,7 @@ echo Converting "system.img.ext4" to "system"
                  set /a web=0
 pause
 goto home
-::/*                 END , LAST UPDATED ON THU, NOVEMBER , 11                        */
+::/*                 END, LAST UPDATED ON TUE, SEPTEMBER 29, 2020                        */
 
 
 ::                 CYANOGENMOD REPACK SCRIPT 
@@ -492,8 +492,8 @@ echo.
 echo.
 pause
 echo.
-if exist system.img echo     Found system.img
-if not exist system.img (cls &echo. &echo system.img not found , please try again with mentioned name &pause > NUL &goto :home)
+if exist system.img echo     Found the system.img
+if not exist system.img (cls &echo. &echo system.img was not found , please try again with mentioned name &pause > NUL &goto :home)
 echo.
 echo  Please wait around 2 minutes for the process to finish. Thank you.
 ::FOR 
@@ -504,7 +504,7 @@ echo.
 echo Files = "system" folder
 echo.
 echo  If the extraction failed then your Image file may be sparse format
-echo  try again by converting it to ext4 format by simg2img binary found in bin
+echo  try again by converting it to ext4 format by simg2img binary found in the bin folder.
 echo.
 pause
 goto home)
@@ -525,8 +525,8 @@ echo.
 echo.
 pause
 echo.
-if exist vendor.img echo     Found vendor.img
-if not exist vendor.img (cls &echo. &echo vendor.img not found , please try again with mentioned name &pause > NUL &goto :home)
+if exist vendor.img echo     Found the vendor.img
+if not exist vendor.img (cls &echo. &echo vendor.img was not found , please try again with mentioned name &pause > NUL &goto :home)
 echo.
 echo  Please wait around 2 minutes for the process to finish. Thank you.
 ::FOR 
@@ -537,7 +537,7 @@ echo.
 echo Files = "vendor" folder
 echo.
 echo  If the extraction failed then your Image file may be sparse format
-echo  try again by converting it to ext4 format by simg2img binary found in bin
+echo  try again by converting it to ext4 format by simg2img binary found in the bin folder.
 echo.
 pause
 goto home)
@@ -626,7 +626,7 @@ if exist Signed\signed_%filename%.zip (echo            DONE
                                        echo.
                                        echo    Current Name is signed_%filename%
                                        echo.
-                                       echo    and found under Signed Folder
+                                       echo    and found under the Signed Folder
                                        echo.
                                        echo.
                                        )
@@ -645,7 +645,7 @@ goto nextsign
 cls
 echo.
 echo.
-bin\cecho       {0c}NO ZIP FILE FOUND, PLEASE COPY THE ZIP FILE TO THE DIRECTORY, AND TRY AGAIN. THANK YOU.{#}
+bin\cecho       {0c}NO ZIP FILE WAS FOUND, PLEASE COPY THE ZIP FILE TO THE DIRECTORY, AND TRY AGAIN. THANK YOU.{#}
 echo.
 echo.
 pause
@@ -679,7 +679,7 @@ SET count=1
  echo.
  echo.
  echo.
- bin\cecho     {0f}Welcome To:{#} {0a}secretwolf98's{#} {0f}System Extract and Repack tool{#}
+ bin\cecho     {0f}Welcome To:{#} {0a}Ryzen5-3600's{#} {0f}System Extract and Repack tool{#}
  echo.
  echo.
  bin\cecho     {0f}Based on:{#} {0a}matrix's{#} {0f}System Extract and Repack tool{#}
@@ -744,11 +744,13 @@ cls
 echo.
 echo     ////////////////////////////////////////////////////////////
 echo.
-bin\cecho       {0f}"system.img"{#} is not found in current folder Please copy
+bin\cecho       {0f}"system.img"{#} is not found in current folder. Please copy
 echo. 
-bin\cecho       {0f}system.img{#} to the current folder, or rename your system image. Thank you.
+bin\cecho       {0f}system.img{#} to the current folder, or rename your system image
 echo.
 bin\cecho       file to {0f}system.img{#}
+echo.
+bin\cecho       Thank you.{#}
 echo.
 echo.
 echo     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -761,7 +763,7 @@ cls
 echo.
 echo      ////////////////////////////////////////////////////////////////
 echo.
-echo        Something is missing from current folder please copy
+echo        Something is missing from the current folder. Please copy
 bin\cecho        {0c}"system.new.dat"{#} , {0c}"system.transfer.list"{#} and {0c}"file_contexts"{#}
 echo.
 echo        to the current folder. Thank you.
@@ -858,7 +860,7 @@ bin\cecho {0c}////////////////////////////////////////////////// {\n}/          
 echo.
 echo.
 echo  Thanks, 
-echo    -secretwolf98
+echo    -Ryzen5-3600
 echo.
 pause
 goto home
