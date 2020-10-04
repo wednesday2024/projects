@@ -3,13 +3,14 @@
 #====================================================
 #          FILE: sdat2img.py
 #       AUTHORS: xpirt - luxi78 - howellzhu
-#          DATE: 2018-05-25 10:49:35 CEST
+#          DATE: 2018-10-27 10:33:21 CEST
 #====================================================
 
+from __future__ import print_function
 import sys, os, errno
 
 def main(TRANSFER_LIST_FILE, NEW_DATA_FILE, OUTPUT_IMAGE_FILE):
-    __version__ = '1.1'
+    __version__ = '1.2'
 
     if sys.hexversion < 0x02070000:
         print >> sys.stderr, "Python 2.7 or newer is required."
@@ -19,13 +20,13 @@ def main(TRANSFER_LIST_FILE, NEW_DATA_FILE, OUTPUT_IMAGE_FILE):
         input('Press ENTER to exit...')
         sys.exit(1)
     else:
-        print('sdat2img binary - version: %s\n' % __version__)
+        print('sdat2img binary - version: {}\n'.format(__version__))
 
     def rangeset(src):
         src_set = src.split(',')
         num_set =  [int(item) for item in src_set]
         if len(num_set) != num_set[0]+1:
-            print('Error on parsing following data to rangeset:\n%s' % src)
+            print('Error on parsing following data to rangeset:\n{}'.format(src), file=sys.stderr)
             sys.exit(1)
 
         return tuple ([ (num_set[i], num_set[i+1]) for i in range(1, len(num_set), 2) ])
@@ -55,7 +56,7 @@ def main(TRANSFER_LIST_FILE, NEW_DATA_FILE, OUTPUT_IMAGE_FILE):
             else:
                 # Skip lines starting with numbers, they are not commands anyway
                 if not cmd[0].isdigit():
-                    print('Command "%s" is not valid.' % cmd)
+                    print('Command "{}" is not valid.'.format(cmd), file=sys.stderr)
                     trans_list.close()
                     sys.exit(1)
 
@@ -82,11 +83,15 @@ def main(TRANSFER_LIST_FILE, NEW_DATA_FILE, OUTPUT_IMAGE_FILE):
         output_img = open(OUTPUT_IMAGE_FILE, 'wb')
     except IOError as e:
         if e.errno == errno.EEXIST:
-            print('Error: the output file "{}" already exists'.format(e.filename))
-            print('Remove it, rename it, or choose a different file name.')
+            print('Error: the output file "{}" already exists'.format(e.filename), file=sys.stderr)
+            print('Remove it, rename it, or choose a different file name.', file=sys.stderr)
             sys.exit(e.errno)
         else:
             raise
+
+    if NEW_DATA_FILE.split(".")[-1] =="br":
+        print("Error: the <system_new_file> is in brotli (.br) format. Decompress using brotli then use .dat format.")
+        exit(0)
 
     new_data_file = open(NEW_DATA_FILE, 'rb')
     all_block_sets = [i for command in commands for i in command[1]]
@@ -108,7 +113,7 @@ def main(TRANSFER_LIST_FILE, NEW_DATA_FILE, OUTPUT_IMAGE_FILE):
                     output_img.write(new_data_file.read(BLOCK_SIZE))
                     block_count -= 1
         else:
-            print('Skipping command %s...' % command[0])
+            print('Skipping command {}...'.format(command[0]))
 
     # Make file larger if necessary
     if(output_img.tell() < max_file_size):
@@ -116,7 +121,7 @@ def main(TRANSFER_LIST_FILE, NEW_DATA_FILE, OUTPUT_IMAGE_FILE):
 
     output_img.close()
     new_data_file.close()
-    print('Done! Output image: %s' % os.path.realpath(output_img.name))
+    print('Done! Output image: {}'.format(os.path.realpath(output_img.name)))
 
 if __name__ == '__main__':
     try:
