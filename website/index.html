@@ -34,7 +34,8 @@
 }
 
 nav {
-  width: 715px;
+  width: 490px;
+  allign: center 100px;
   height: 40px;
   background-color: #fff;
   border-radius: 21px;
@@ -195,8 +196,11 @@ h2 {
 
      gtag('config', 'UA-176787919-2');
     </script>
+	<audio autoplay loop>
+      <source src="music/halloween.mp3">
+    </audio
     </head>
-	<!-- Website styling. -->
+	<!-- Extra website styling. -->
 	<body style="color: black;
 		 font-size: 12pt;">
     <body>
@@ -205,11 +209,10 @@ h2 {
 	<!-- Webite navagation. -->
 	<div class="container -column">
   <nav class="-sticky">
-    <a href="https://ryzen5-3600.com/" class="nav-item">HOME</a>
-    <a href="https://www.patreon.com/Ryzen5_3600" class="nav-item">SUPPORT THE PATREON</a>
 	<a href="https://discord.gg/jupHd5q" class="nav-item">JOIN THE DISCORD</a>
-    <a href="license_agreements/OPEN_SOURCE.txt" class="nav-item">OPEN SOURCE</a>
+    <a href="license_agreements/OPEN_SOURCE.txt" class="nav-item">OPEN SOURCE NOTICES</a>
   </nav>
+  <hr>
   <div class="content">
   </div>
 </div>
@@ -295,7 +298,9 @@ h2 {
 	 <footer>
 	 <br>
 	 <div class="container">
-     <h2 class="animated">The website was last updated on:</h2><div> <b><strong>September 24, 2020</strong></b>
+	 <h2 class="animated">The website was created on:</h2><div> <b><strong>July 4, 2019</strong></b>
+     <h2 class="animated">The website was last updated on:</h2><div> <b><strong>October 20, 2020</strong></b>
+	 <h2 class="animated">Revision version:</h2><div> <b><strong>v153</strong></b>
 	 <div>
 	 </footer>
     </p>
@@ -315,5 +320,12 @@ h2 {
     <script src="game_files/js/local_storage_manager.js"></script>
     <script src="game_files/js/game_manager.js"></script>
     <script src="game_files/js/application.js"></script>
+	 <script>
+       if ('serviceWorker' in navigator) {
+         navigator.serviceWorker.register('/serviceworker.js', {
+           scope: './'
+         });
+       }
+  </script>
     </body>
     </html>

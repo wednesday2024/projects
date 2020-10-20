@@ -54,13 +54,13 @@
 
 // Keyframe animations
 @mixin keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
+  @-webkit-keyframes #{$animation-name} {
     @content;
   }
-  @-moz-keyframes $animation-name {
+  @-moz-keyframes #{$animation-name} {
     @content;
   }
-  @keyframes $animation-name {
+  @keyframes #{$animation-name} {
     @content;
   }
 }
@@ -72,13 +72,6 @@
   }
 }
 
-// Appearance
-@mixin appearance($args...) {
-  -webkit-appearance: $args;
-  -moz-appearance: $args;
-  appearance: $args;
-}
-
 // Clearfix
 @mixin clearfix {
   &:after {
@@ -87,3 +80,4 @@
     clear: both;
   }
 }
+ 
