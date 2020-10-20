@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "BenchNine";
+    src: url("BenchNine-Light.otf");
+    src: url("BenchNine-Light.otf") format("embedded-opentype"),
+         url("BenchNine-Regular.otf") format("svg"),
+         url("BenchNine-Light.otf") format("woff");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BenchNine";
+    src: url("BenchNine-Light.otf");
+    src: url("BenchNine-Light.otf") format("embedded-opentype"),
+         url("BenchNine-Regular.otf") format("svg"),
+         url("BenchNine-Light.otf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BenchNine";
+    src: url("BenchNine-Bold.otf");
+    src: url("BenchNine-Bold.otf") format("embedded-opentype"),
+         url("BenchNine-Bold.otf") format("svg"),
+         url("BenchNine-Bold.otf") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
