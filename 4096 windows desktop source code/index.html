@@ -4,6 +4,7 @@
 	<!-- HTML type. -->
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta charset="utf-8">
+	<html manifest="cache.appcache">
 	<!-- App author. -->
 	<meta name="author" content="Ryzen5-3600">
 	<!-- App styling. -->
@@ -159,6 +160,88 @@ h2 {
 @media not (max-width: 639px) {
 /* CSS rules for any device that is wider than 639 pixels */
 }
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
+    var appCache = window.applicationCache;
+    appCache.addEventListener('cached', function() {
+        /* Cached resource is downloaded */
+    }, false);
+
+    appCache.addEventListener('checking', function() {
+        /*
+           Manifest file is downloaded for the first time
+           or if there is an update in the manifest
+        */
+    }, false);
+
+    appCache.addEventListener('downloading', function() {
+        /* Content is being updated */
+    }, false);
+
+    appCache.addEventListener('error', function() {
+        /* Error occurred */
+    }, false);
+
+    appCache.addEventListener('noupdate', function() {
+        /* No update is available */
+    }, false);
+
+    appCache.addEventListener('obsolete', function() {
+        /* Manifest file cannot be found */
+    }, false);
+
+    appCache.addEventListener('progress', function() {
+        /* Cache file is being downloaded */
+    }, false);
+
+    appCache.addEventListener('updateready', function() {
+        /* All resources for update are downloaded */
+    }, false);
+	    var appCache = window.applicationCache;
+
+    switch (appCache.status) {
+        case 0: /* ApplicationCache.status is UNCACHED */
+            break;
+        case 1: /* ApplicationCache.status is IDLE */
+            break;
+        case 2: /* ApplicationCache.status is CHECKING */
+            break;
+        case 3: /* ApplicationCache.status is DOWNLOADING */
+            break;
+        case 4: /* ApplicationCache.status is UPDATEREADY */
+            break;
+        case 5: /* ApplicationCache.status is OBSOLETE */
+            break;
+        default: break;
+    }
+	        function handleCacheEvent(e) {
+            if (appCache.status == appCache.UPDATEREADY) {
+                try {
+                    window.applicationCache.swapCache();
+                    document.getElementById('log').innerHTML = 'Update is successful';
+                }
+            }
+        }
+    };
+	    var update = function() {
+        var appCache = window.applicationCache;
+        appCache.addEventListener('updateready', handleCacheEvent, false);
+        appCache.update();
 	</style>
 	<!-- Top nav bar title. -->
     <title>4096</title>
@@ -198,7 +281,9 @@ h2 {
     </script>
 	<audio autoplay loop>
       <source src="music/halloween.mp3">
+	Error! Your browser does not support audio playback. Please upgrade to a newer version or switch to a different browser that supports audio playback.
     </audio>
+	<body oncontextmenu="return false">
     </head>
 	<!-- Extra app styling. -->
 	<body style="color: black;
@@ -294,7 +379,7 @@ h2 {
 	 <br>
 	 <div class="container">
 	 <h2 class="animated">The app was created on:</h2><div> <b><strong>October 18, 2020</strong></b>
-     <h2 class="animated">The app was last updated on:</h2><div> <b><strong>October 25, 2020</strong></b>
+     <h2 class="animated">The app was last updated on:</h2><div> <b><strong>October 26, 2020</strong></b>
 	 <h2 class="animated">Revision version:</h2><div> <b><strong>v1</strong></b>
 	 <div>
 	 </footer>
