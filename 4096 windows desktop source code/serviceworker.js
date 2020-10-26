@@ -18,7 +18,12 @@ const CACHE_URLS = [
   'images/logo/favicon.ico',
   'music/halloween.mp3',
   'music/normal.mp3',
+  'music/normal2.mp3',
   'music/christmas.mp3',
+  'convertDataUrl.js',
+  'electronOpenFile.js',
+  'newSongObject.js',
+  'index.js',
 ];
 
 const OPTIONAL_CACHE_URLS = [
