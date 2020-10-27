@@ -4,7 +4,7 @@ CACHE MANIFEST
 # Adds the ability to view the website offline.
 # The following comment needs to be updated whenever a change is made.
 # Run `rake appcache:update` to do so
-# Updated: 2020-10-26T07:56:33-05:00
+# Updated: 2020-10-27T07:50:51-05:00
 
 
 # Home page
@@ -17,9 +17,6 @@ game_files/style/main.scss
 game_files/style/helpers.scss
 game_files/style/normalize.css
 game_files/style/normalize.scss
-css/media-query.css
-css/main.css
-css/normalize.css
 
 # Fonts
 game_files/style/fonts/BenchNine.css
@@ -43,6 +40,7 @@ game_files/js/tile.js
 images/maintenance/construction.png
 images/logo/icon.png
 images/logo/icon2.png
+images/logo/icon3.png
 images/logo/4096.gif
 images/logo/favicon.ico
 images/secretwolf98's_pfp/secretwolf_eyes.png

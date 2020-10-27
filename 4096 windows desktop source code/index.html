@@ -10,6 +10,7 @@
 	<!-- App styling. -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
 	<style type="text/css">
 	 body {
 	    font-family: sans-serif;
@@ -33,34 +34,6 @@
   position: sticky;
   top: 12px; // will stick at this point
 }
-
-nav {
-  width: 490px;
-  allign: center 100px;
-  height: 40px;
-  background-color: #fff;
-  border-radius: 21px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
-  padding: 0 32px;
-  box-sizing: border-box;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-  .nav-item {
-    color: #505050;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.875em;
-    line-height: 42px;
-    font-weight: 700;
-    transition: color 0.3s ease;
-    cursor: pointer;
-    &:hover {
-      color: #44BF75;
-    }
-  }
-}
-
 .content {
   margin-top: 0px;
 }
@@ -109,56 +82,6 @@ h2 {
 *{
   margin:0;
   padding:0;
-}
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-}
-@-ms-viewport {
-  width: device-width ;
-}
-@media screen and (max-width:320px) {
-  /* CSS for screens that are 320 pixels or less will be put in this section */
-}
-@media screen and (min-width:320px) and (max-width:640px) {
-  /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
-}
-/* code that is here, until the first @media block, will apply to any screen size */
-#somethingorother {
-  width: 800px ;
-}
-
-@media screen and (max-width: 320px) {
-  /* comes into effect for screens less than or equal to 320 pixels */
-  #somethingorother {
-    width: 120px ;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 480px) {
-  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
-  #somethingorother {
-    width: 320px ;
-  }
-}
-@media screen and (min-width: 481px) {
-  /* comes into effect for screens larger than or equal to 481 pixels */
-  #somethingorother {
-    width: 480px ;
-  }
-}
-
-/* code that is here will apply to any screen size */
-@media screen and (orientation:portrait) {
-  /* ... */
-}
-@media screen and (orientation: landscape) {
-  /* ... */
-}
-@media only screen and (max-width: 480px) {
-  /* ... */
-}
-@media not (max-width: 639px) {
-/* CSS rules for any device that is wider than 639 pixels */
 }
 document.onkeydown = function(e) {
   if(event.keyCode == 123) {
@@ -245,7 +168,7 @@ document.onkeydown = function(e) {
 	</style>
 	<!-- Top nav bar title. -->
     <title>4096</title>
-	<link rel="shortcut icon" href="images/logo/favicon.ico">
+	<link rel="shortcut icon" href="images/logo/icon3.png">
 	<!-- App services description. -->
 	<meta name="description" content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services. And Ryzen5-3600's free services are open source.">
 	<!-- App styling. -->
@@ -379,7 +302,7 @@ document.onkeydown = function(e) {
 	 <br>
 	 <div class="container">
 	 <h2 class="animated">The app was created on:</h2><div> <b><strong>October 18, 2020</strong></b>
-     <h2 class="animated">The app was last updated on:</h2><div> <b><strong>October 26, 2020</strong></b>
+     <h2 class="animated">The app was last updated on:</h2><div> <b><strong>October 27, 2020</strong></b>
 	 <h2 class="animated">Revision version:</h2><div> <b><strong>v1</strong></b>
 	 <div>
 	 </footer>
