@@ -18,6 +18,8 @@ const CACHE_URLS = [
   'images/logo/icon3.png',
   'images/logo/4096.gif',
   'images/logo/favicon.ico',
+  'images/Ryzen5-3600s_pfp/secretwolf_eyes.png',
+  'images/Ryzen5-3600s_pfp/NormaBates.png',
   'music/halloween.mp3',
   'music/normal.mp3',
   'music/normal2.mp3',
@@ -26,6 +28,11 @@ const CACHE_URLS = [
   'electronOpenFile.js',
   'newSongObject.js',
   'index.js',
+  'index.html',
+  'Christmas.html',
+  'Halloween.html',
+  'Normal2.html',
+  '4096.html',
 ];
 
 const OPTIONAL_CACHE_URLS = [

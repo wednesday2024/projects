@@ -4,11 +4,15 @@ CACHE MANIFEST
 # Adds the ability to view the website offline.
 # The following comment needs to be updated whenever a change is made.
 # Run `rake appcache:update` to do so
-# Updated: 2020-10-27T07:50:51-05:00
+# Updated: 2020-10-29T19:03:11-05:00
 
 
 # Home page
 index.html
+Christmas.html
+Halloween.html
+Normal2.html
+4096.html
 
 # CSS
 game_files/style/main.css
@@ -43,7 +47,8 @@ images/logo/icon2.png
 images/logo/icon3.png
 images/logo/4096.gif
 images/logo/favicon.ico
-images/secretwolf98's_pfp/secretwolf_eyes.png
+images/Ryzen5-3600s_pfp/secretwolf_eyes.png
+images/Ryzen5-3600s_pfp/NormaBates.png
 
 music/halloween.mp3
 music/normal.mp3
