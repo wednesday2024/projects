@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <meta name="author" content="Ryzen5-3600">
+	<style type="text/css">
+	 body {
+	    font-family: sans-serif;
+	    font-size:large;
+	    }
+	  cite {
+	    font-family: serfif;
+	    font-style: italic;
+	    }
+	body{
+    text-align: center;
+}
+
+}
+	h1 {
+}
+	div {
+}
+.-sticky {
+  position: -webkit-sticky; // safari
+  position: sticky;
+  top: 12px; // will stick at this point
+}
+
+nav {
+  width: 180px;
+  allign: center 100px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 21px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  padding: 0 32px;
+  box-sizing: border-box;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  .nav-item {
+    color: #505050;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    line-height: 42px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    &:hover {
+      color: #44BF75;
+    }
+  }
+}
+
+.content {
+  margin-top: 0px;
+}
+
+strong {
+  color: #559FAC;
+}
+
+created {
+  color: #A4A4A4;
+}
+
+instructions {
+  color: #0489B1;
+}
+
+html, body {
+  height: auto;
+}
+.clip-text {
+  background: url(images/logo/4096.gif);
+  background-size: cover;
+  background-position: center;
+  
+  -webkit-background-clip: text;
+  color: transparent; // set to transparent, otherwise won't see the background
+  
+  width: 300px;
+  height: 100px;
+  box-sizing: border-box;
+  font-size: 58px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 155px;
+  flex-shrink: 0;
+}
+@keyframes animation {
+  from {
+    letter-spacing: 20px;
+  }
+  to {
+    letter-spacing: 0;
+  }
+}
+
+.animated {
+  animation: animation 4s ease;
+}
+
+h2 {
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+*{
+  margin:0;
+  padding:0;
+}
+body::-webkit-scrollbar {
+  width: 12px; }
+
+body::-webkit-scrollbar-track {
+  background: #faf8ef;
+  border-radius: 6px; }
+
+body::-webkit-scrollbar-thumb {
+  background: #bbada0;
+  border-radius: 6px; }
+}
+	</style>
+	<!-- Top nav bar title. -->
+    <title>1000 Years Later: 2048, Christmas</title>
+	<link rel="shortcut icon" href="images/logo/2048.png">
+	<!-- Website services description. -->
+	<meta name="description" content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services. And Ryzen5-3600's free services are open source.">
+	<!-- Website styling. -->
+	<link rel="stylesheet" href="2048_game_files/style/normalize.css">
+	<link rel="stylesheet" href="2048_game_files/style/main.css">
+	<link href="https://fonts.googleapis.com/css?family=BenchNine&display=swap" rel="stylesheet">
+	<h1 {text-shadow:0.1em 0.1em #aaaaaa}>
+	<h1 text-shadow:offset-x offset-y color;>
+	<h1 text-shadow: 0.1em 0.1em #aaaaaa .2em;>
+	<h1 text-shadow: 0px 3px 0px #b2a98f,
+					 0px 7px 5px rgba(0,0,0,0.15),
+					 0px 12px 1px rgba(0,0,0,0.1),
+					 0px 17px 17px rgba(0,0,0,1);>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<audio autoplay loop>
+	  <source src="music/christmas.ogg" type="audio/ogg">
+      <source src="music/christmas.mp3" type="audio/mpeg">
+	Error! Your browser does not support audio playback. Please upgrade to a newer version or switch to a different browser that supports audio playback.
+    </audio>
+	<body oncontextmenu="return false">
+    </head>
+	<!-- Extra website styling. -->
+	<body style="color: black;
+		 font-size: 12pt;">
+    <body>
+	<div id="container">
+    <div class="container">
+	<!-- Webite navagation. -->
+	<div class="container -column">
+  <nav class="-sticky">
+	<a href="index.html" class="nav-item">HOME PAGE</a>
+  </nav>
+  <hr>
+  <div class="content">
+  </div>
+</div>
+<body id='body'>
+	<div id="content">
+    <div class="heading">
+    <h1 class="title"><b><div class="container"><div class="clip-text">2048.</div></div></b></h1>
+    <div class="scores-container">
+    <div class="score-container">0</div>
+    <div class="best-container">0</div>
+    </div>
+    </div>
+    <br>
+	<!-- Game buttons. -->
+    <body>
+    <div class="above-game">
+    <p class="game-intro"><b>Put the numbers together and get to the</b> <instructions><b>2048 tile!</b></instructions></p>
+    <a class="restart-button"><b>New game (This can't be undone)</b></a>
+    </div>
+    <div class="game-container">
+    <div class="game-message">
+    <p></p>
+    <div class="lower">
+	<a class="keep-playing-button"><b>Keep going</b></a>
+    <a class="retry-button"><b>I believe in you, try it again.</b></a>
+    </div>
+    </div>
+	<!-- Game grids. -->
+    <div class="grid-container">
+    <div class="grid-row">
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    </div>
+    <div class="grid-row">
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    </div>
+    <div class="grid-row">
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    </div>
+    <div class="grid-row">
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    <div class="grid-cell"></div>
+    </div>
+    </div>
+    <div class="tile-container">
+    </div>
+    </div>
+    <hr>
+    <p>
+	<!-- Game explaination. -->
+    <p class="game-explanation">
+    <strong class="important"><b>How to play 2048:<br></b></strong> <b>Use your</b> <strong><b>arrow keys or your finger on the screen</b></strong> <b>to move the tiles. When 2 tiles with the same number touch, they will</b> <strong><b>merge into some other tiles!</b></strong> <b>You can press CTRL + Z on a PC or CMD + Z on a Mac<br> to undo your turn up to 6 times.</b>
+    </p>
+    <hr>
+    <p>
+	<!-- Game notes. -->
+    <strong class="important"><b>Note:<br></strong> This website is the official version of the game, 2048. All other websites and apps that claim to be<br> 2048 are fake. They should be used with caution.<br> Thank you for understanding.</b>
+    </p>
+    <hr>
+    <p>
+    <p><b></b></p>
+	<!-- Logo icon and team name. -->
+	  <figure id="home-image">
+	    <img src="images/logo/icon2.png" alt="Team Unusual"
+	    width="200" height="50" alt="Team Unusual"
+					   class="shadowfilter">
+	  </figure>
+	 </div>
+	 <!-- Copyrights. -->
+	 <footer>
+	 <b>Copyright &copy; 2019-2021<br> 1000 Years Later (Banana#6176), Team Unusual, & Ryzen5-3600 (Xxdarkestwolfxx#1219)<br> All Rights Reserved.</b>
+	 </footer>
+    <hr>
+    <p>
+	<!-- Who the game was created by. -->
+  <h2 class="animated">Created by:</h2><div> <a href="http://github.com/Ryzen5-3600" target="_blank"><b><created>Ryzen5-3600</created></b>
+    <br><br>
+    <figure id="home-image">
+        <img src="images/Ryzen5-3600s_pfp/cool-doge.gif" alt="Ryzen5-3600's Discord profile picture."
+        width="200" height="150" alt="Ryzen5-3600's Discord profile picture."
+               class="shadowfilter">
+    <br>
+    <figure id="home-image">
+        <img src="images/logo/1000YearsLater.png" alt="1000 Years Later Discord server logo."
+        width="250" height="200" alt="Ryzen5-3600's Discord profile picture."
+               class="shadowfilter">
+      </div>
+    <!-- Game scripts. -->
+      <script src="8192_game_files/js/bind_polyfill.js"></script>
+      <script src="8192_game_files/js/classlist_polyfill.js"></script>
+      <script src="8192_game_files/js/animframe_polyfill.js"></script>
+      <script src="8192_game_files/js/keyboard_input_manager.js"></script>
+      <script src="8192_game_files/js/html_actuator.js"></script>
+      <script src="8192_game_files/js/grid.js"></script>
+      <script src="8192_game_files/js/tile.js"></script>
+      <script src="8192_game_files/js/local_storage_manager.js"></script>
+      <script src="8192_game_files/js/game_manager.js"></script>
+      <script src="8192_game_files/js/application.js"></script>
+      </body>
+      </html>

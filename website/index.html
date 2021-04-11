@@ -1,333 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<!-- HTML type. -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta charset="utf-8">
-<html manifest="cache.appcache">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!-- Website security. -->
-<meta name="have-i-been-pwned-verification" value="dc273eddb6aa8ba489c108cce5a303c8">
-<!-- Website author. -->
-<meta name="author" content="Ryzen5-3600">
-<!-- Website styling. -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+<!-- CSS styles -->
 <style type="text/css">
-body {
-  font-family: sans-serif;
-  font-size:large;
-  }
-cite {
-  font-family: serfif;
-  font-style: italic;
-  }
-body{
-text-align: center;
-}
-
-}
-h1 {
-}
-div {
-}
-.-sticky {
-position: -webkit-sticky; // safari
-position: sticky;
-top: 12px; // will stick at this point
-}
-
-nav {
-width: 390px;
-allign: center 100px;
-height: 40px;
-background-color: #fff;
-border-radius: 21px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
-padding: 0 32px;
-box-sizing: border-box;
-z-index: 9999;
-display: flex;
-justify-content: space-between;
-.nav-item {
-color: #505050;
-text-decoration: none;
-text-transform: uppercase;
-font-size: 0.875em;
-line-height: 42px;
-font-weight: 700;
-transition: color 0.3s ease;
-cursor: pointer;
-&:hover {
-  color: #44BF75;
-}
-}
-}
-
-.content {
-margin-top: 0px;
-}
-
 strong {
-color: #44BF75;
+  color: #559FAC;
 }
+body::-webkit-scrollbar {
+  width: 12px; }
 
-created {
-color: #A4A4A4;
-}
+body::-webkit-scrollbar-track {
+  background: #faf8ef;
+  border-radius: 6px; }
 
-instructions {
-color: #0489B1;
+body::-webkit-scrollbar-thumb {
+  background: #bbada0;
+  border-radius: 6px; }
 }
-
-html, body {
-height: auto;
-}
-.clip-text {
-background: url(images/logo/4096.gif);
-background-size: cover;
-background-position: center;
-
--webkit-background-clip: text;
-color: transparent; // set to transparent, otherwise won't see the background
-
-width: 300px;
-height: 100px;
-box-sizing: border-box;
-font-size: 58px;
-font-weight: bold;
-text-align: right;
-line-height: 155px;
-flex-shrink: 0;
-}
-@keyframes animation {
-from {
-letter-spacing: 20px;
-}
-to {
-letter-spacing: 0;
-}
-}
-
 .animated {
-animation: animation 4s ease;
+  animation: animation 4s ease;
 }
-
-h2 {
-text-transform: uppercase;
-white-space: nowrap;
+.center1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
-*{
-margin:0;
-padding:0;
+.center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }
-@viewport {
-width: device-width ;
-zoom: 1.0 ;
-}
-@-ms-viewport {
-width: device-width ;
-}
-@media screen and (max-width:320px) {
-/* CSS for screens that are 320 pixels or less will be put in this section */
-}
-@media screen and (min-width:320px) and (max-width:640px) {
-/* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
-}
-/* code that is here, until the first @media block, will apply to any screen size */
-#somethingorother {
-width: 800px ;
-}
-
-@media screen and (max-width: 320px) {
-/* comes into effect for screens less than or equal to 320 pixels */
-#somethingorother {
-width: 120px ;
-}
-}
-@media screen and (min-width: 321px) and (max-width: 480px) {
-/* comes into effect for screens between 321 and 480 pixels (inclusive) */
-#somethingorother {
-width: 320px ;
-}
-}
-@media screen and (min-width: 481px) {
-/* comes into effect for screens larger than or equal to 481 pixels */
-#somethingorother {
-width: 480px ;
-}
-}
-
-/* code that is here will apply to any screen size */
-@media screen and (orientation:portrait) {
-/* ... */
-}
-@media screen and (orientation: landscape) {
-/* ... */
-}
-@media only screen and (max-width: 480px) {
-/* ... */
-}
-@media not (max-width: 639px) {
-/* CSS rules for any device that is wider than 639 pixels */
-}
-document.onkeydown = function(e) {
-if(event.keyCode == 123) {
- return false;
-}
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
- return false;
-}
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
- return false;
-}
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
- return false;
-}
-if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
- return false;
-}
-}
-var appCache = window.applicationCache;
-appCache.addEventListener('cached', function() {
-    /* Cached resource is downloaded */
-}, false);
-
-appCache.addEventListener('checking', function() {
-    /*
-       Manifest file is downloaded for the first time
-       or if there is an update in the manifest
-    */
-}, false);
-
-appCache.addEventListener('downloading', function() {
-    /* Content is being updated */
-}, false);
-
-appCache.addEventListener('error', function() {
-    /* Error occurred */
-}, false);
-
-appCache.addEventListener('noupdate', function() {
-    /* No update is available */
-}, false);
-
-appCache.addEventListener('obsolete', function() {
-    /* Manifest file cannot be found */
-}, false);
-
-appCache.addEventListener('progress', function() {
-    /* Cache file is being downloaded */
-}, false);
-
-appCache.addEventListener('updateready', function() {
-    /* All resources for update are downloaded */
-}, false);
-  var appCache = window.applicationCache;
-
-switch (appCache.status) {
-    case 0: /* ApplicationCache.status is UNCACHED */
-        break;
-    case 1: /* ApplicationCache.status is IDLE */
-        break;
-    case 2: /* ApplicationCache.status is CHECKING */
-        break;
-    case 3: /* ApplicationCache.status is DOWNLOADING */
-        break;
-    case 4: /* ApplicationCache.status is UPDATEREADY */
-        break;
-    case 5: /* ApplicationCache.status is OBSOLETE */
-        break;
-    default: break;
-}
-      function handleCacheEvent(e) {
-        if (appCache.status == appCache.UPDATEREADY) {
-            try {
-                window.applicationCache.swapCache();
-                document.getElementById('log').innerHTML = 'Update is successful';
-            }
-        }
-    }
-};
-  var update = function() {
-    var appCache = window.applicationCache;
-    appCache.addEventListener('updateready', handleCacheEvent, false);
-    appCache.update();
+.center3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 </style>
-<!-- Top nav bar title. -->
-    <title>Team Unusual: Thank you!</title>
-<!-- Website services description. -->
-<meta name="description" content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services. And Ryzen5-3600's free services are open source.">
-<!-- Website styling. -->
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" type="text/css" media="screen and (max-width: 360px)" href="game_files/css/portrait.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 480px)" href="game_files/css/landscape.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 481px)" href="game_files/css/desktop.css">
-<link rel="stylesheet" href="game_files/style/normalize.css">
-<link rel="stylesheet" href="game_files/style/main.css">
-<link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 480px)" href="game_files/css/media-query.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 481px)" href="game_files/css/media-query.css">
-<link href="https://fonts.googleapis.com/css?family=BenchNine&display=swap" rel="stylesheet">
-<h1 {text-shadow:0.1em 0.1em #aaaaaa}>
-<h1 text-shadow:offset-x offset-y color;>
-<h1 text-shadow: 0.1em 0.1em #aaaaaa .2em;>
-<h1 text-shadow: 0px 3px 0px #b2a98f,
-       0px 7px 5px rgba(0,0,0,0.15),
-       0px 12px 1px rgba(0,0,0,0.1),
-       0px 17px 17px rgba(0,0,0,1);>
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-<meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Global site tag (gtag.js) - Google Analytics. -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176787919-2"></script>
-    <script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
 
- gtag('config', 'UA-176787919-2');
-    </script>
-<audio autoplay loop>
-  <source src="music/normal.mp3">
-Error! Your browser does not support audio playback. Please upgrade to a newer version or switch to a different browser that supports audio playback.
-</audio>
-<body oncontextmenu="return false">
+<!-- Website title and description -->
+  <meta name="author" content="Ryzen5-3600">
+  <title>1000 Years Later: Home Page</title>
+  <meta content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services. And Ryzen5-3600's free services are open source." name="description">
+  <meta content="Ryzen5-3600's services are free and Ryzen5-3600 don't expect any money in return for Ryzen5-3600's services. And Ryzen5-3600's free services are open source." name="keywords">
+
+  <!-- Favicons -->
+  <link href="images/logo/1000YearsLater.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
-<!-- Extra website styling. -->
-<body style="color: black;
- font-size: 12pt;">
+
+<!-- Background audio -->
+<audio id="audio" autoplay loop>
+	  <source src="music/summer.ogg" type="audio/ogg">
+      <source src="music/summer.mp3" type="audio/mpeg">
+	Error! Your browser does not support audio playback. Please upgrade to a newer version or switch to a different browser that supports audio playback.
+    </audio>
+
 <body>
-<div id="container">
-<div class="container">
-<nav class="-sticky">
-<a href="4096.html" class="nav-item">CLICK THIS BUTTON TO PLAY 4096</a>
-</nav>
-<hr>
-<p>
-I want to say first of all, thank you for joining me in this HTML 5 test project that I have created<br> almost 2 years ago (July 4, 2019).<br> As of January 1, 2021,<br> this HTML 5 test project of mine, 4096,<br> will no longer be updated.<br> If you press the button on top of this page,<br> you will be able to play my clone of,<br> <a href="https://github.com/gabrielecirulli/2048/tree/gh-pages" target="_blank"></a><b><created>gabrielecirulli's 2048.</created>
-</p>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div id="logo">
+        <a href="index.html"><img src="assets/img/logo.png" alt="1000 Years Later website logo"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+      <li><a class="nav-link scrollto active" href="https://discord.gg/BZcUGSP">Join the website suggesting Discord</a></li>
+		  <li><a class="nav-link scrollto active" href="https://discord.gg/AHnPFACG8G">Join the 1000 Years Later official Discord</a></li>
+		  <li><a class="nav-link scrollto active" href="downloads.html">Downloads page</a></li>
+		  <li><a class="nav-link scrollto active" href="assets/changelog/website-changelog.html">Website changelog</a></li>
+		  <li><a class="nav-link scrollto active" href="assets/copyrights/copyright-notices.html">Copyright notices</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- End navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Welcome to the 1000 Years Later website!</h1>
+
+	  <br><br><br>
+
+    <figure id="home-image">
+	    <img src="images/logo/1000YearsLater.png" alt="1000 Years Later"
+	    width="250" height="200" alt="1000 Years Later"
+					   class="shadowfilter">
+             
+	<br><br><br>
+
+	<a href="#useful-links" class="btn-get-started">Useful links</a>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
 <br>
+
+    <!-- ======= Useful links ======= -->
+    <section id="useful-links">
+    <div class="container" data-aos="fade-up">
+	  <div class="row about-container">
+
+<div class="col-lg-6 content order-lg-1 order-2">
+<div class="section-header">
+<h3 class="section-title">Useful links:</h3>
 <br>
-<h2 class="animated"><instructions>See you in my future projects,</instructions><br></h2><div> 
-<a href="http://github.com/Ryzen5-3600" target="_blank"><b><created>Ryzen5-3600</created></b>
-<br><br>
-<figure id="home-image">
-  <img src="images/Ryzen5-3600s_pfp/NormaBates.png" alt="Ryzen5-3600's Discord profile picture."
-  width="250" height="200" alt="Ryzen5-3600's Discord profile picture."
-         class="shadowfilter">
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSd5ynTDY7X2MpCdPjEIkzzc92A6d6L9xAI2N1j-4_DSv54YLQ/viewform?usp=sf_link"><strong>~ 1000 Years Later Mod Application ~</strong></a>
+	<br>
+    <a href="https://docs.google.com/spreadsheets/d/1zkA2Fgbfp6AP924AZnBj8iTAlQEX_aCwXgNxyl7db-Q/edit?usp=sharing"><strong>~ Tribe Rank Up Doc ~</strong></a></b>
+    <br>
+    <a href="https://atelier801.com/topic?f=855337&t=938218&p=1#m1"><strong>~ People Who Are Blacklisted From The Tribe ~</strong></a></b>
+	<br>
+    <a href="https://atelier801.com/topic?f=855337&t=938219"><strong>~ Let Us Know When You Need To Take A Break ~</strong></a></b>
+	<br>
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSfBmK8vO9F1BOcFXsrFBx_PMAoXmCm22qEpD2ivDp5iUgoKwg/viewform?usp=sf_link"><strong>~ Buddy Form ~</strong></a>
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1" data-aos="fade-left" data-aos-delay="100"></div>
+        </div>
+
+      </div>
+    </section><!-- End useful-links -->
+
+<br>
 <hr>
-<script>
-   if ('serviceWorker' in navigator) {
-     navigator.serviceWorker.register('/serviceworker.js', {
-       scope: './'
-     });
-   }
+
+    <!-- ======= How to recommend new website features ======= -->
+    <section id="features">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">How to recommend new website features:</h3>
+		  <br>
+	<p>~ <strong>Through Discord: Ryzen5-3600 | Windows 10 Pro#0001</strong> ~</p>
+	<p center>or</p>
+	<p>~ <strong>Through Transformice: Xxdarkestwolfxx#1219</strong> ~</p>
+
+        </div>
+
+      </div>
+    </section><!-- End features -->
+
+<br>
+<hr>
+
+<!-- ======= Last website update ======= -->
+    <section id="update">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">When the website was last updated:</h3>
+		  <br>
+	 <footer>
+	 <br>
+	 <div class="container">
+	 <h2 class="animated">The website was created on:</h2><div> <b><strong>July 4, 2019</strong></b><br>
+	 <br>
+     <h2 class="animated">The website was last updated on:</h2><div> <b><strong>May 29, 2021</strong></b><br>
+	 <br>
+	 <h2 class="animated">Revision version:</h2><div> <b><strong>v206</strong></b>
+	 <div>
+	 </footer>
+
+        </div>
+
+      </div>
+    </section><!-- End update -->
+	
+	<br>
+	<hr>
+	
+	<!-- ======= Background audio mute ======= -->
+    <section id="mute">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">Mute and unmute the website's background audio:</h3>
+		  <br>
+<img src="assets/img/mute.png" class="center1" onclick="document.getElementById('audio').pause()" />
+
+<br>
+
+<img src="assets/img/play.png" class="center2" onclick="document.getElementById('audio').play()" />
+
+        </div>
+
+      </div>
+    </section><!-- End mute -->
+	
+	<br>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Copyrights footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        2019-2021 &copy; Copyright <strong>1000 Years Later (Banana#6176), Team Unusual, & Ryzen5-3600 (Xxdarkestwolfxx#1219)</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed & created by: <a href="http://github.com/Ryzen5-3600"><strong>Ryzen5-3600</strong></a>
+		<p>(Xxdarkestwolfxx#1219)</p>
+		<br>
+			<figure id="home-image">
+	    <img src="images/Ryzen5-3600s_pfp/cool-doge.gif" alt="Ryzen5-3600's Discord profile picture."
+	    width="200" height="150" alt="Ryzen5-3600's Discord profile picture."
+					   class="shadowfilter">
+				
+      </div>
+    </div>
+  </footer><!-- End Copyrights -->
+  
+    <!-- ======= Archives footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="archives">
+	  
+		<li class="center2"><span>Chromebook & mobile archives:</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li center class="center3"><span>2048:</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="2048-Halloween.html">2048 Halloween</a></li>
+                  <li><a href="2048-Normal.html">2048 Normal #1</a></li>
+                  <li><a href="2048-Normal2.html">2048 Normal #2</a></li>
+                  <li><a href="2048-Christmas.html">2048 Christmas</a></li>
+				  <li><a href="2048-No_Music.html">2048 No Music</a></li>
+                </ul>
+				<li class="center3"><span>4096:</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="4096-Halloween.html">4096 Halloween</a></li>
+                  <li><a href="4096-Normal.html">4096 Normal #1</a></li>
+                  <li><a href="4096-Normal2.html">4096 Normal #2</a></li>
+                  <li><a href="4096-Christmas.html">4096 Christmas</a></li>
+				  <li><a href="4096-No_Music.html">4096 No Music</a></li>
+                </ul>
+				<li class="center3"><span>8192:</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="8192-Halloween.html">8192 Halloween</a></li>
+                  <li><a href="8192-Normal.html">8192 Normal #1</a></li>
+                  <li><a href="8192-Normal2.html">8192 Normal #2</a></li>
+                  <li><a href="8192-Christmas.html">8192 Christmas</a></li>
+				  <li><a href="8192-No_Music.html">8192 No Music</a></li>
+                </ul>
+				
+		<br><br>
+		
+  <!-- SSL Trust Logo -->
+  <script type="text/javascript"> //<![CDATA[
+  var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
+  document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
+//]]></script>
+<script language="JavaScript" type="text/javascript">
+  TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
 </script>
+				
+      </div>
+    </div>
+  </footer><!-- End Archives -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
