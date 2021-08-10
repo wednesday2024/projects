@@ -2,7 +2,7 @@
 
 Future plans:
 
-None at this time.
+Make an unofficial build of NotePad++ for later.
 
 
 (GSIs now boot on this device. It must be AMD64, A/B)
