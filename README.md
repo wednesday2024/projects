@@ -2,7 +2,7 @@
 
 Future plans:
 
-Make an unofficial build of NotePad++ for later.
+Redesign the website.
 
 
 (GSIs now boot on this device. It must be AMD64, A/B)
@@ -11,7 +11,7 @@ Make an unofficial build of NotePad++ for later.
 
 Plans that are already in progress:
 
-None at this time.
+Make an unofficial build of NotePad++ for later.
 
 
 Finished projects for the SM-T290:
