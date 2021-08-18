@@ -1,0 +1,74 @@
+{
+	"Changes": [
+		{
+			"LogName": "NPC Manifestation",
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Entries": {
+				"Leximonster": "adult/neutral/shy/neutral/undefined/not-datable/null/Other//Jessie 'mother'/SeaCave 33 5/Lexi"
+			}
+		},
+		{
+			"LogName": "Gift tastes",
+			"Action": "EditData",
+			"Target": "Data/NPCGiftTastes",
+			"Entries": {
+				"Leximonster": "Oh, very kind! I love the sweetness, yes./254 233 220 604/I am grateful for your gift./103 203 -74 -7 -79 -80/This ... it is unpleasant. I do not want it./-15/This thing... I don't like it./-26/You are kind. Am grateful, yes./-4/"
+			},
+			"When": {
+				"HasSeenEvent |contains=57872004": false
+			}
+		},
+		{
+			"LogName": "Lexi Antisocial flag",
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"Entries": {
+				"Leximonster": true
+			},
+			"When": {
+				"HasSeenEvent |contains=57872004": false
+			}
+		},
+		{
+			"LogName": "LexiPortraits",
+			"Action": "Load",
+			"Target": "Portraits/Leximonster",
+			"FromFile": "assets/Portraits/Lexi/Lexi_portrait.png"
+		},
+		{
+			"LogName": "Lexi Sprites",
+			"Action": "Load",
+			"Target": "Characters/Leximonster",
+			"FromFile": "assets/Characters/Lexi/seamonster.png"
+		},
+		{
+			"LogName": "Dialogue",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Leximonster",
+			"FromFile": "assets/Characters/Dialogue/Lexi/dialogue.json"
+		},
+		/*{
+	"LogName": "Schedule Dialogue", 
+	"Action": "Load",
+	"Target": "Strings/schedules/Leximonster",
+	"FromFile": "assets/Lexi/ScheduleDialogue.json"
+		},*/
+		{
+			"LogName": "Schedule",
+			"Action": "Load",
+			"Target": "Characters/schedules/Leximonster",
+			"FromFile": "assets/Characters/schedules/Lexi/schedule.json"
+		},
+		{ //	Vincent sees Lexi
+			"Action": "EditData",
+			"Target": "Data/Events/Beach",
+			"Entries": {
+				"57872000/p Vincent/t 1600 1900":"continue/38 25/farmer 38 17 2 Vincent 45 24 2/skippable/move farmer 0 7 2/faceDirection Vincent 3/jump Vincent 5/pause 500/speed Vincent 5/move Vincent -6 0 3/speak Vincent \"Farmer @! Farmer @! Have you see it? Have you see it?$3\"/faceDirection farmer 1/emote farmer 8/jump Vincent 5/textAboveHead Vincent \"The sea monster!\"/speak Vincent \"It was green and covered in scales and had big round eyes!#$b#And I wasn't scared at all! Well... maybe just a little...$3\"/jump Vincent 4/speak Vincent \"But when I told Mom, she said it wasn't real, that it was just my imagination.$2#$b#But you believe me, don't you, farmer @?\"/quickQuestion #(agree to humor him) Of course.#Absolutely, I've seen them too!#Of course I believe you!#Your mom's right. It's your imagination.(break)speak Vincent \"I think you're just saying that to be nice. But that's okay.\"(break)jump Vincent 4\\textAboveHead Vincent \"You have!\"\\speak Vincent \"That's so cool! I knew it!$1\"(break)emote Vincent 32\\speak Vincent \"I knew you would! You're not like the others. You're cool!$1\"(break)emote Vincent 12\\speak Vincent \"You don't believe me either... no one believes me...$2\"/pause 500/faceDirection Vincent 2/pause 500/faceDirection farmer 2/speak Vincent \"You wait, farmer @! Next time I see it, I'm gonna...I'm gonna catch it!#$b#Then everyone's got to believe it's real!$3\"/speed Vincent 5/move Vincent 3 0 2/faceDirection Vincent 3/faceDirection farmer 1/textAboveHead Vincent \"Right?\"/pause 500/emote farmer 28/pause 1000/end",
+				//"57872001/e 57872000/e 6398004/p Vincent/p Jessie/t 1600 1900":"continue/38 25/farmer 38 17 2 Vincent 45 24 1 Jessie 46 24 3/skippable/"
+			}
+		}
+
+
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"Name": "Minnow",
+	"Description": "A small river fish.",
+	"Category": "Fish",
+	"Edibility": 1,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 20,
+	"IsColored": false,
+	"GiftTastes":
+	{
+		/*gift tastes go here*/
+	},
+	"NameLocalization":
+	{
+		/*to be added in*/
+	},
+	"DescriptionLocalization":
+	{
+		/*to be added in*/
+	},
+}

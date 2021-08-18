@@ -1,0 +1,1552 @@
+{
+    "Format": "1.20",
+    "ConfigSchema": {
+        "TownMap": {
+            "AllowValues": "default, karmylla, vanilla",
+            "Default": "default"
+        },
+        "River": {
+            "AllowValues": "true, false",
+            "Default": "false"
+        },
+        "Forest": {
+            "AllowValues": "true, false",
+            "Default": "false"
+        },
+        "Skin": {
+            "AllowValues": "Kaya, NewEastScarpe",
+            "Default": "NewEastScarpe"
+        }
+    },
+    "DynamicTokens": [
+        {
+            "Name": "birdVar",
+            "Value": "0"
+        },
+        {
+            "Name": "birdVar",
+            "Value": "32",
+            "When": {
+                "Season": "fall",
+                "DayofWeek": "friday, saturday, sunday"
+            }
+        },
+        {
+            "Name": "birdVar",
+            "Value": "64",
+            "When": {
+                "Season": "fall",
+                "DayofWeek": "monday, tuesday, wednesday, thursday"
+            }
+        },
+        {
+            "Name": "birdVar",
+            "Value": "96",
+            "When": {
+                "Season": "winter"
+            }
+        }
+    ],
+    "Changes": [
+        //Load Tilesheets
+        {
+            "Action": "Load",
+            "Target": "Maps/spring_EastScarpe, Maps/summer_EastScarpe, Maps/fall_EastScarpe, Maps/winter_EastScarpe,Maps/spring_lighthouse, Maps/summer_lighthouse, Maps/fall_lighthouse, Maps/winter_lighthouse",
+            "FromFile": "assets/TileSheets/{{Skin}}/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/spring_Cottage, Maps/summer_Cottage, Maps/fall_Cottage , Maps/winter_Cottage,Maps/spring_Inn, Maps/summer_Inn, Maps/fall_Inn, Maps/winter_Inn, Maps/lemurfurniture, Maps/lumisteria_flowerset",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Maps/spring_himeoutdoors, Maps/summer_himeoutdoors, Maps/fall_himeoutdoors , Maps/winter_himeoutdoors",
+            "FromFile": "assets/TileSheets/{{TargetWithoutPath}}.png"
+        },
+        //Map patches for various map types (Karmylla's Immersive Maps, Reimagined, Reimagined2, Expanded, Shortcuts Enhanced)
+        //River Patch
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/EastScarpeRiverPatch1.tmx",
+            "ToArea": {
+                "X": 19,
+                "Y": 0,
+                "Width": 19,
+                "Height": 26
+            },
+            "When": {
+                "River": true,
+                "HasMod |contains=DaisyNiko.Tilesheets": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/EastScarpeRiverPatch1-waterfall.tmx",
+            "ToArea": {
+                "X": 19,
+                "Y": 0,
+                "Width": 19,
+                "Height": 26
+            },
+            "When": {
+                "River": true,
+                "HasMod |contains=DaisyNiko.Tilesheets": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/EastScarpeRiverPatch2.tmx",
+            "ToArea": {
+                "X": 38,
+                "Y": 15,
+                "Width": 42,
+                "Height": 17
+            },
+            "MapProperties": {
+                "CanyonWater": "T"
+            },
+            "When": {
+                "River": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/ESWilderness1.tmx",
+            "ToArea": {
+                "X": 24,
+                "Y": 38,
+                "Width": 35,
+                "Height": 35
+            },
+            "MapProperties": {
+                "Wilderness": "T"
+            },
+            "When": {
+                "Forest": true,
+                "HasMod |contains=DaisyNiko.Tilesheets": true,
+                "HasMod |contains=Hime.ARV.CP": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/ESWilderness.tmx",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 35,
+                "Height": 22
+            },
+            "ToArea": {
+                "X": 24,
+                "Y": 38,
+                "Width": 35,
+                "Height": 22
+            },
+            "MapProperties": {
+                "Wilderness": "T"
+            },
+            "When": {
+                "Forest": true,
+                "HasMod |contains=DaisyNiko.Tilesheets": true,
+                "HasMod": "ItsBenter.EastScarpeInn.TMX"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/ESWilderness.tmx",
+            "FromArea": {
+                "X": 0,
+                "Y": 22,
+                "Width": 12,
+                "Height": 13
+            },
+            "ToArea": {
+                "X": 24,
+                "Y": 60,
+                "Width": 12,
+                "Height": 13
+            },
+            "When": {
+                "Forest": true,
+                "HasMod |contains=DaisyNiko.Tilesheets": true,
+                "HasMod": "ItsBenter.EastScarpeInn.TMX"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/ESWilderness.tmx",
+            "FromArea": {
+                "X": 9,
+                "Y": 31,
+                "Width": 20,
+                "Height": 4
+            },
+            "ToArea": {
+                "X": 33,
+                "Y": 69,
+                "Width": 20,
+                "Height": 4
+            },
+            "When": {
+                "Forest": true,
+                "HasMod |contains=DaisyNiko.Tilesheets": true,
+                "HasMod": "ItsBenter.EastScarpeInn.TMX"
+            }
+        },
+        //Mountains
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "FromFile": "assets/Patches/MountainEastScarpe.tmx",
+            "ToArea": {
+                "X": 86,
+                "Y": 35,
+                "Width": 9,
+                "Height": 6
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "FromFile": "assets/Patches/MountainEastScarpeSDR2.tmx",
+            "ToArea": {
+                "X": 85,
+                "Y": 35,
+                "Width": 10,
+                "Height": 6
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "FromFile": "assets/Patches/MountainEastScarpeShortcuts.tmx",
+            "ToArea": {
+                "X": 86,
+                "Y": 35,
+                "Width": 10,
+                "Height": 6
+            },
+            "When": {
+                "HasMod |contains=SEnhanced.Shortcuts": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "FromFile": "assets/Patches/MountainEastScarpeSVE.tmx",
+            "ToArea": {
+                "X": 86,
+                "Y": 35,
+                "Width": 9,
+                "Height": 6
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL, megmom84.waterfilledgorge": true
+            }
+        },
+        /* {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Warp"
+                    ],
+                    "Value": "120 70 EastScarpe 0 70 120 71 EastScarpe 0 71 120 72 EastScarpe 0 72 120 73 EastScarpe 0 73 120 74 EastScarpe 0 74",
+                    "Delimiter": " "
+                }
+            ],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL, FlashShifter.ShearwaterBridge": false
+            }
+        },*/
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_rev_core.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        //Stardew Valley Expanded
+        { //Adds patch for Town East so you can access Herbert if they are both loaded
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-SVE.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true,
+                "HasMod |contains=tiger.herbmapss": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 119,
+                        "Y": 93
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Custom_TownEast 2 20"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 119,
+                        "Y": 94
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Custom_TownEast 2 20"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 119,
+                        "Y": 95
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Custom_TownEast 2 20"
+                    }
+                }
+            ],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true,
+                "HasMod |contains=tiger.herbmapss": true
+            }
+        },
+        //Karmylla's Immersive Maps, but not Stardew Reimagined2
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_rev_karm.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": false,
+                "HasMod |contains=Karmylla.ImmersiveMaps": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        //Stardew Reimagined2 (over-rides Karmylla's if both installed and TownMap set to "default")
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_REV_Reimagined2.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        //Reimagined2 AND Karmylla's maps, Karmylla option selected
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_rev_karm.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true,
+                "HasMod |contains=Karmylla.ImmersiveMaps": true,
+                "TownMap": "karmylla",
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        //Reimagined
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_REV_Reimagined2.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.StardewValleyReimagined": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false,
+                "TownMap": "default"
+            }
+        },
+        //if set to "vanilla" will over-ride every other option.
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/ES_rev_core.tmx",
+            "ToArea": {
+                "X": 109,
+                "Y": 63,
+                "Width": 11,
+                "Height": 14
+            },
+            "When": {
+                "TownMap": "vanilla",
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ShearwaterBridge",
+            "FromFile": "assets/Patches/ES_ShearwaterBridgestrip.tmx",
+            "ToArea": {
+                "X": 59,
+                "Y": 14,
+                "Width": 1,
+                "Height": 12
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+        /* {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "MapProperties": {
+                "Warp": "-1 70 Town 119 70 -1 71 Town 119 71 -1 72 Town 119 72 -1 73 Town 119 73 -1 74 Town 119 74 79 48 ESOrchard 1 18 79 49 ESOrchard 1 19 73 -1 DeepMountains 60 61 74 -1 DeepMountains 60 61 75 -1 DeepMountains 60 61"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },*/
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "MapProperties": {
+                "Warp": "-1 70 Custom_ShearwaterBridge 59 19 -1 71 Custom_ShearwaterBridge 59 20 -1 72 Custom_ShearwaterBridge 59 21 -1 73 Custom_ShearwaterBridge 59 22 -1 74 Custom_ShearwaterBridge 59 23 79 48 ESOrchard 1 18 79 49 ESOrchard 1 19 73 -1 DeepMountains 60 61 74 -1 DeepMountains 60 61 75 -1 DeepMountains 60 61"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "MapProperties": {
+                "Warp": "-1 70 ESVineyard 59 19 -1 71 ESVineyard 59 20 -1 72 ESVineyard 59 21 -1 73 ESVineyard 59 22 -1 74 ESVineyard 59 23 79 48 ESOrchard 1 18 79 49 ESOrchard 1 19 73 -1 DeepMountains 60 61 74 -1 DeepMountains 60 61 75 -1 DeepMountains 60 61"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        /*{
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapProperties": {
+                "warp": "-1 52 BusStop 34 23 -1 53 BusStop 34 23 -1 54 BusStop 34 23 -1 55 BusStop 34 24 53 110 Beach 38 0 81 -1 Mountain 15 40 79 -1 Mountain 15 40 80 -1 Mountain 15 40 82 -1 Mountain 15 40 83 -1 Mountain 15 40 -1 92 Forest 118 25 -1 90 Forest 118 25 -1 89 Forest 118 25 -1 91 Forest 118 25 54 110 Beach 38 0 55 110 Beach 38 0 92 45 MovieTheater 13 4 120 70 Custom_ShearwaterBridge 0 20 120 71 Custom_ShearwaterBridge 0 20 120 72 Custom_ShearwaterBridge 0 20 120 73 Custom_ShearwaterBridge 0 20 120 74 Custom_ShearwaterBridge 0 20 120 75 Custom_ShearwaterBridge 0 20 120 76 Custom_ShearwaterBridge 0 20"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },*/
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ShearwaterBridge",
+            "MapProperties": {
+                "Warp": "-1 19 Town 118 70 -1 20 Town 118 71 -1 21 Town 118 72 -1 22 Town 118 73 -1 23 Town 118 73 60 19 EastScarpe 0 70 60 20 EastScarpe 0 71 60 21 EastScarpe 0 72 60 22 EastScarpe 0 73 60 23 EastScarpe 0 74"
+                // 60 24 EastScarpe 0 74 60 25 EastScarpe 0 74 60 26 EastScarpe 0 74"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+        /*{
+            "Action": "EditMap",
+            "Target": "Maps/Custom_ShearwaterBridge",
+            "MapProperties": {
+                "Warp": "-1 19 Town 118 70 -1 20 Town 118 71 -1 21 Town 118 72 -1 22 Town 118 73 -1 23 Town 118 73 60 19 EastScarpe 0 70 60 20 EastScarpe 0 71 60 21 EastScarpe 0 72 60 22 EastScarpe 0 73 60 23 EastScarpe 0 74"
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.ShearwaterBridge": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },*/
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Warp"
+                    ],
+                    "Value": "120 70 Custom_ShearwaterBridge 0 20 120 71 Custom_ShearwaterBridge 0 20 120 72 Custom_ShearwaterBridge 0 20 120 73 Custom_ShearwaterBridge 0 20 120 74 Custom_ShearwaterBridge 0 20",
+                    "Delimiter": " "
+                }
+            ],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Warp"
+                    ],
+                    "Value": "120 70 ESVineyard 0 20 120 71 ESVineyard 0 20 120 72 ESVineyard 0 20 120 73 ESVineyard 0 20 120 74 ESVineyard 0 20",
+                    "Delimiter": " "
+                }
+            ],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/Patches/GrampletonPatch.tmx",
+            "ToArea": {
+                "X": 70,
+                "Y": 32,
+                "Width": 10,
+                "Height": 5
+            },
+            "When": {
+                "HasMod |contains=flashshifter.GrampletonFields": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Custom_GrampletonFields",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 1,
+                        "Y": 110
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap EastScarpe 78 33"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 1,
+                        "Y": 111
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap EastScarpe 78 34"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 1,
+                        "Y": 112
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap EastScarpe 78 35"
+                    }
+                }
+            ],
+            "When": {
+                "HasMod |contains=flashshifter.GrampletonFields": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            }
+        },
+        /* {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "When": {
+                "HasMod |contains=flashshifter.GrampletonFields": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 36,
+                        "Y": 44
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 5 112 GrampletonFields"
+                    }
+                }
+            ]
+        },*/
+        /*{
+            "Action": "EditMap",
+            "Target": "Maps/TownEast",
+            "FromFile": "assets/TownEast_EastScarpe.tbin",
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 40,
+                "Height": 30
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+       
+        //Town
+        //If using Karmylla's maps with another Town edit installed, please adjust your config - otherwise it autodetects what one you are using. This may misfire if you mix them up a lot!
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-Core.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            }
+        },
+        //Stardew Valley Expanded
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-SVE.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+        //Karmylla's Immersive Maps, but not Stardew Reimagined2
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-KIM.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": false,
+                "HasMod |contains=Karmylla.ImmersiveMaps": true
+            }
+        },
+        //Stardew Reimagined2 (over-rides Karmylla's if both installed and TownMap set to "default")
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-SDR2.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true
+            }
+        },
+        //Reimagined2 AND Karmylla's maps, Karmylla option selected
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-KIM.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true,
+                "HasMod |contains=Karmylla.ImmersiveMaps": true,
+                "TownMap": "karmylla"
+            }
+        },
+        //short cuts
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-SEcuts.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=SEnhanced.Shortcuts": true,
+                "TownMap": "default"
+            }
+        },
+        //Reimagined
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-reimagined1.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.StardewValleyReimagined": true,
+                "TownMap": "default"
+            }
+        },
+        //if set to "vanilla" will over-ride every other option.
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/EastScarpeEntrance-Core.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 8
+            },
+            "When": {
+                "TownMap": "vanilla"
+            }
+        },
+        //Offsets exit warps for Reimagined2
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "MapProperties": {
+                "Warp": "-1 91 Town 117 94 -1 92 Town 117 94 -1 93 Town 117 95 -1 94 Town 117 96 79 48 ESOrchard 1 18 79 49 ESOrchard 1 19"
+            },
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true
+            }
+        },
+        //Remove tree from museum
+        {
+            "LogName": "Removes tree from KIM",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 108,
+                        "Y": 88
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 109,
+                        "Y": 88
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 110,
+                        "Y": 88
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 111,
+                        "Y": 88
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 108,
+                        "Y": 89
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 109,
+                        "Y": 89
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 110,
+                        "Y": 89
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 111,
+                        "Y": 89
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 108,
+                        "Y": 90
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 109,
+                        "Y": 90
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 110,
+                        "Y": 90
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                },
+                {
+                    "Position": {
+                        "X": 111,
+                        "Y": 90
+                    },
+                    "Layer": "AlwaysFront",
+                    "Remove": true
+                }
+            ],
+            "When": {
+                "HasMod": "Karmylla.ImmersiveMaps, FlashShifter.StardewValleyExpandedALL"
+            }
+        },*/
+        {
+            "LogName": "Removes treestump from Water Filled Gorge",
+            "Action": "EditMap",
+            "Target": "Maps/Mountain",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 93,
+                        "Y": 35
+                    },
+                    "Layer": "Buildings",
+                    "Remove": true
+                }
+            ],
+            "When": {
+                "HasMod": "megmom84.waterfilledgorge"
+            }
+        },
+        {
+            "LogName": "Adds warp to Mountain when Shortcuts installed",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 3,
+                        "Y": 0
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Mountain 92 40"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 4,
+                        "Y": 0
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Mountain 92 40"
+                    }
+                }
+            ],
+            "When": {
+                "HasMod": "SEnhanced.Shortcuts"
+            }
+        },
+        {
+            "LogName": "Adds warp to caves",
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 43,
+                        "Y": 84
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Underground1 14 67"
+                    }
+                },
+                {
+                    "Position": {
+                        "X": 44,
+                        "Y": 84
+                    },
+                    "Layer": "Back",
+                    "SetProperties": {
+                        "TouchAction": "LoadMap Underground1 14 67"
+                    }
+                }
+            ],
+            "When": {
+                "HasMod": "DaisyNiko.Tilesheets"
+            }
+        },
+        //Fishing
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "EastScarpe": "-1/-1/-1/-1/153 -1 142 0 152 -1 129 1 147 1 131 2 148 2 708 2/153 -1 142 0 144 0 152 -1 154 1 128 2 130 2 146 2 149 2 150 2 155 2 708 2 701 2 267 2/153 -1 142 0 269 0 152 -1 129 1 154 1 155 1 131 2 148 2 150 2 705 2 701 2/153 -1 142 0 269 0 152 -1 147 1 155 1 708 2 130 2 131 2 146 2 150 2 151 2 154 2 705 2/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1 102 .15 390 .25 330 1",
+                "Underground1": "-1/-1/-1/-1/153 -1 156 -1 157 -1 158 -1/153 -1 156 -1 157 -1 158 -1/153 -1 156 -1 157 -1 158 -1/153 -1 156 -1 157 -1 158 -1/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1",
+                "ESOrchard": "-1/-1/-1/-1/139 -1 698 -1 147 -1 136 -1 699 -1 138 -1 129 -1/139 -1 137 -1 136 -1 699 -1 148 -1/698 -1 137 -1 136 -1 699 -1/147 -1 136 -1 699 -1/110 .1 118 .1 100 .05 103 .05 106 .05 102 .15 390 .25 330 1",
+                "ESVineyard": "18 .9/402 .9/410 .6/418 .7 414 .1 283 .5/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/378 .2 110 .2 583 .1 102 .2 390 .25 330 1",
+            },
+            "When": {
+                "HasMod |contains=MoreFish": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "EastScarpe": "1096 .4 1097 .3/1096 .5 1098 .1/1096 .5 1099 .1/1096 .5 1100 .1/153 -1 142 0 1123 0 1124 0 1146 0 1147 0 152 -1 129 1 147 1 1071 1 1088 1 1075 1 131 2 148 2 708 2 1120 2 1137 2 1139 2 1143 2 1058 2 1076 2 267 2/153 -1 142 0 144 0 1122 0 1124 0 1148 0 1082 0 1146 0 152 -1 154 1 1071 1 1075 1 128 2 130 2 146 2 149 2 150 2 155 2 708 2 267 2 1120 2 1129 2 1143 2 1068 2 1070 2/153 -1 142 0 269 0 1121 0 1146 0 1149 0 152 -1 129 1 154 1 155 1 1075 1 131 2 148 2 150 2 705 2 1135 2 1136 2 1059 2 1069 2/153 -1 142 0 269 0 1146 0 1079 0 1081 0 152 -1 147 1 155 1 1075 1 708 2 130 2 131 2 146 2 150 2 151 2 154 2 705 2 1135 2 1138 2 1126 2 1060 2 1061 2 1072 2 1080 2 1109 2/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1 102 .15 390 .25 330 1",
+                "Underground1": "-1/-1/-1/-1/153 -1 156 -1 157 -1 158 -1 1145 -1 1062 -1 1075 -1 1095 -1 1184 -1 1185 -1 1114 -1/153 -1 156 -1 157 -1 158 -1 1145 -1 1062 -1 1075 -1 1095 -1 1184 -1 1185 -1 1114 -1/153 -1 156 -1 157 -1 158 -1 1145 -1 1062 -1 1075 -1 1095 -1 1184 -1 1185 -1 1114 -1/153 -1 156 -1 157 -1 158 -1 1145 -1 1062 -1 1075 -1 1095 -1 1184 -1 1185 -1 1114 -1/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1",
+                "ESOrchard": "-1/-1/-1/-1/139 -1 698 -1 147 -1 136 -1 699 -1 138 -1 129 -1 1073 -1 1086 -1 1092 -1/139 -1 137 -1 136 -1 699 -1 148 -1 1073 -1 1086 -1 1092 -1/698 -1 137 -1 136 -1 699 -1 1086 -1 1092 -1/147 -1 136 -1 699 -1/110 .1 118 .2 100 .05 103 .05 106 .05 102 .15 390 .25 330 1",
+                "ESVineyard": "18 .9/402 .9/410 .6/418 .7 414 .1 283 .5/137 -1 132 -1 143 -1 145 -1 153 -1 706 -1/138 -1 132 -1 144 -1 145 -1 153 -1 706 -1 704 -1/139 -1 137 -1 132 -1 140 -1 143 -1 153 -1 706 -1 699 -1/132 -1 140 -1 141 -1 143 -1 144 -1 153 -1 707 -1 699 -1/378 .2 110 .2 583 .1 102 .2 390 .25 330 1",
+            },
+            "When": {
+                "HasMod |contains=MoreFish": true
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Fields": {
+                "EastScarpe": {
+                    "5": "142 0 144 0 1122 0 1124 0 1148 0 1082 0 1146 0 138 0 132 0 145 0 153 0 706 0 701 0 1073 0 154 1 1075 1 1168 2 1171 2 1173 2 1175 2 1159 2 1158 2 1166 2 1160 2 1177 2 1068 2 1071 2"
+                }
+            },
+            "When": {
+                "HasMod |contains=MoreFish": true,
+                "Season": "summer",
+                "Day": "12, 13, 14"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Fish",
+            "Fields": {
+                "137": {
+                    "6": "summer fall"
+                },
+                "138": {
+                    "6": "spring"
+                },
+                "139": {
+                    "6": "spring summer"
+                },
+                "148": {
+                    "6": "summer"
+                },
+                "698": {
+                    "6": "spring fall"
+                }
+            },
+            "When": {
+                "LocationName": "ESOrchard"
+            }
+        },
+        //If Smapi component is uninstalled for mobile etc
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "EastScarpe": "-1/-1/-1/-1/153 -1 142 -1 152 -1 129 -1 147 -1 131 -1 148 -1 708 -1/153 -1 142 -1 144 -1 152 -1 154 -1 128 -1 130 -1 146 -1 149 -1 150 -1 155 -1 708 -1 701 -1 267 -1/153 -1 142 -1 269 0 152 -1 129 -1 154 -1 155 -1 131 -1 148 -1 150 -1 705 -1 701 -1/153 -1 142 -1 269 -1 152 -1 147 -1 155 -1 708 -1 130 -1 131 -1 146 -1 150 -1 151 -1 154 -1 705 -1/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1 102 .15 390 .25 330 1"
+            },
+            "When": {
+                "HasMod |contains=MoreFish": false,
+                "HasMod |contains=LemurKat.EastScarpe.SMAPI": false
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "EastScarpe": "1096 .4 1097 .3/1096 .5 1098 .1/1096 .5 1099 .1/1096 .5 1100 .1/153 -1 142 -1 1123 -1 1124 -1 1146 -1 1147 -1 152 -1 129 -1 147 -1 1071 -1 1088 -1 1075 -1 131 -1 148 -1 708 -1 1120 -1 1137 -1 1139 -1 1143 -1 1058 -1 1076 -1 267 2/153 -1 142 -1 144 -1 1122 -1 1124 -1 1148 -1 1082 -1 1146 -1 152 -1 154 -1 1071 -1 1075 -1 128 -1 130 -1 146 -1 149 -1 150 -1 155 -1 708 -1 267 -1 1120 -1 1129 -1 1143 -1 1068 -1 1070 -1/153 -1 142 -1 269 -1 1121 -1 1146 -1 1149 -1 152 -1 129 -1 154 -1 155 -1 1075 -1 131 -1 148 -1 150 -1 705 -1 1135 -1 1136 -1 1059 -1 1069 -1/153 -1 142 -1 269 -1 1146 -1 1079 -1 1081 -1 152 -1 147 -1 155 -1 1075 -1 708 -1 130 -1 131 -1 146 -1 150 -1 151 -1 154 -1 705 -1 1135 -1 1138 -1 1126 -1 1060 -1 1061 -1 1072 -1 1080 -1 1109 -1/107 .01 378 .08 579 .1 588 .1 581 .1 583 .1 102 .15 390 .25 330 1"
+            },
+            "When": {
+                "HasMod |contains=MoreFish": true,
+                "HasMod |contains=LemurKat.EastScarpe.SMAPI": false
+            }
+        },
+        //Seasonal Birdwatching
+        {
+            "LogName": "Pelicans for Pelican Town part 1",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/Pelican.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 320,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 320,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "EastScarpe"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Pelicans for Pelican Town part 2",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/Pelican.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 32,
+                "Width": 128,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 32,
+                "Width": 128,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "EastScarpe"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Pink Wader Migration part 1",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/PinkWader.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 320,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 320,
+                "Height": 32
+            },
+            "When": {
+                "Season": "Summer",
+                "Day": "12, 13, 14"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Pink Wader Migration part 2",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/PinkWader.png",
+            "FromArea": {
+                "X": 0,
+                "Y": 32,
+                "Width": 128,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 32,
+                "Width": 128,
+                "Height": 32
+            },
+            "When": {
+                "Season": "Summer",
+                "Day": "12, 13, 14"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Add bird part 1",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/EastScarpeBirds.png",
+            "FromArea": {
+                "X": 0,
+                "Y": "{{birdVar}}",
+                "Width": 160,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 160,
+                "Y": 64,
+                "Width": 160,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "EastScarpe"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Add bird part 2",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/EastScarpeBirds.png",
+            "FromArea": {
+                "X": 160,
+                "Y": "{{birdVar}}",
+                "Width": 128,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 96,
+                "Width": 128,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "EastScarpe"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Replace crested blue bird part 1",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/EastScarpeBirds.png",
+            "FromArea": {
+                "X": 0,
+                "Y": "{{birdVar}}",
+                "Width": 160,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 160,
+                "Y": 128,
+                "Width": 160,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "EastScarpe"
+            },
+            "Update": "OnLocationChange"
+        },
+        {
+            "LogName": "Replace crested blue bird part 2",
+            "Action": "EditImage",
+            "Target": "TileSheets/Critters",
+            "FromFile": "assets/EastScarpeBirds.png",
+            "FromArea": {
+                "X": 160,
+                "Y": "{{birdVar}}",
+                "Width": 128,
+                "Height": 32
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 160,
+                "Width": 128,
+                "Height": 32
+            },
+            "When": {
+                "LocationName": "EastScarpe"
+            },
+            "Update": "OnLocationChange"
+        },
+        //Loads a blank template so NPC creators can EditData in their own events without creating conflicts
+        {
+            "LogName": "Events for East Scarpe",
+            "Action": "Load",
+            "Target": "Data/Events/EastScarpe, Data/Events/DeepMountains, Data/Events/Silo, Data/Events/ESHouse1, Data/Events/ESHouse2, Data/Events/ESHouse3, Data/Events/ESHouse4, Data/Events/EastScarpeInn, Data/Events/ESOrchard",
+            "FromFile": "assets/EastScarpeEvents.json"
+        },
+        //TileData messages
+        {
+            "LogName": "Location Messages",
+            "Action": "Include",
+            "FromFile": "assets/LocationMessages.json",
+        },
+        /*{	"Action": "EditData", "Target": "Strings/schedules/Richie", "Entries": { "sleep.000": "%Richie is sleeping." }  },*/
+        //Compatibility Patches
+        //Herbert
+        /*{
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/TownHerbert-Core.tmx",
+            "ToArea": {
+                "X": 100,
+                "Y": 91,
+                "Width": 20,
+                "Height": 13
+            },
+            "When": {
+                "HasMod |contains=tiger.herbmapss": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },*/
+        //Herbert
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/TownHerbert-SVE.tmx",
+            "ToArea": {
+                "X": 112,
+                "Y": 95,
+                "Width": 8,
+                "Height": 9
+            },
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true,
+                "HasMod |contains=tiger.herbmapss": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "FromFile": "assets/Patches/HerbertEntrance.tmx",
+            "ToArea": {
+                "X": 107,
+                "Y": 92,
+                "Width": 13,
+                "Height": 6
+            },
+            "When": {
+                "HasMod |contains=tiger.herbmapss": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Warp"
+                    ],
+                    "Value": "119 95 Herbertsproperty 1 31",
+                    "Delimiter": " "
+                }
+            ],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": false,
+                "HasMod |contains=tiger.herbmapss": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": [
+                        "MapProperties",
+                        "Warp"
+                    ],
+                    "Value": "120 100 Herbertsproperty 0 30 120 101 Herbertsproperty 0 30",
+                    "Delimiter": " "
+                }
+            ],
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true,
+                "HasMod |contains=tiger.herbmapss": true
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Herbertsproperty",
+            "MapProperties": {
+                "Warp": "-1 30 Town 119 100 -1 31 Town 119 101"
+            },
+            "When": {
+                "HasMod |contains=tiger.herbmapss": true,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedALL": true
+            }
+        },
+        {
+            "Action": "Include",
+            "FromFile": "assets/KayaSkin.json",
+            "When": {
+                "Skin": "Kaya"
+            }
+        },
+        //Removes Garbage can I added
+        /*{
+            "LogName": "Remove Garbage can from Archaeology House",
+            "Action": "EditMap",
+            "Target": "Maps/Town",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 108,
+                        "Y": 91
+                    },
+                    "Layer": "Buildings",
+                    "Remove": true
+                }
+            ],
+            "When": {
+                "HasMod |contains=DaisyNiko.SVR2": true,
+                "HasMod |contains=test2.andril11": true
+            }
+        },*/
+        //Adds Door Warp to Nicer Sewer
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Underground1",
+            "When": {
+                "HasMod": "LemurKat.CleanerSewer.CP"
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 3
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 33 40 Sewer"
+                        //"Warp 44 15 MonsterSaloon"
+                    }
+                }
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Sewer",
+            "When": {
+                "HasMod": "LemurKat.CleanerSewer.CP"
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 32,
+                        "Y": 39
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 25 4 Underground1"
+                    }
+                    //"Warp 1 6 MonsterSaloon"
+                }
+            ]
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Underground1",
+            "When": {
+                "HasMod": "MouseyPounds.ShadowFestival",
+                "DayEvent": "spirit's eve"
+            },
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 25,
+                        "Y": 3
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 3 47 Sewer"
+                        //"Warp 44 15 MonsterSaloon"
+                    }
+                }
+            ]
+        },
+        //East Scarpe Time based Map Edits:
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpe",
+            "FromFile": "assets/Patches/VanGone.tmx",
+            "ToArea": {
+                "X": 28,
+                "Y": 27,
+                "Width": 6,
+                "Height": 9
+            },
+            "Update": "OnTimeChange",
+            "When": {
+                "DayofWeek": "Tuesday",
+                "Time": "{{Range: 1230, 1800}}"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/ESOrchard",
+            "FromFile": "assets/Patches/Orchard_river.tmx",
+            "ToArea": {
+                "X": 4,
+                "Y": 0,
+                "Width": 15,
+                "Height": 40
+            },
+            "When": {
+                "River": "true"
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/ESOrchard",
+            "FromFile": "assets/Patches/Orchard_quarry_NoBridge.tmx",
+            "ToArea": {
+                "X": 5,
+                "Y": 17,
+                "Width": 6,
+                "Height": 3
+            },
+            "Update": "OnTimeChange",
+            "When": {
+                "River": "false",
+                "Time": "{{Range: 610, 1800}}",
+                "HasSeenEvent |contains=80090001": false
+            }
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/ESOrchard",
+            "FromFile": "assets/Patches/Orchard_river_NoBridge.tmx",
+            "ToArea": {
+                "X": 5,
+                "Y": 17,
+                "Width": 6,
+                "Height": 3
+            },
+            "Update": "OnTimeChange",
+            "When": {
+                "River": "true",
+                "Time": "{{Range: 610, 1800}}",
+                "HasSeenEvent |contains=80090001": false
+            }
+        },
+        {
+            "LogName": "House Interior when married to Aideen",
+            "Action": "EditMap",
+            "Target": "Maps/ESHouse1",
+            "FromFile": "assets/ESHouse1-rev.tmx",
+            "FromArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 30,
+                "Height": 25
+            },
+            "ToArea": {
+                "X": 0,
+                "Y": 0,
+                "Width": 30,
+                "Height": 25
+            },
+            "When": {
+                "Spouse": "Aideen"
+            }
+        },
+        {
+            "LogName": "Tristan's House Interior 1",
+            "Action": "EditMap",
+            "Target": "Maps/ESHouse1",
+            "FromFile": "assets/TristanHouse3.tmx",
+            "FromArea": {
+                "X": 9,
+                "Y": 0,
+                "Width": 21,
+                "Height": 14
+            },
+            "ToArea": {
+                "X": 9,
+                "Y": 0,
+                "Width": 21,
+                "Height": 14
+            },
+            "When": {
+                "HasSeenEvent |contains=5295000": true,
+                "Spouse |contains=MisterGinger, Shane": false
+            }
+        },
+        //Adds trapdoor to Mine
+        /*{   "Action": "EditMap",
+            "Target": "Maps/Mine",
+            "FromFile": "assets/trapdoor.tmx",
+            "ToArea": { "X": 45,  "Y": 13,
+                    "Width": 1, "Height": 1
+                         }
+            }*/
+        { //sets up Luma's door warp
+            "Action": "EditMap",
+            "Target": "Maps/ESOrchard",
+            "MapTiles": [
+                {
+                    "Position": {
+                        "X": 38,
+                        "Y": 12
+                    },
+                    "Layer": "Buildings",
+                    "SetProperties": {
+                        "Action": "Warp 13 21 Custom_ESLumaHut"
+                    }
+                }
+            ],
+            //"When": {                "HasMod": "Pillow.NPCLuma"            }
+        }
+    ]
+}

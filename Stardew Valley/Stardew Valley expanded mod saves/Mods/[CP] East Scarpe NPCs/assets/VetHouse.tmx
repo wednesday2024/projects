@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="-1" width="36" height="28" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="24">
+ <editorsettings>
+  <export target="VetHouse.tmx" format="tmx"/>
+ </editorsettings>
+ <properties>
+  <property name="Doors" value="5 21 1 120 10 21 1 120 5 17 1 120 10 17 1 120 19 11 1 120 28 11 1 120 20 20 1 120 27 20 1 120"/>
+  <property name="Warp" value="12 27 EastScarpe 15 24"/>
+ </properties>
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="../../../Pictures/Stardew/Core Game Files/Tiles &amp; Festivals/townInterior" width="512" height="1088"/>
+  <tile id="546">
+   <animation>
+    <frame tileid="546" duration="250"/>
+    <frame tileid="547" duration="250"/>
+    <frame tileid="548" duration="250"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="2177" name="p" tilewidth="16" tileheight="16" tilecount="32" columns="4">
+  <image source="../../../Pictures/Stardew/Core Game Files/Tiles &amp; Festivals/paths" width="64" height="128"/>
+ </tileset>
+ <tileset firstgid="2209" name="lemurfurniture" tilewidth="16" tileheight="16" tilecount="2048" columns="32">
+  <image source="../../../Pictures/Stardew/Core Game Files/Tiles &amp; Festivals/lemurfurniture.png" width="512" height="1024"/>
+ </tileset>
+ <tileset firstgid="4257" name="sproomsts" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="../../../Pictures/Stardew/Core Game Files/Tiles &amp; Festivals/sproomsts.png" width="400" height="1264"/>
+  <tile id="362">
+   <animation>
+    <frame tileid="362" duration="250"/>
+    <frame tileid="363" duration="250"/>
+    <frame tileid="364" duration="250"/>
+    <frame tileid="365" duration="250"/>
+    <frame tileid="366" duration="250"/>
+    <frame tileid="367" duration="250"/>
+    <frame tileid="368" duration="250"/>
+    <frame tileid="300" duration="250"/>
+    <frame tileid="301" duration="250"/>
+    <frame tileid="302" duration="250"/>
+    <frame tileid="303" duration="250"/>
+    <frame tileid="305" duration="250"/>
+    <frame tileid="306" duration="250"/>
+    <frame tileid="308" duration="250"/>
+    <frame tileid="309" duration="250"/>
+    <frame tileid="311" duration="250"/>
+    <frame tileid="312" duration="250"/>
+    <frame tileid="313" duration="250"/>
+    <frame tileid="314" duration="250"/>
+    <frame tileid="315" duration="250"/>
+    <frame tileid="316" duration="250"/>
+    <frame tileid="317" duration="250"/>
+    <frame tileid="318" duration="250"/>
+    <frame tileid="319" duration="250"/>
+    <frame tileid="320" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="387">
+   <animation>
+    <frame tileid="387" duration="250"/>
+    <frame tileid="388" duration="250"/>
+    <frame tileid="389" duration="250"/>
+    <frame tileid="390" duration="250"/>
+    <frame tileid="391" duration="250"/>
+    <frame tileid="392" duration="250"/>
+    <frame tileid="393" duration="250"/>
+    <frame tileid="325" duration="250"/>
+    <frame tileid="326" duration="250"/>
+    <frame tileid="327" duration="250"/>
+    <frame tileid="328" duration="250"/>
+    <frame tileid="330" duration="250"/>
+    <frame tileid="331" duration="250"/>
+    <frame tileid="332" duration="250"/>
+    <frame tileid="333" duration="250"/>
+    <frame tileid="334" duration="250"/>
+    <frame tileid="336" duration="250"/>
+    <frame tileid="337" duration="250"/>
+    <frame tileid="338" duration="250"/>
+    <frame tileid="339" duration="250"/>
+    <frame tileid="340" duration="250"/>
+    <frame tileid="341" duration="250"/>
+    <frame tileid="342" duration="250"/>
+    <frame tileid="343" duration="250"/>
+    <frame tileid="344" duration="250"/>
+    <frame tileid="345" duration="250"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="6232" name="VoidCat" tilewidth="16" tileheight="16" tilecount="128" columns="8">
+  <image source="../../../Pictures/Stardew/Core Game Files/Tiles &amp; Festivals/VoidCat.png" width="128" height="256"/>
+  <tile id="80">
+   <animation>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="80" duration="250"/>
+    <frame tileid="82" duration="250"/>
+    <frame tileid="84" duration="250"/>
+    <frame tileid="86" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="81">
+   <animation>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="81" duration="250"/>
+    <frame tileid="83" duration="250"/>
+    <frame tileid="85" duration="250"/>
+    <frame tileid="87" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="88">
+   <animation>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="88" duration="250"/>
+    <frame tileid="90" duration="250"/>
+    <frame tileid="92" duration="250"/>
+    <frame tileid="94" duration="250"/>
+   </animation>
+  </tile>
+  <tile id="89">
+   <animation>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="89" duration="250"/>
+    <frame tileid="91" duration="250"/>
+    <frame tileid="93" duration="250"/>
+    <frame tileid="95" duration="250"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer id="1" name="Back" width="36" height="28">
+  <data encoding="base64" compression="zlib">
+   eJzNlr9PFEEUx2dy5H70NGphRQ4KoSG0lpyF0hj+ABowRmmInULFf6GY2MN/oNd5NJhAzWnnbguVGjjfC/PNvnv7Znc2IYSXfPLmZmd3vvd25rvj3P2LJ8QiManIS2J8n5hvwEJDPc+JF8RjH89rYvwqMWjAs4Z63hBviac+nrfF+E1iS/BasGXkVw31nLacu6zhrFWM/06MiGPifdu5D8Re++Y3+kei/VvM9aUTB3HRSgOREXnIH0nHJ+Jze7ofOneDVsRGJw5Hl95Fz9dn1pO78j3nNNeYGLan+6HzIGjNE/VwpOwp1sNzaT1XNNc1//+O3T8JWpvoSdlTsj7yvVgZuvRvjrmQO74MxqTsKVmfFWLZyDxv7BoyazyJgEjZU7MzRXudeGnkrOIaMmuu05Oyp6Sed8SOkXmu2DU5Ru8X5ocr1kOqHqx16TGpGW2u4T7R92WwHlL1YK3XrWd4D/xH+hDXwtIz8NX10bE8U6z1Oq+CJ8F/pA+hPnpvDWrqo/2I+1D7uvpI70GeBI/KK/Tkzg6eW/uR9b1I9XZkvqfn6+tj6dF+JPV0K+7NjD6Mjf1/Gd7gQvkQ3qE1FrLgeawVbcRhgHUdujJHAQSfD+V64bn1t8zqWxJ64HmZaGs9uaFF6+Hn8flQrheeW3/LrL41oQeex/VBW+pxbvp94fx25Mp6+Hwo1wvPrb9lVt+20HPsCr/LQ5tDeiK/L+2VAGc2fp4+H+r1U/V9g5488If4S/wL/ZmzfeEr3fiNGIpzAPSkng8toKcX9twD4iHxKFzA90nue55/TPkn8ctP79fb0mPNibrFzkM6Q0/sfTTRY53JUDdLq+Xrd1WfVD+HnhQwt+WLlh7kmI/H4j9YKp7h
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back"/>
+ <layer id="3" name="Buildings" width="36" height="28">
+  <data encoding="base64" compression="zlib">
+   eJytljlsFDEUhu3ZbPYYNgUFdEiRgAYKDiFOCQUpAnKIMlwNORZEVgsNZLdBCBqCgJCghAIaEAUUnA0NoSAcooA0lIQAgiAaxNlx/daMmWevPeuJeNK34xk/2/88v3lrzhjjCcgDPwEp0JBwDVdbBFoS+EtbGo4Va93LRIyT9v1Mcj081NMG2hPQAVrDsS8zEVOk/UrTUwYbuf1K9ewH/QQWXhuwOWnQmAruP/LgWiJjf2YifpH2b6LntENshsicJ8EJj7FBL35MLuw/RcZuQVJtBW0gC3IgDxZkZ79fNutFXPpAMWUf2+mbxx7NJM95qidfJza6tTL13QdSanubr651Lq0y7dVqkO0sxucMMYgz015UMEc1Fe8jrByjR9afuBi6xNlGM3iBxhIWcQZ6/mh6qpo23daE19WWfhcfOf93Q5A+c/Wbou9lqjHbQ58uS7+Lj/6+awuMrStE9+Nc9XkAJsBj+DwpqDWowoIYDjD1ucnH1l9Pz5SmR8RZxHwGPh/AHiRTN+gBVxoDnzc5xt6C5ibGLoCLYHFT0LdwbhT7L+Ar+MaD/fnBa/XswBo7iZ6S5tNFYi7sLHJsGIwk/PZtFpefpu9C7EUlbM+BhlvgNrjjBfdJ7TomvgFuav9HnYZa8prMP/2f3p/aIBZ/Bp6DSfCUx9cIkx75H+1iReTU3pB9ebufT9aJ0yMOUrIeiVpUZVHNT1LvZP2cqLNmvTlNpuu5BC6Tfr3e0flc6qX0HzP8b4n9insmGE2rNVKvd3F9pjObKR507bhn+jv14afIg33thl+PF/U9RA15VFDr5SFs4mE/qoUlMtdycBXjr3lBrmwW35uWP/SZ9KV6qB1D33Gi5x20vC+oPqPQMhaehVb50ZlNIM6HtjPEkax6P8wj3yEyRwt+NmnC6uWjNBlb6q/XoEmH880ImWOF4dxn0jMvZ59P+n9KmXExWwzEmU/2nQ+1zoeW9di3Ddreydj+y3+ytqlWm6wd+dFBcqQ3W+sj++6S2O2Clt2anpXoX+a77W8ZBe0AOKjV2H5oKWl6BCIu8hzqmj+6/qS1cjbjXPkLIf2uBg==
+  </data>
+ </layer>
+ <objectgroup id="4" name="Buildings">
+  <object id="1" name="TileData" x="80" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 3 6 JacobAwayRoom"/>
+   </properties>
+  </object>
+  <object id="2" name="TileData" x="80" y="144" width="16" height="16">
+   <properties>
+    <property name="NPCPassable" value="T"/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="304" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door Jacob"/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="432" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door Eloise"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="320" y="320" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="448" y="176" width="16" height="16">
+   <properties>
+    <property name="Action" value="Door"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="224" y="352" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.01&quot;"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="128" y="352" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.02&quot;"/>
+   </properties>
+  </object>
+  <object id="12" name="TileData" x="464" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.03&quot;"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="400" y="384" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.04&quot;"/>
+   </properties>
+  </object>
+  <object id="14" name="TileData" x="336" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.05&quot;"/>
+   </properties>
+  </object>
+  <object id="15" name="TileData" x="384" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.07&quot;"/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="432" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.06&quot;"/>
+   </properties>
+  </object>
+  <object id="17" name="TileData" x="288" y="368" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.08&quot;"/>
+   </properties>
+  </object>
+  <object id="18" name="TileData" x="224" y="192" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.09&quot;"/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="352" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.10&quot;"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="400" y="336" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.11&quot;"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="240" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.12&quot;"/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="496" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;VetHouse.13&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="5" name="Front" width="36" height="28">
+  <data encoding="base64" compression="zlib">
+   eJylVzlvU0EQ3n25YxKhJBQcTYBwJFgUIEEapNwUCAIVEYgIQUGkBJE0FFyFU3IJaCkgxiE9iBqcpERc+QGcggAttHzD29Gbt959z7E/6ZPt3Xmz387MzltrpVQA1qSwVoXQwn6taAYzKf47we4yfO3x2Gsd0oZrvC/Ff1eKjY0hh32nDkn4gsB9Bb8F8fFq/KfZMy5gzYkgPr8dge8Cd5hkfhR6+NldSNhusBv8jgT+AFfB8Ybq9LgwCB1D4LDR0yT08rPZjPvZG0bPI/AxuJTAOYee1QpykYS9mdCGap6246p7rnmOIft8in0vWLkqB3YuTmKRMXFQffl6UBd+cs0Teo39WXBRhXHjz2UVxTDvmc+JtaQNsQDO0z6NzYuE2HNMxlQ85nYsi2b8lWOuHBvKzzpPfAhvdFyP/d2F3pR5adOOfHdYObfztbFFqU0t0e+HulQP2RdgMy/sGGPW71OtSp1uddvsg5b9Rs8zrPNc++sna9VYQ01IinNR2PXhMPSDA+BsfTj2sgl2oIaOK+BVsN5oyrSFnxT7t+A78D34AVxJ0MM4opNzdAn7mwZnKjhrLiStRWeAaj+XZAMd/YjbzQr13MJ+b4N3RK364iPPQNFjUw0moGEKvAteBBd0vD8XDKmPUK3cQw+6Xxf1IjoXeRX1mTQMo6ZGDA83++1+Ot5xDJqieO10XG74XMh+6Huv2P3Onis4yP3QBukZWeNli+9Zst9xf7PBc5Ly3UQIxBz7lPtb9vgiHxxThuyJvvpcUdF97ROcfK6N3k32fY/qhevHN3YAGzgYxO90Q/A9rMO89mNuIIj05NE7n1j903Vf8+l31Q+NjeL54+AJqwbJxxzG8mX6/68Heg+Zu9CGTKn9JNabcug40xj/PY01t8LXtiDuo4jxxTXoidmZ2Er7rKXldxk1PSN8tDnufS49fxpL7c7Bz3nh6zXW/mVxsrb0OReSYsBzl43Wv9CyGXW0xaqlHLTMCj09IhZ2nHzooXoWNTvo2DfPDQif1zqUut4Rt2uH3vWZ8vJ7FM3lGDjq6bFSD2vie2gl/xfs94WLvh7LPVX27IL4njNz/Ly0KYjvS8rfn13QKt730u6J1eAfpqC5OQ==
+  </data>
+ </layer>
+ <objectgroup id="6" name="Front"/>
+ <layer id="7" name="Paths" width="36" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAACAdwMPwAAB
+  </data>
+ </layer>
+ <objectgroup id="8" name="Paths"/>
+ <layer id="9" name="AlwaysFront" width="36" height="28">
+  <data encoding="base64" compression="zlib">
+   eJztzrERABEYBeE3hBoQKYb2lCG4y+iQTAHnxh/sV8DOSgAsyV5q7nunrE490AH+8kTpjbcvtr5ehqEfADakcPsAALYJTQoE+w==
+  </data>
+ </layer>
+ <objectgroup id="10" name="AlwaysFront"/>
+</map>

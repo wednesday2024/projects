@@ -1,0 +1,20 @@
+{
+    "Name": "Jacob & Eloise",
+    "Author": "Lemurkat",
+    "Description": "Adds Dr Jacob and his daughter, Eloise plus assorted other NPCs",
+    "Version": "1.7.0",
+    "UniqueID": "Lemurkat.JacobEloise.CP",
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "LemurKat.EastScarpe.TMX"
+        },
+        
+        {
+            "UniqueID": "attonbomb.Beatrice",
+            "IsRequired": false
+        }
+    ]
+}

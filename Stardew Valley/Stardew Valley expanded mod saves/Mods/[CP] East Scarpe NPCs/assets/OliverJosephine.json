@@ -1,0 +1,121 @@
+{
+    "Changes": [
+        {
+            "Action": "EditMap",
+            "Target": "Maps/EastScarpeInn",
+            "FromFile": "assets/Maps/OliverRoom.tmx",
+            "ToArea": {
+                "X": 12,
+                "Y": 4,
+                "Width": 9,
+                "Height": 9
+            },
+            "When": {
+                "HasSeenEvent |contains=57873005": false
+            }
+        },
+        {
+            "LogName": "NPC Manifestation",
+            "Action": "EditData",
+            "Target": "Data/NPCDispositions",
+            "Entries": {
+                "OliverK": "teen/polite/shy/negative/male/not-datable//Other//JosephineK 'mother'/EastScarpeInn 19 11/Oliver",
+                "JosephineK": "adult/polite/neutral/negative/female/not-datable/GovernorK/Other//OliverK 'son'/EastScarpeInn 8 9/Josephine"
+            },
+            "When": {
+                "HasSeenEvent |contains=57873005": false
+            }
+        },
+        {
+            "LogName": "NPC Manifestation",
+            "Action": "EditData",
+            "Target": "Data/NPCDispositions",
+            "Entries": {
+                "OliverK": "teen/polite/shy/negative/male/not-datable//Other//JosephineK 'mother'/VetHouse 18 21/Oliver",
+                "JosephineK": "adult/polite/neutral/negative/female/not-datable/GovernorK/Other//OliverK 'son'/EastScarpeInn -1000 -1000/Josephine"
+            },
+            "When": {
+                "HasSeenEvent |contains=57873005": true
+            }
+        },
+        //57873000 = introductory event
+        //57873005 = event where Oliver moves in with Jacob: end with End Invisible
+        {
+            "LogName": "NPC Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "OliverK": "Thanks. This is really cool!/557 581 587 589/Thanks, I like this./584 585 586 583 579/I don't get why you'd give me this./344 340 -80 -28/This is disgusting./346/Hey, thanks./395/",
+                "JosephineK": "You're really giving me this? How generous!/344 340 461/Thank you, I really appreciate this./-74 350/This is... not really my thing. Sorry./-15/Sorry...I feel a little insulted by this./-28/Thank you.//"
+            }
+        },
+        /*************
+        Oliver
+        *************/
+        {
+            "LogName": "Oliver Portraits",
+            "Action": "Load",
+            "Target": "Portraits/OliverK, Characters/OliverK",
+            "FromFile": "assets/{{Target}}/Oliver.png"
+        },
+        {
+            "LogName": "Oliver Dialogue",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/OliverK",
+            "FromFile": "assets/{{Target}}/Oliver.json"
+        },
+        {
+            "LogName": "Oliver Schedule",
+            "Action": "Load",
+            "Target": "Characters/schedules/OliverK",
+            "FromFile": "assets/{{Target}}/Oliver.json"
+        },
+        /*************
+        Josephine
+        ************/
+        {
+            "LogName": "Josephine Portraits",
+            "Action": "Load",
+            "Target": "Portraits/JosephineK, Characters/JosephineK",
+            "FromFile": "assets/{{Target}}/Josephine.png"
+        },
+        {
+            "LogName": "Josephine Dialogue",
+            "Action": "Load",
+            "Target": "Characters/Dialogue/JosephineK",
+            "FromFile": "assets/{{Target}}/Josephine.json"
+        },
+        {
+            "LogName": "Josephine Schedule",
+            "Action": "Load",
+            "Target": "Characters/schedules/JosephineK",
+            "FromFile": "assets/{{Target}}/Josephine.json"
+        },
+        {
+            "LogName": "Animations",
+            "Action": "EditData",
+            "Target": "Data/animationDescriptions",
+            "Entries": {
+                "oliverk_sleep": "28/28/28",
+                "oliverk_computer": "24/24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 24 25 26 27 26 27 26 27 26 25 24 24 24/24",
+                "josephinek_sleep": "24/24/24"
+            }
+        },
+        {
+            "Action":"Include",
+            "FromFile":"assets/Festivals/Josephine.json",
+            "When": {
+                "HasSeenEvent |contains=57873005": false,
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+            }
+        },
+        {
+            "Action":"Include",
+            "FromFile":"assets/Festivals/Oliver.json",
+            "When": {
+                "HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+
+            }
+        }
+    ]
+}

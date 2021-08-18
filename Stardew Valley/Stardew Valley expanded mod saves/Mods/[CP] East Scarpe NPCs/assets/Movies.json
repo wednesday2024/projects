@@ -1,0 +1,451 @@
+{
+    "Changes": [
+        //Jacob
+        {
+            "Action": "EditData",
+            "Target": "Data/ConcessionTastes",
+            "Entries": {
+                "Jacob": {
+                    "Name": "Jacob",
+                    "LovedTags": [
+                        "Fries",
+                        "Cappuccino Mousse Cake"
+                    ],
+                    "LikedTags": [
+                        "Salted Peanuts"
+                    ],
+                    "DislikedTags": [
+                        "Kale Smoothie",
+                        "JojaCorn"
+                    ]
+                },
+                "Aideen": {
+                    "Name": "Aideen",
+                    "LovedTags": [
+                        "Jasmine Tea",
+                        "Panzanella Sandwich",
+                        "Cappuccino Mousse Cake"
+                    ],
+                    "LikedTags": [
+                        "Gourmet"
+                    ],
+                    "DislikedTags": [
+                        "Rock Candy",
+                        "Salted Peanuts"
+                    ]
+                },
+                "Eloise": {
+                    "Name": "Eloise",
+                    "LovedTags": [
+                        "Cotton Candy",
+                        "Ice Cream Sandwich"
+                    ],
+                    "LikedTags": [
+                        "Sweet"
+                    ],
+                    "DislikedTags": [
+                        "Kale Smoothie",
+                        "Black Licorice"
+                    ]
+                },
+                "LexiMonster": {
+                    "Name": "LexiMonster",
+                    "LovedTags": [
+                        "Stardrop Sorbet",
+                        "Cotton Candy",
+                        "Star Cookie"
+                    ],
+                    "LikedTags": [
+                        "Sweet"
+                    ],
+                    "DislikedTags": [
+                        "Kale Smoothie",
+                        "Jawbreaker"
+                    ]
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/MoviesReactions",
+            "Entries": {
+                "Jacob": {
+                    "NPCName": "Jacob",
+                    "Reactions": [
+                        {
+                            "Tag": "spring_movie_1",
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Our natural history is sure to be interesting. I'm looking forward to this one.$1"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/message \"(Jacob is smiling)\"",
+                                    "Text": "It's a wonderful world, isn't it?"
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "I'll have to take Ellie to see this sometime. She'd love it."
+                                }
+                            },
+                            "ID": "reaction_1"
+                        },
+                        {
+                            "Tag": "horror",
+                            "Response": "dislike",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "I'm not a fan of this kind of movie."
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/message \"(Jacob looks bored)",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Cheap jump scares and shaky cameras... no, I wasn't scared at all."
+                                }
+                            },
+                            "ID": "reaction_2"
+                        },
+                        {
+                            "Tag": "comedy",
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This looks ridiculous. Still, we could all do with a bit of fun, now and then, right?"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Oh yes, I was amused. I wonder if Ellie would enjoy it?"
+                                }
+                            },
+                            "ID": "reaction_3"
+                        },
+                        {
+                            "Tag": "winter_movie_1",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Oh, this looks emotional."
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/message \"Jacob wipes away a tear\"",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "It's movies like this that make me... well, Del would've hated it, and called me a sentimental sap.$2"
+                                }
+                            },
+                            "ID": "reaction_4"
+                        },
+                        {
+                            "Tag": "*",
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "It's nice to take a break from work now and then."
+                                },
+                                "DuringMovie": null,
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Thank you for inviting me, @. I thoroughly enjoyed it."
+                                }
+                            },
+                            "ID": "reaction_0"
+                        }
+                    ]
+                },
+                "Aideen": {
+                    "NPCName": "Aideen",
+                    "Reactions": [
+                        {
+                            "Tag": "horror",
+                            "Response": "dislike",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "I'm not sure why you would invite me to this.$2"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "I don't feel well."
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "I would like to go home now.$2"
+                                }
+                            },
+                            "ID": "reaction_1"
+                        },
+                        {
+                            "Tag": "summer_movie_1",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This looks most ridiculously trite."
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/Message \"(Aideen's gaze is fixated on the screen. And she's ... grinning?)\"",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Yes, I was entertained, @. No need to rub it in!"
+                                }
+                            },
+                            "ID": "reaction_2"
+                        },
+                        {
+                            "Tag": "winter_movie_1",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "There's nothing quite like the classics."
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/Message \"(Aideen is engrossed in the film)\"",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "That was absolutely splendid, @. Thank you for inviting me."
+                                }
+                            },
+                            "ID": "reaction_3"
+                        },
+                        {
+                            "Tag": "*",
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Good day, @. I do hope I shall enjoy this film."
+                                },
+                                "DuringMovie": null,
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Thank you for inviting me to the pictures, @. I enjoyed myself."
+                                }
+                            },
+                            "ID": "reaction_0"
+                        }
+                    ]
+                },
+                "Eloise": {
+                    "NPCName": "Eloise",
+                    "Reactions": [
+                        {
+                            "Tag": "horror",
+                            "Response": "dislike",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This doesn't look like a movie for kids, @"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "My stomach feels sick. Can I go home?"
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "I don't ever want to go to the movies with you again. $2"
+                                }
+                            },
+                            "ID": "reaction_1"
+                        },
+                        {
+                            "Tag": "comedy",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This looks really fun!"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "/Message \"(Eloise is bouncing up and down in excitement)\"",
+                                    "Text": ""
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Oh, I loved it! Can we see it again next week, please?$1"
+                                }
+                            },
+                            "ID": "reaction_2"
+                        },
+                        {
+                            "Tag": "spring_movie_1",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This looks really cool! I hope there's lots of birds in it.$1"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Did you see that, farmer @? It was awesome!$1"
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Thank you so much! I loved it. I'm going to watch it again and again and again!"
+                                }
+                            },
+                            "ID": "reaction_3"
+                        },
+                        {
+                            "Tag": "*",
+                            "Response": "like",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "There's birds in here! That's really neat"
+                                },
+                                "DuringMovie": null,
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Thanks farmer @! I really liked going to the movies with you."
+                                }
+                            },
+                            "ID": "reaction_0"
+                        }
+                    ]
+                },
+                "Leximonster": {
+                    "NPCName": "Leximonster",
+                    "Reactions": [
+                        {
+                            "Tag": "spring_movie_0",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Not feel should be in here. People stare.$2"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": "sprout_leave",
+                                    "Script": "",
+                                    "Text": "Poor plant. All alone."
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Feel weird in my heart. Maybe happy-sad? What that feeling called?"
+                                }
+                            },
+                            "ID": "reaction_1"
+                        },
+                        {
+                            "Tag": "spring_movie_1",
+                            "Response": "love",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This place strange... far from sea. Little scared.$2"
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This.. it is wonderful!."
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Feel, what is word? Inspired. Thank you!"
+                                }
+                            },
+                            "ID": "reaction_2"
+                        },
+                        {
+                            "Tag": "*",
+                            "Response": "dislike",
+                            "Whitelist": [],
+                            "SpecialResponses": {
+                                "BeforeMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "This place... so strange. Not feel comfortable! People stare."
+                                },
+                                "DuringMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "It dark... so noisy. Not understand."
+                                },
+                                "AfterMovie": {
+                                    "ResponsePoint": null,
+                                    "Script": "",
+                                    "Text": "Not want to go there again. Not pleasant. Sorry...$2"
+                                }
+                            },
+                            "ID": "reaction_0"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

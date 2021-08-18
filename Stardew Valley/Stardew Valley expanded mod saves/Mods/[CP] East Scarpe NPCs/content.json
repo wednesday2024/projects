@@ -1,0 +1,143 @@
+{
+	"Format": "1.20",
+	"Changes": [
+		{
+			"Action": "Include",
+			"FromFile": "assets/JacobEloise.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Aideen.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Lexi.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/OliverJosephine.json",
+			"When": {
+				"HasSeenEvent": "57873000"
+			}
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/LeoFix.json"
+		},
+		{
+			"Action": "Include",
+			"FromFile": "assets/Movies.json"
+		},
+		/***************************
+ANTISOCICAL NPCS
+****************************/
+		{
+			"LogName": "NPC Exclusion NPCs to avoid Perfection issues",
+			"Action": "EditData",
+			"Target": "Data/CustomNPCExclusions",
+			"Entries": {
+				"DuckNPC": "All",
+				"Duck2NPC": "All",
+				"Leximonster": "All",
+				"OliverK": "All",
+				"JosephineK": "All"
+			}
+		},
+		{
+			"LogName": "Emperor Ducks AntiSocial Flags",
+			"Action": "EditData",
+			"Target": "Data/AntiSocialNPCs",
+			"Entries": {
+				"DuckNPC": true,
+				"Duck2NPC": true
+			},
+			"When": {
+				"HasSeenEvent |contains=57870002": true,
+				"HasMod": "SuperAardvark.AntiSocial"
+			}
+		},
+		//Ducks
+		{ //Drake
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Characters/DuckNPC",
+			"FromFile": "assets/Images/Duck-Mandarin-land.png"
+		},
+		{
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Characters/schedules/DuckNPC",
+			"FromFile": "assets/Characters/schedules/Duck.json"
+		},
+		{
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/DuckNPC",
+			"FromFile": "assets/Characters/Dialogue/Duck.json"
+		},
+		{
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Portraits/DuckNPC",
+			"FromFile": "assets/Images/DuckPortrait.png"
+		},
+		{ //Hen
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Characters/Duck2NPC",
+			"FromFile": "assets/Images/Duck-Mandarin-female.png"
+		},
+		{
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Characters/schedules/Duck2NPC",
+			"FromFile": "assets/Characters/schedules/Duck2.json"
+		},
+		{
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Characters/Dialogue/Duck2NPC",
+			"FromFile": "assets/Characters/Dialogue/Duck2.json"
+		},
+		{
+			"LogName": "Mandarin Duck",
+			"Action": "Load",
+			"Target": "Portraits/Duck2NPC",
+			"FromFile": "assets/Images/DuckPortrait2.png"
+		},
+		{
+			"LogName": "NPC Manifestation",
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Entries": {
+				"DuckNPC": "adult/rude/outgoing/positive/male/not-datable/null/Town/null//EastScarpe 21 62/The Emperor"
+			},
+			"When": {
+				"HasSeenEvent": "57870002",
+				"HasMod": "SuperAardvark.AntiSocial"
+			}
+		},
+		{
+			"LogName": "NPC Manifestation",
+			"Action": "EditData",
+			"Target": "Data/NPCDispositions",
+			"Entries": {
+				"Duck2NPC": "adult/rude/shy/positive/female/not-datable/null/Town/null//EastScarpe 22 61/The Empress"
+			},
+			"When": {
+				"HasSeenEvent": "57870011",
+				"HasMod": "SuperAardvark.AntiSocial"
+			}
+		},
+		//Fixing Beatrice's pathing	
+		{
+			"LogName": "Beatrice Summer",
+			"Action": "EditData",
+			"Target": "Characters/schedules/Beatrice",
+			"Entries": {
+				"summer": "610 Lighthouse 11 10 0 Beatrice_pjs \"Strings\\schedules\\Beatrice:sleep\"/1100 EastScarpe 22 102 1/1300 EastScarpe 55 84 2 Beatrice_read/1500 Lighthouse 11 5 0/1600 Lighthouse 21 6 1/1700 Lighthouse 5 5 0/2000 Lighthouse 18 4 0"
+			}
+		},
+		//NPC for "When": {"HasFlag":"Capsule_Broken"}
+	]
+}

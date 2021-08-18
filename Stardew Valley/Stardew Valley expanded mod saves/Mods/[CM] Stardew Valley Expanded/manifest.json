@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Stardew Valley Expanded Custom Music",
+  "Author": "FlashShifter",
+  "Version": "1.13.10",
+  "Description": "Adds new original music to the game",
+  "UniqueID": "FlashShifter.SVEMusic",
+  "UpdateKeys": [ "Nexus:???" ],
+  "ContentPackFor": {
+    "UniqueID": "Platonymous.CustomMusic",
+    "MinimumVersion": "1.5.1"
+	
+  }
+}

@@ -1,0 +1,662 @@
+{
+	"Changes": [
+		//Egg Festival
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 8 64 1",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Eloise 35 60 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 9 64 3",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Jacob 34 60 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 8 63 1",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Eloise 35 60 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring13",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 9 63 3",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Jacob 34 60 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		//FLower Dance 
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 14 30 3",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Eloise 13 30 0",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/spring24",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 3 30 1",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Jacob 12 32 0",
+					"Delimiter": "/"
+				}
+			]
+		},
+		//Luau UP TO HERE
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 13 14 1",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Eloise 23 23 0",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer11",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 31 34 2",
+					"Delimiter": "/"
+				},
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"MainEvent_additionalCharacters"
+					],
+					"Value": "Jacob 31 34 3",
+					"Delimiter": "/"
+				}
+			]
+		},
+		//Moonlight Jellies
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 5 7 down",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/summer28",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 4 7 2",
+					"Delimiter": "/"
+				}
+			]
+		},
+		//Fair
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 63 65 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 62 65 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		//Fair SVE
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall16",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 58 27 1/Jacob 59 26 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		
+		//Spirit's Eve
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 16 52 up",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/fall27",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 16 51 down",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		//Ice Festival
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 59 46 1",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasSeenEvent |contains=57873005": false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 84 51 2",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"HasSeenEvent |contains=57873005": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 59 45 1",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 55 51 1",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter8",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 54 52 1",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			}
+		},
+		//Winter Star
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 27 51 3",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Eloise 24 49 1",
+					"Delimiter": "/"
+				}
+			],
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			},
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Festivals/winter25",
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": [
+						"Entries",
+						"Set-Up_additionalCharacters"
+					],
+					"Value": "Jacob 37 71 3",
+					"Delimiter": "/"
+				}
+			]
+		},
+		{
+			"LogName": "EggFest Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/spring13",
+			"Entries": {
+				"Eloise": "Did you know a hen lays around 530 eggs in her lifetime!",
+				"Jacob": "Hello @. Eloise loves birds, but she's never been particularly interested in the egg hunt. Probably because Abigail always wins."
+			}
+		},
+		{
+			"LogName": "Luau Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/summer11",
+			"Entries": {
+				"Eloise": "Dancing's so silly! I hope we haven't scared all the birds away.",
+				"Jacob": "Hello @. Just grabbing a little space to myself."
+			}
+		},
+		{
+			"LogName": "Luau Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/summer11",
+			"Entries": {
+				"Jacob": "Hello @. Just hanging out here with my good buddy Coppernicus."
+			},
+			"When": {
+				"HasMod": "LemurKat.Mr.Ginger.NPC"
+			}
+		},
+		{
+			"LogName": "Luau Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/summer11",
+			"Entries": {
+				"Jacob": "Hello @. Oh, we're just hanging out - two dads, boosting about our girls!$1"
+			},
+			"When": {
+				"HasMod": "LemurKat.Tristan.CP",
+				"HasSeenEvent": "5295000"
+			}
+		},
+		{
+			"LogName": "Jellyfish Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/summer28",
+			"Entries": {
+				"Eloise": "The jellyfish are so cool! Did you know that jellyfish don't have a brain? And they don't have a heart either!#$b#Also, they're not fish. They're actually Medusozoa.",
+				"Jacob": "Hello @! I hope Ellie hasn't chatted your ears off with jellyfish facts. There's a part of me that loves the mystery that surrounds them."
+			}
+		},
+		{
+			"LogName": "Jellyfish Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/summer28",
+			"Entries": {
+				"Eloise": "Miss Eloise's hat is so silly! Jellyfish don't have eyes!"
+			},
+			"When": {
+				"HasMod": "LemurKat.Eloise.NPC"
+			}
+		},
+		{
+			"LogName": "Fair Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/fall16",
+			"Entries": {
+				"Eloise": "Do you know why these chickens are so tame, farmer @?#$b#It's cos when birds hatch, they think the first thing they see is their mom. It's called 'imprinting'.$3#$b#So Marnie's their mother chicken!$1",
+				"Jacob": "These chickens look very healthy. Compliments to Ms. Marnie and Shane for raising them well.#$b#They're nicely socialized too."
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			},
+		},
+		{
+			"LogName": "Fair Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/fall16",
+			"Entries": {
+				"Eloise": "Wow, that pumpkin is so big! You could live in it!$3#$b#Did you know pumpkins are technically fruit, @? But you wouldn't put it in a fruit salad! Yuck!$1",
+				"Jacob": "Hello @. Good luck with your display today."
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": true
+			},
+		},
+		{
+			"LogName": "Spirit's Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/fall27",
+			"Entries": {
+				"Eloise": "Oh, why can't we go in the maze! We'll look after each other. Puh-lease Dad.$5",
+				"Jacob": "I know, I look ridiculous. Eloise is extremely persuasive.$5",
+				"Marnie": "Dr Jacob won't believe me when I tell him he's looking very smart in that outfit."
+			},
+			"When": {
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			}
+		},
+		{
+			"LogName": "Spirit's Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/spring24",
+			"Entries": {
+				"Eloise": "Hi farmer @! You should ask my Dad to dance.#$b#He never dances with anyone but me. I think he misses Mom too much.$2",
+				"Jacob": "Ask someone to dance? Oh, I couldn't possibly!$4"
+			}
+		},
+		{
+			"LogName": "Eloise Sprites",
+			"Action": "EditImage",
+			"Target": "Characters/Eloise, Portraits/Eloise",
+			"FromFile": "assets/{{Target}}/Eloise.png",
+			"When": {
+				"LocationName": "Temp",
+				"DayEvent": "luau, egg festival"
+			}
+		},
+		{
+			"LogName": "Festival Sprites",
+			"Action": "EditImage",
+			"Target": "Characters/Jacob",
+			"FromFile": "assets/{{Target}}/Jacob_magician.png",
+			"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 16,
+				"Height": 128
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 16,
+				"Height": 128
+			},
+			"Update": "OnLocationChange",
+			"When": {
+				"LocationName": "Temp",
+				"DayEvent": "spirit's eve"
+			}
+		},
+		{
+			"LogName": "Festival Sprites",
+			"Action": "EditImage",
+			"Target": "Characters/Eloise",
+			"FromFile": "assets/{{Target}}/Eloise_bird.png",
+			"Update": "OnLocationChange",
+			"FromArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 16,
+				"Height": 128
+			},
+			"ToArea": {
+				"X": 0,
+				"Y": 0,
+				"Width": 16,
+				"Height": 128
+			},
+			"When": {
+				"LocationName": "Temp",
+				"DayEvent": "spirit's eve"
+			}
+		},
+		{
+			"LogName": "Ice Festival Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/winter8",
+			"Entries": {
+				"Eloise": "Are you gonna enter the competition, farmer @? I don't like fishing. Fish have feelings too you know!$2",
+				"Jacob": "Hello @. We're here for the company and the snowmen, not the competition.#$b#I'm sorry, but catch and release fishing feels somewhat barbaric to me."
+			}
+		},
+		{
+			"LogName": "Winter Star Dialogue",
+			"Action": "EditData",
+			"Target": "data/festivals/winter25",
+			"Entries": {
+				"Eloise": "Happy Winter Star! What do you think's in this one? It's REALLY big. And heavy!#$b#Hey, I found this and thought you might like it.[444 392 394]",
+				"Jacob": "Hello @. Happy Winter Star. Jodi has been gracious enough to invite me to join her family.#$b#Now if only I could drag Ellie away from the presents!"
+			}
+		}
+	]
+}
