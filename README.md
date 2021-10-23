@@ -2,7 +2,7 @@
 
 Future plans:
 
-Redesign the website.
+None at this time.
 
 
 (GSIs now boot on this device. It must be AMD64, A/B)
@@ -11,7 +11,7 @@ Redesign the website.
 
 Plans that are already in progress:
 
-Make an unofficial build of NotePad++ for later.
+Make a whole new website design.
 
 
 Finished projects for the SM-T290:
