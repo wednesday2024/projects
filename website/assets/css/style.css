@@ -1,7 +1,7 @@
 /**
 * Template Name: Regna - v4.6.0
 * Bootstrap version: 5.1.3
-* Bootstrap icons version: 1.6.0
+* Bootstrap icons version: 1.7.0
 * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
