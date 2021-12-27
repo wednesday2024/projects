@@ -61,6 +61,8 @@ start-process prgrams/misc/PowerToys.exe
 
 start-process programs/misc/RainMeter.exe
 
+start-process programs/misc/PowerShellPreview.exe
+
 
 <# end misc. programs list. #>
 
@@ -85,7 +87,7 @@ start-process programs/drivers/WIN7/TPLink-T6E-V2-WIN7-Driver.exe
 <# VS Studio, studio code, and visual C++ list. #>
 
 
-start-process programs/MS/VSCode.exe /s
+start-process programs/MS/VSCodePreview.exe /s
 
 start-process programs/MS/VSC++19x64.exe /s
 
