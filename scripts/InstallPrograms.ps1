@@ -25,7 +25,7 @@ start-process programs/misc/UnityHub.exe /s
 
 start-process programs/misc/GitHubDesktop.exe /s
 
-start-process programs/misc/iTunes.exe /s
+start-process programs/misc/iTunes.exe
 
 start-process programs/misc/Origin.exe
 
