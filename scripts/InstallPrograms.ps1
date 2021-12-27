@@ -55,6 +55,12 @@ start-process programs/misc/HarmanAirRuntime.exe /s
 
 start-process programs/msic/Transformice.exe
 
+start-process programs/misc/DirectXInstaller.exe
+
+start-process prgrams/misc/PowerToys.exe
+
+start-process programs/misc/RainMeter.exe
+
 
 <# end misc. programs list. #>
 
@@ -84,6 +90,26 @@ start-process programs/MS/VSCode.exe /s
 start-process programs/MS/VSC++19x64.exe /s
 
 start-process programs/MS/VSC++19x86.exe /s
+
+start-process programs/MS/VSC++13x86.exe /s
+
+start-process programs/MS/VSC++19x64.exe /s
+
+start-process programs/MS/VSC++12x86.exe /s
+
+start-process programs/MS/VSC++12x64.exe /s
+
+start-process programs/MS/VSC++10x86.exe /s
+
+start-process programs/MS/VSC++10x64.exe /s
+
+start-process programs/MS/VSC++08x86.exe /s
+
+start-process programs/MS/VSC++08x64.exe /s
+
+start-process programs/MS/VSC++05x86.exe /s
+
+start-process programs/MS/VSC++05x64.exe /s
 
 start-process programs/MS/VS17.exe /s
 
