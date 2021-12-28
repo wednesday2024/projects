@@ -63,6 +63,10 @@ start-process programs/misc/RainMeter.exe
 
 start-process programs/misc/PowerShellPreview.exe
 
+start-process programs/misc/Panda3D.exe
+
+start-process programs/misc/NodeJS.exe
+
 
 <# end misc. programs list. #>
 
