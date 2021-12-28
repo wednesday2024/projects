@@ -136,9 +136,7 @@ start-process programs/MS/VS22.exe /s
 
 start-process programs/MS/DirectXInstaller.exe
 
-start-process programs/MS/DOTNetFramework3x64.exe /s
-
-start-process programs/MS/DOTNetFramework3x86.exe /s
+start-process programs/MS/DOTNetFramework3.exe /s
 
 start-process programs/MS/DOTNetFramework4x64.exe /s
 
