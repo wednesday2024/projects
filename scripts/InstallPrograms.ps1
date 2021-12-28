@@ -20,8 +20,6 @@ start-process programs/misc/Minecraft.exe /s
 
 start-process programs/misc/Java8.exe
 
-start-process programs/misc/Java17.exe
-
 start-process programs/misc/Python.exe
 
 start-process programs/misc/UnityHub.exe /s
@@ -32,21 +30,13 @@ start-process programs/misc/iTunes.exe
 
 start-process programs/misc/Origin.exe
 
-start-process programs/misc/Ubisoft.exe /s
-
 start-process programs/misc/Steam.exe /s
-
-start-process programs/misc/EpicGames.exe /s
 
 start-process programs/misc/RockstarGames.exe /s
 
 start-process programs/misc/VLC.exe
 
-start-process programs/misc/LibreOffice.exe
-
 start-process programs/misc/MakeMKV.exe /s
-
-start-process programs/misc/Gimp.exe /s
 
 start-process programs/misc/OBS.exe /s
 
@@ -63,10 +53,6 @@ start-process prgrams/misc/PowerToys.exe
 start-process programs/misc/RainMeter.exe
 
 start-process programs/misc/PowerShellPreview.exe
-
-start-process programs/misc/Panda3D.exe
-
-start-process programs/misc/NodeJS.exe
 
 start-process programs/misc/7Zip.exe /s
 
