@@ -58,8 +58,6 @@ start-process programs/misc/HarmanAirRuntime.exe /s
 
 start-process programs/msic/Transformice.exe
 
-start-process programs/misc/DirectXInstaller.exe
-
 start-process prgrams/misc/PowerToys.exe
 
 start-process programs/misc/RainMeter.exe
@@ -79,7 +77,15 @@ start-process programs/misc/NodeJS.exe
 
 start-process programs/drivers/RoccatVulcanDriver.exe
 
-start-process programs/drivers/SamsungNVME-Driver.exe /s
+start-process programs/drivers/SamsungNVME-Driver.exe
+
+start-process programs/drivers/Asus-VG259QR-DisplayDriver.exe
+
+start-process programs/drivers/Dell-SE2419HX-DisplayDriver.exe
+
+start-process programs/drivers/DellDisplayManager.exe
+
+start-process programs/drivers/AsusDisplayManager.exe
 
 start-process programs/drivers/WIN10/RTX2060-GameReady-WIN10-DisplayDriver.exe
 
@@ -127,6 +133,20 @@ start-process programs/MS/VS17.exe /s
 start-process programs/MS/VS19.exe /s
 
 start-process programs/MS/VS22.exe /s
+
+start-process programs/MS/DirectXInstaller.exe
+
+start-process programs/MS/DOTNetFramework3x64.exe /s
+
+start-process programs/MS/DOTNetFramework3x86.exe /s
+
+start-process programs/MS/DOTNetFramework4x64.exe /s
+
+start-process programs/MS/DOTNetFramework4x86.exe /s
+
+start-process programs/MS/DOTNetFramework6x64.exe /s
+
+start-process programs/MS/DOTNetFramework6x86.exe /s
 
 
 <# end MS VS programs list. #>
