@@ -68,6 +68,10 @@ start-process programs/misc/Panda3D.exe
 
 start-process programs/misc/NodeJS.exe
 
+start-process programs/misc/7Zip.exe /s
+
+start-process programs/misc/7Zip-ZSTD.exe /s
+
 
 <# end misc. programs list. #>
 
@@ -135,8 +139,6 @@ start-process programs/MS/VS19.exe /s
 start-process programs/MS/VS22.exe /s
 
 start-process programs/MS/DirectXInstaller.exe
-
-start-process programs/MS/DOTNetRuntime3.exe /s
 
 start-process programs/MS/DOTNetRuntime4x64.exe /s
 
