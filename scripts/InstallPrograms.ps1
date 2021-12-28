@@ -136,15 +136,15 @@ start-process programs/MS/VS22.exe /s
 
 start-process programs/MS/DirectXInstaller.exe
 
-start-process programs/MS/DOTNetFramework3.exe /s
+start-process programs/MS/DOTNetRuntime3.exe /s
 
-start-process programs/MS/DOTNetFramework4x64.exe /s
+start-process programs/MS/DOTNetRuntime4x64.exe /s
 
-start-process programs/MS/DOTNetFramework4x86.exe /s
+start-process programs/MS/DOTNetRuntime4x86.exe /s
 
-start-process programs/MS/DOTNetFramework6x64.exe /s
+start-process programs/MS/DOTNetRuntime6x64.exe /s
 
-start-process programs/MS/DOTNetFramework6x86.exe /s
+start-process programs/MS/DOTNetRuntime6x86.exe /s
 
 
 <# end MS VS programs list. #>
