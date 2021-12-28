@@ -132,7 +132,7 @@ start-process programs/MS/VS22.exe /s
 <# end MS VS programs list. #>
 
 
-echo "All of the selected programs and/or drivers has been installed successfully! You may have to restart your PC for changes to take effect!"
+echo "All of the selected programs and/or drivers has been installed successfully! You may have to restart your PC for the changes to take effect!"
 
 echo "Press any key to exit..."
 $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
