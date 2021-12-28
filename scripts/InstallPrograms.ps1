@@ -1,7 +1,7 @@
 <# Just a simple script to install Windows programs. #>
 
 
-echo "Now installing the selected programs and/or drivers! This should only take a couple of minutes!"
+echo "This script will install the selected programs and/or drivers! This should only take a couple of minutes!"
 
 echo "Press any key to continue..."
 $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
