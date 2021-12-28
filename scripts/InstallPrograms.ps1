@@ -3,6 +3,9 @@
 
 echo "Now installing the selected programs and/or drivers! This should only take a couple of minutes!"
 
+echo "Press any key to continue..."
+$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+
 
 <# misc. programs list. #>
 
@@ -130,6 +133,9 @@ start-process programs/MS/VS22.exe /s
 
 
 echo "All of the selected programs and/or drivers has been installed successfully! You may have to restart your PC for changes to take effect!"
+
+echo "Press any key to exit..."
+$Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 
 
 <# End of the script. #>
