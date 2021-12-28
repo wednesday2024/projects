@@ -72,6 +72,8 @@ start-process programs/misc/PowerShellPreview.exe
 
 start-process programs/drivers/RoccatVulcanDriver.exe
 
+start-process programs/drivers/SamsungNVME-Driver.exe /s
+
 start-process programs/drivers/WIN10/RTX2060-GameReady-WIN10-DisplayDriver.exe
 
 start-process programs/drivers/WIN10/TPLink-T6E-V2-WIN10-Driver.exe
