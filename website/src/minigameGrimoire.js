@@ -501,6 +501,7 @@ M.launch=function()
 			M.magicBarL.style.width=(M.magicM*3)+'px';
 			M.infoL.innerHTML=loc("Spells cast: %1 (total: %2)",[Beautify(M.spellsCast),Beautify(M.spellsCastTotal)]);
 		}
+		M.magicBarFullL.style.backgroundPosition=(-Game.T*0.5)+'px';
 	}
 	M.init(l('rowSpecial'+M.parent.id));
 }

@@ -2609,7 +2609,7 @@
 	"[Achievement name 54]Far far away": "Очень далеко",
 	"[Achievement name 55]Transmutation": "Трансмутация",
 	"[Achievement name 56]Transmogrification": "Трансмогрификация",
-	"[Achievement name 57]Gold member": "Золотой член",
+	"[Achievement name 57]Gold member": "Голдмембер",
 	"[Achievement name 58]A whole new world": "Полностью новый мир",
 	"[Achievement name 59]Now you're thinking": "Теперь вы думаете",
 	"[Achievement name 60]Dimensional shift": "Пространственный сдвиг",
