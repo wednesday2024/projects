@@ -5500,7 +5500,7 @@
 	 "Target": "data/events/farmhouse",
 	 "When": { "HasFlag": "RailroadBoulderRemoved" },
 	 "Entries": {
-	 "8050109//t 600 2600": "none/-500 -500/Clint -10 -10 0/pause 1500/playSound thunder_small/pause 3000/message \"There was an explosion at the railroad...\"/pause 1500/addConversationTopic railroadBoulder/end"
+	 "8050109/t 600 2600": "none/-500 -500/Clint -10 -10 0/pause 1500/playSound thunder_small/pause 3000/message \"There was an explosion at the railroad...\"/pause 1500/addConversationTopic railroadBoulder/end"
 	 },
 },
 
