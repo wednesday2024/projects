@@ -5,7 +5,7 @@ Future plans:
 None at this time.
 
 
-(GSIs now boot on this device. It must be AMD64, A/B)
+(GSIs now boot on the SM-T290. It must be AMD64, A/B)
 
 
 
