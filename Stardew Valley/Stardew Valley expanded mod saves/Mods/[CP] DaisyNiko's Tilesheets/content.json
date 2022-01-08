@@ -71,10 +71,17 @@
             }
         },
         {
-            "name": "recolour",
+            "Name": "recolour",
             "Value": "vibrant",
             "When": {
                 "HasMod": "grapeponta.VibrantPastoralRecolor"
+            }
+        },
+        {
+            "Name":"recolour",
+            "Value":"yellog",
+            "When":{
+                "HasMod":"yri.ProjectYellogTownOverhaul"
             }
         },
 
