@@ -1,0 +1,28 @@
+#-- Others
+
+*.tmp
+*.log
+*.bak
+
+#-------------------------------------------------------------------------------
+# Windows
+
+#-- image file cache
+Thumbs.db
+
+#-- Folder config file
+Desktop.ini
+folder-*.ico
+
+#-- Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+
+#-------------------------------------------------------------------------------
+# Mac
+
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
