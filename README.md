@@ -2,7 +2,7 @@
 
 Future plans:
 
-Announce top secret project on the week of May 28th, 2022.
+None for right now.
 
 
 (GSIs now boot on the SM-T290. It must be AMD64, A/B)
