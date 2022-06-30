@@ -12,5 +12,3 @@ Android link: coming soon
 
 Source code link: private, join my team to access the source code.
 
-
-It is releasing Friday July 1, 2022.
