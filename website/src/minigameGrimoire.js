@@ -291,6 +291,7 @@ M.launch=function()
 			var failChance=0.15;
 			if (Game.hasBuff('Magic adept')) failChance*=0.1;
 			if (Game.hasBuff('Magic inept')) failChance*=5;
+			failChance*=1+0.1*Game.auraMult('Supreme Intellect');
 			if (spell.failFunc) failChance=spell.failFunc(failChance);
 			return failChance;
 		}
@@ -339,6 +340,7 @@ M.launch=function()
 		{
 			var out=spell.costMin;
 			if (spell.costPercent) out+=M.magicM*spell.costPercent;
+			out*=1-0.1*Game.auraMult('Supreme Intellect');
 			return Math.floor(out);
 		}
 		M.getSpellCostBreakdown=function(spell)
@@ -358,7 +360,7 @@ M.launch=function()
 				var costBreakdown=M.getSpellCostBreakdown(me);
 				if (cost!=costBreakdown) costBreakdown=' <small>('+costBreakdown+')</small>'; else costBreakdown='';
 				var backfire=M.getFailChance(me);
-				var str='<div style="padding:8px 4px;min-width:350px;">'+
+				var str='<div style="padding:8px 4px;min-width:350px;" id="tooltipSpell">'+
 				'<div class="icon" style="float:left;margin-left:-8px;margin-top:-8px;background-position:'+(-me.icon[0]*48)+'px '+(-me.icon[1]*48)+'px;"></div>'+
 				'<div class="name">'+me.name+'</div>'+
 				'<div>'+loc("Magic cost:")+' <b style="color:#'+(cost<=M.magic?'6f6':'f66')+';">'+cost+'</b>'+costBreakdown+'</div>'+
@@ -366,6 +368,11 @@ M.launch=function()
 				'<div class="line"></div><div class="description"><b>'+loc("Effect:")+'</b> <span class="green">'+(me.descFunc?me.descFunc():me.desc)+'</span>'+(me.failDesc?('<div style="height:8px;"></div><b>'+loc("Backfire:")+'</b> <span class="red">'+me.failDesc+'</span>'):'')+'</div></div>';
 				return str;
 			};
+		}
+		
+		M.dragonBoostTooltip=function()
+		{
+			return '<div style="width:280px;padding:8px;text-align:center;" id="tooltipDragonBoost"><b>'+loc("Supreme Intellect")+'</b><div class="line"></div>'+loc("Grimoire spells are %1% cheaper but fail %1% more.",10*Game.auraMult('Supreme Intellect'))+'</div>';
 		}
 		
 		var str='';
@@ -422,7 +429,7 @@ M.launch=function()
 		}
 		
 		M.refillTooltip=function(){
-			return '<div style="padding:8px;width:300px;font-size:11px;text-align:center;">'+loc("Click to refill <b>%1 units</b> of your magic meter for %2.",[100,'<span class="price lump">'+loc("%1 sugar lump",LBeautify(1))+'</span>'])+
+			return '<div style="padding:8px;width:300px;font-size:11px;text-align:center;" id="tooltipRefill">'+loc("Click to refill <b>%1 units</b> of your magic meter for %2.",[100,'<span class="price lump">'+loc("%1 sugar lump",LBeautify(1))+'</span>'])+
 				(Game.canRefillLump()?'<br><small>('+loc("can be done once every %1",Game.sayTime(Game.getLumpRefillMax(),-1))+')</small>':('<br><small class="red">('+loc("usable again in %1",Game.sayTime(Game.getLumpRefillRemaining()+Game.fps,-1))+')</small>'))+
 			'</div>';
 		};

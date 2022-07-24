@@ -142,7 +142,7 @@ M.launch=function()
 			return function(){
 				var me=M.godsById[id];
 				me.icon=me.icon||[0,0];
-				var str='<div style="padding:8px 4px;min-width:350px;">'+
+				var str='<div style="padding:8px 4px;min-width:350px;" id="tooltipGod">'+
 				'<div class="icon" style="float:left;margin-left:-8px;margin-top:-8px;background-position:'+(-me.icon[0]*48)+'px '+(-me.icon[1]*48)+'px;"></div>'+
 				'<div class="name">'+me.name+'</div>'+
 				'<div class="line"></div><div class="description"><div style="margin:6px 0px;font-weight:bold;">'+loc("Effects:")+'</div>'+
@@ -163,9 +163,11 @@ M.launch=function()
 				if (M.slot[id]!=-1)
 				{
 					var me=M.godsById[M.slot[id]];
+					var slot=me.slot;
+					if (Game.hasAura('Supreme Intellect')) slot=Math.max(0,slot-1);
 					me.icon=me.icon||[0,0];
 				}
-				var str='<div style="padding:8px 4px;min-width:350px;">'+
+				var str='<div style="padding:8px 4px;min-width:350px;" id="tooltipPantheonSlot">'+
 				(M.slot[id]!=-1?(
 					'<div class="name templeEffect" style="margin-bottom:12px;"><div class="usesIcon shadowFilter templeGem templeGem'+(parseInt(id)+1)+'"></div>'+loc(M.slotNames[id]+" slot")+'</div>'+
 					'<div class="icon" style="float:left;margin-left:-8px;margin-top:-8px;background-position:'+(-me.icon[0]*48)+'px '+(-me.icon[1]*48)+'px;"></div>'+
@@ -173,9 +175,9 @@ M.launch=function()
 					'<div class="line"></div><div class="description"><div style="margin:6px 0px;font-weight:bold;">'+loc("Effects:")+'</div>'+
 						(me.activeDescFunc?('<div class="templeEffect templeEffectOn" style="padding:8px 4px;text-align:center;">'+me.activeDescFunc()+'</div>'):'')+
 						(me.descBefore?('<div class="templeEffect">'+me.descBefore+'</div>'):'')+
-						(me.desc1?('<div class="templeEffect templeEffect1'+(me.slot==0?' templeEffectOn':'')+'"><div class="usesIcon shadowFilter templeGem templeGem1"></div>'+me.desc1+'</div>'):'')+
-						(me.desc2?('<div class="templeEffect templeEffect2'+(me.slot==1?' templeEffectOn':'')+'"><div class="usesIcon shadowFilter templeGem templeGem2"></div>'+me.desc2+'</div>'):'')+
-						(me.desc3?('<div class="templeEffect templeEffect3'+(me.slot==2?' templeEffectOn':'')+'"><div class="usesIcon shadowFilter templeGem templeGem3"></div>'+me.desc3+'</div>'):'')+
+						(me.desc1?('<div class="templeEffect templeEffect1'+(slot==0?' templeEffectOn':'')+'"><div class="usesIcon shadowFilter templeGem templeGem1"></div>'+me.desc1+'</div>'):'')+
+						(me.desc2?('<div class="templeEffect templeEffect2'+(slot==1?' templeEffectOn':'')+'"><div class="usesIcon shadowFilter templeGem templeGem2"></div>'+me.desc2+'</div>'):'')+
+						(me.desc3?('<div class="templeEffect templeEffect3'+(slot==2?' templeEffectOn':'')+'"><div class="usesIcon shadowFilter templeGem templeGem3"></div>'+me.desc3+'</div>'):'')+
 						(me.descAfter?('<div class="templeEffect">'+me.descAfter+'</div>'):'')+
 						(me.quote?('<q>'+me.quote+'</q>'):'')+
 					'</div>'
@@ -295,7 +297,11 @@ M.launch=function()
 			var god=M.gods[what];
 			for (var i=0;i<3;i++)
 			{
-				if (M.slot[i]==god.id) return (i+1);
+				if (M.slot[i]==god.id)
+				{
+					if (Game.hasAura('Supreme Intellect')) return Math.max(1,i);
+					else return (i+1);
+				}
 			}
 			return false;
 		}
@@ -312,6 +318,10 @@ M.launch=function()
 		}
 		Game.useSwap=M.useSwap;
 		
+		M.dragonBoostTooltip=function()
+		{
+			return '<div style="width:280px;padding:8px;text-align:center;" id="tooltipDragonBoost"><b>'+loc("Supreme Intellect")+'</b><div class="line"></div>'+loc("The jade slot behaves as a ruby slot and the ruby slot behaves as a diamond slot.")+'</div>';
+		}
 		
 		var str='';
 		str+='<style>'+
@@ -405,7 +415,7 @@ M.launch=function()
 		
 		
 		M.refillTooltip=function(){
-			return '<div style="padding:8px;width:300px;font-size:11px;text-align:center;">'+loc("Click to refill all your worship swaps for %1.",'<span class="price lump">'+loc("%1 sugar lump",LBeautify(1))+'</span>')+
+			return '<div style="padding:8px;width:300px;font-size:11px;text-align:center;" id="tooltipRefill">'+loc("Click to refill all your worship swaps for %1.",'<span class="price lump">'+loc("%1 sugar lump",LBeautify(1))+'</span>')+
 				(Game.canRefillLump()?'<br><small>('+loc("can be done once every %1",Game.sayTime(Game.getLumpRefillMax(),-1))+')</small>':('<br><small class="red">('+loc("usable again in %1",Game.sayTime(Game.getLumpRefillRemaining()+Game.fps,-1))+')</small>'))+
 			'</div>';
 		};

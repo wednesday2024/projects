@@ -42,7 +42,10 @@ WindowFocus=true;
 
 Steam={};
 App=Steam;
-Steam.reload=()=>{send('reload');};
+Steam.reload=(args)=>{
+	if (!args) send('reload');
+	else send({id:'reload',...args});
+};
 Steam.quit=()=>{send('quit');};
 Steam.save=(str)=>{
 	//save to cloud and local
@@ -58,8 +61,13 @@ Steam.save=(str)=>{
 Steam.load=(callback)=>{send({id:'cloud read'/*,name:'save'*/},callback);};//load from cloud
 Steam.purgeCloud=()=>{send('cloud purge');};
 Steam.writeCloudUI=()=>{
-	return '<div class="listing" style="margin-bottom:-8px;">'+Game.WriteButton('cloudSave','cloudSaveButton',loc("Cloud saving")+ON,loc("Cloud saving")+OFF,'')+'<label>('+loc("allow use of Steam Cloud for save backups")+')</label></div><div id="cloudIsOn" class="listing" style="display:'+(Steam.cloud?'inline-block':'none')+';"><a class="option" style="font-size:11px;margin-left:12px;" '+Game.clickStr+'="Steam.purgeCloud();PlaySound(\'snd/tick.mp3\');">'+loc("Purge Cloud")+'</a><label>'+loc("Current Cloud use:")+' <b>'+Steam.cloudQuota+'</b></label></div><div id="cloudIsOff" class="listing" style="display:'+(!Steam.cloud?'inline-block':'none')+';font-size:11px;margin-left:12px;color:#c00;">'+loc("No Cloud access at the moment.")+'</div>';
+	return '<div class="listing" style="margin-bottom:-8px;">'+Game.WritePrefButton('cloudSave','cloudSaveButton',loc("Cloud saving")+ON,loc("Cloud saving")+OFF,'')+'<label>('+loc("allow use of Steam Cloud for save backups")+')</label></div><div id="cloudIsOn" class="listing" style="display:'+(Steam.cloud?'inline-block':'none')+';"><a class="option" style="font-size:11px;margin-left:12px;" '+Game.clickStr+'="Steam.purgeCloud();PlaySound(\'snd/tick.mp3\');">'+loc("Purge Cloud")+'</a><label>'+loc("Current Cloud use:")+' <b>'+Steam.cloudQuota+'</b></label></div><div id="cloudIsOff" class="listing" style="display:'+(!Steam.cloud?'inline-block':'none')+';font-size:11px;margin-left:12px;color:#c00;">'+loc("No Cloud access at the moment.")+'</div>'
+	+'<div class="listing">'+Game.WritePrefButton('discordPresence','discordPresenceButton',loc("Discord status")+ON,loc("Discord status")+OFF,'Steam.toggleRichPresence(Game.prefs.discordPresence);')+'<label>('+loc("if Discord is on, show your game info as activity status")+')</label></div>';
 };
+Steam.toggleRichPresence=function(val)
+{
+	send({id:'toggle presence',val:val});
+}
 
 let analyzeSaveData=function(data)
 {
@@ -119,6 +127,7 @@ Steam.justLoadedSave=()=>{
 		var old=localStorageGet(Game.SaveTo);
 		if (old) localStorageSet(Game.SaveTo+'Old',old);
 	}
+	Steam.toggleRichPresence(Game.prefs.discordPresence);
 	//if (Game.HasAchiev('Cheated cookies taste awful')) Steam.allowSteamAchievs=false;
 	if (!Steam.allowSteamAchievs) return false;
 	let list=[];
@@ -298,7 +307,7 @@ Steam.modsPopup=function()
 		}
 		else el.innerHTML=loc("Select a mod.");
 	}
-	Game.Prompt(`
+	Game.Prompt(`<id ManageMods>
 		<h3>${loc("Manage mods")}</h3>
 		<div class="line"></div>
 		<div style="overflow:hidden;clear:both;"><a class="option" style="float:left;" id="openModsFolder" ${Game.clickStr}="PlaySound('snd/tick.mp3');">${loc("Open %1 folder",'/mods')}</a><a class="option" style="float:right;" id="openWorkshop" ${Game.clickStr}="PlaySound('snd/tick.mp3');">${loc("Open Workshop")}</a></div>
@@ -330,7 +339,7 @@ Steam.workshopPopup=function()
 	
 	let updatePublishedModsPopup=()=>
 	{
-		Game.Prompt(`
+		Game.Prompt(`<id UpdateMods>
 			<h3>${loc("Update published mods")}</h3>
 			<div class="line"></div>
 			<div style="font-size:11px;">You may upload updated folders for your published mods here.<br>To edit a mod's name/description/gallery, please use its Workshop page instead.<br>Your mod's thumbnail will also be updated if your folder includes<br>an image named "thumbnail.png" under 1MB.</div>
@@ -487,6 +496,7 @@ Steam.workshopPopup=function()
 			
 			str+=`
 			<div style="font-size:11px;">
+				${tinyIcon([16,5])}<div></div>
 				${loc("This tool allows you to upload new mods to the Steam Workshop.<br>You need to select a mod folder containing a properly-formatted %1 file.<br>See the included sample mods for examples.",'<b>info.txt</b>')}
 			</div>
 			<div class="line"></div>
@@ -511,7 +521,7 @@ Steam.workshopPopup=function()
 		Game.UpdatePrompt();
 	}
 	
-	Game.Prompt(`
+	Game.Prompt(`<id PublishMods>
 		<h3>${loc("Publish mods")}</h3>
 		<div class="line"></div>
 		<div class="block" id="modDisplay"></div>
@@ -579,7 +589,7 @@ Steam.loadMods=async function(callback)
 		{
 			let mod=mods[i];
 			Steam.mods[mod.id]=mod;
-			if (!mod.dependencies.every(v=>loadedMods.includes(v))) mod.disabled=true;
+			if (Game.modless || !mod.dependencies.every(v=>loadedMods.includes(v))) mod.disabled=true;
 			if (mod.disabled) continue;
 			let file=mod.jsFile;
 			if (file)
@@ -638,7 +648,7 @@ Steam.logic=function(T)
 		var arr=[];
 		arr[0]=loc("%1 cookie",LBeautify(Game.cookies));
 		arr[1]='('+(EN?'':(loc("per second:")+' '))+Beautify(Game.cookiesPs*(1-Game.cpsSucked),1)+(EN?' per second':'')+')';
-		send({id:'update presence',arr:arr});
+		if (Game.prefs.discordPresence) send({id:'update presence',arr:arr});
 	}
 }
 
@@ -764,7 +774,7 @@ PRELOAD=function(callback){return async function(){
 				else Music.gain.gain.setValueAtTime(val,Music.context.currentTime);
 			}
 			
-			Music.addTrack=function(name,url)
+			Music.addTrack=function(name,author,url)
 			{
 				if (!Music.tracks[name])
 				{
@@ -772,6 +782,7 @@ PRELOAD=function(callback){return async function(){
 						audio:new Audio(),
 						canPlay:false,
 						name:name,
+						author:author,
 					};
 					var track=Music.tracks[name];
 					track.out=Music.context.createMediaElementSource(track.audio);
@@ -786,8 +797,12 @@ PRELOAD=function(callback){return async function(){
 						this.audio.play();
 					};
 					track.stop=function(){
-						this.out.disconnect(Music.out);
+						//this.out.disconnect(Music.out);
 						this.audio.pause();
+					};
+					track.unstop=function(){
+						this.out.connect(Music.out);
+						this.audio.play();
 					};
 					AddEvent(track.audio,'canplay',function(it){
 						it.target.track.canPlay=true;
@@ -796,10 +811,10 @@ PRELOAD=function(callback){return async function(){
 			}
 			
 			//note: may trigger CORS locally
-			Music.addTrack('preclick','music/preclick.mp3');
-			Music.addTrack('click','music/click.mp3');
-			Music.addTrack('grandmapocalypse','music/grandmapocalypse.mp3');
-			Music.addTrack('ascend','music/ascend.mp3');
+			Music.addTrack('preclick','C418','music/preclick.mp3');
+			Music.addTrack('click','C418','music/click.mp3');
+			Music.addTrack('grandmapocalypse','C418','music/grandmapocalypse.mp3');
+			Music.addTrack('ascend','C418','music/ascend.mp3');
 			
 			Music.cues={
 				'launch':()=>{Music.setFilter(0);setTimeout(()=>{Music.loopTrack('preclick');Music.setFilter(1,5);},1000);},
@@ -833,18 +848,36 @@ PRELOAD=function(callback){return async function(){
 				if (!track) return false;
 				if (Music.playing) Music.playing.stop();//todo: fade out
 				Music.playing=track;
-				if (track.canPlay) {track.play();if (callback){callback(track);}}
+				if (track.canPlay) {track.play();track.audio.loop=false;if (callback){callback(track);}}
 				else
 				{
 					AddEvent(track.audio,'canplay',function(it){
 						if (it.target.track==Music.playing) {it.target.track.play();if (callback){callback(it.target.track);}}
 					});
 				}
+				if (Game.jukebox) Game.jukebox.setTrack(Game.jukebox.tracks.indexOf(name),true);
 				return true;
 			}
 			Music.loopTrack=function(name)
 			{
 				Music.playTrack(name,(track)=>{track.audio.loop=true;});
+			}
+			
+			Music.pause=function()
+			{
+				if (Music.playing) Music.playing.stop();
+			}
+			Music.unpause=function()
+			{
+				if (Music.playing) Music.playing.unstop();
+			}
+			Music.loop=function(val)
+			{
+				if (Music.playing) Music.playing.audio.loop=val;
+			}
+			Music.setTime=function(val)
+			{
+				if (Music.playing) Music.playing.currentTime=val;
 			}
 			
 			//Music.playTrack('click');
@@ -891,6 +924,54 @@ PRELOAD=function(callback){return async function(){
 		}}(initMusic));
 	}
 	else */initMusic();
+	
+	setTimeout(()=>{Steam.toggleRichPresence(Game.prefs.discordPresence);},1000*5);
+	
+	
+	//handle errors, likely in mods
+	let onRuntimeError=function(e)
+	{
+		var stack=0;
+		if (e.stack) stack=e.stack;
+		else if (e.reason && e.reason.stack) stack=e.reason.stack;
+		if (stack)
+		{
+			var str='';
+			
+			var paths=stack.match(/\(([^\)]+)\)/gi);
+			var modPath=paths.filter(it=>it.indexOf('/mods/')!=-1);
+			var srcPath=paths.filter(it=>it.indexOf('/src/')!=-1);
+			if (modPath.length>0)
+			{
+				var path=modPath[0].slice(1,-1);
+				path=path.substring(path.indexOf('/mods/'));
+				str+=`Error in mod script:<br><b>${path}</b><br>Try disabling the relevant mod.`;
+			}
+			else if (srcPath.length>0)
+			{
+				var path=srcPath[0].slice(1,-1);
+				path=path.substring(path.indexOf('/src/'));
+				str+=`Error in game script:<br><b>${path}</b><br>This may be caused by a recent update.`;
+			}
+			else
+			{
+				str+=`Error in game code.`;
+				if (paths.length>0) str+=`<br><b>${paths[0].slice(1,-1)}</b>`;
+			}
+			
+			if (str && l('failedToLoad'))
+			{
+				str+=`<div style="font-size:20px;margin-top:24px;"><a id="errorStartModless" class="highlightHover smallWhiteButton">Restart without mods?</a> <a id="errorQuit" class="highlightHover smallOrangeButton">Quit</a></div>`;
+				l('failedToLoad').innerHTML=str;
+				l('failedToLoad').style.animation='none';
+				AddEvent(l('errorStartModless'),'click',()=>{Steam.reload({'modless':'1'})});
+				AddEvent(l('errorQuit'),'click',Steam.quit);
+			}
+		}
+	}
+	
+	window.addEventListener('error',onRuntimeError);
+	window.addEventListener('unhandledrejection',onRuntimeError);
 	
 	callback();
 }};
