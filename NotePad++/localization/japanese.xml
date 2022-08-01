@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <NotepadPlus>
-    <Native-Langue name="Japanese" filename="japanese.xml" version="8.4.3">
+    <Native-Langue name="Japanese" filename="japanese.xml" version="8.4.5">
         <Menu>
             <Main>
                 <!-- Main Menu Entries -->
@@ -868,7 +868,9 @@
                     <Item id="6120" name="縦に表示する"/>
                     <Item id="6121" name="最後のタブを閉じると終了する"/>
 
+                    <Item id="6131" name="メニュー"/>
                     <Item id="6122" name="メインメニューを隠す(表示するには Alt か F10 を押す)"/>
+                    <Item id="6132" name="メインメニュー右端の ＋ ▼ ✕ ボタンを非表示にする(Notepad++ の再起動が必要)"/>
                     <Item id="6123" name="言語"/>
 
                     <Item id="6128" name="別デザインのアイコンを使用する"/>
