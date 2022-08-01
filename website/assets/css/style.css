@@ -1,5 +1,5 @@
 /**
-* Template Name: Regna - v4.8.0
+* Template Name: Regna - v4.8.1
 * Bootstrap version: 5.2.0
 * Bootstrap icons version: 1.9.1
 * Swiper JS version: 8.3.1
@@ -15,7 +15,7 @@ body {
   background: #464242;
   color: white;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: Edu VIC WA NT Beginner;
 }
 
 a {
@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: Edu VIC WA NT Beginner;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -104,7 +104,7 @@ h6 {
   font-size: 32px;
   margin: 0;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: Edu VIC WA NT Beginner;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -166,7 +166,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: Edu VIC WA NT Beginner;
   color: #fff;
   font-size: 14px;
   padding: 0 4px;
@@ -462,7 +462,7 @@ h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: Edu VIC WA NT Beginner;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -749,7 +749,7 @@ section {
 }
 
 #call-to-action .cta-btn {
-  font-family: "Poppins", sans-serif;
+  font-family: Edu VIC WA NT Beginner;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -815,6 +815,9 @@ section {
 strong {
   color: #07CFE7;
 }
+strong2 {
+  color: #b1cfa7;
+}
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -863,4 +866,7 @@ body::-webkit-scrollbar-thumb {
 }
 border {
   border: 5px solid white;
+}
+body {
+    font-family: 'Edu VIC WA NT Beginner';font-size: 22px;
 }

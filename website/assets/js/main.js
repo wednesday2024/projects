@@ -1,5 +1,5 @@
 /**
-* Template Name: Regna - v4.8.0
+* Template Name: Regna - v4.8.1
 * Bootstrap version: 5.2.0
 * Bootstrap icons version: 1.9.1
 * Swiper version: 8.3.1
@@ -227,5 +227,10 @@
       mirror: false
     })
   });
+
+  /**
+   * Initiate Pure Counter 
+   */
+  new PureCounter();
 
 })()
