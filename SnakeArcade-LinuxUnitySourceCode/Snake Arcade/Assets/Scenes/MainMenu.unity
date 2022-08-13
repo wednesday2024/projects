@@ -1166,11 +1166,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Version - 2.1.0
+  m_text: 'Version - 3.0.0
 
-    Built on - July 11, 2022
+    Built on - August 13, 2022
 
-    Unity version - 2022.1.8f1
+    Unity version - 2022.1.13f1
     personal'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -265.55698, w: 0}
+  m_margin: {x: 0, y: 0, z: -461.26987, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
