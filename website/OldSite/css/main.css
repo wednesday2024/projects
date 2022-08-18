@@ -1,0 +1,428 @@
+/* A modified default Jekyll theme
+/*
+/* Improvements include:
+/*
+/* 1. Responsive Template: Added media-queries so that it works well
+/*    on a wide-range of screens.
+/*
+
+The MIT License (MIT)
+
+Copyright (c) 2013 Kashyap
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+/* Global Reset */
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  background-color: #FFF;
+  font-size: 130%;
+  font-family: 'BenchNine', sans-serif;
+  font-weight: 300;
+  line-height: 1.55em;
+  padding: 0 2em;
+  text-rendering: optimizeLegibility;
+  color: #555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-family: 'BenchNine', sans-serif;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 170%;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.4em;
+}
+
+h2 {
+  font-size: 150%;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.4em;
+}
+
+h3 {
+  font-size: 130%;
+  margin-top: 3.25em;
+  margin-bottom: 0.5em;
+  line-height: 1.4em;
+}
+
+h4 {
+  font-size: 110%;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  line-height: 1.4em;
+}
+
+h5 {
+  font-size: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.4em;
+}
+
+p {
+  margin: 0.5em 0 2.5em;
+}
+
+a         { color: #00a; }
+a:hover   { color: #000; }
+a:visited { color: #a0a; }
+
+
+blockquote {
+  padding: 0.1em 1.3em;
+  background: #fafafa;
+  border-left: 5px #81E26D solid;
+  color: #666;
+}
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+  margin-bottom: 1em;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-family: 'BenchNine', sans-serif;
+  font-size: 80%;
+  display: list-item;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  margin: auto;
+  max-width: 34em;
+  padding: 0 1em;
+  color: #333;
+}
+
+.site .header a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site .header h1.title {
+  display: inline-block;
+  font-size: 180%;
+}
+
+.site .header h1.title a {
+  color: #a00;
+}
+
+.site .header h1.title a:hover {
+  color: #000;
+}
+
+.site .header a.extra {
+  color: #aaa;
+  margin-left: 1em;
+}
+
+.site .header a.extra:hover {
+  color: #000;
+}
+
+.site .meta {
+  color: #aaa;
+}
+
+.site .footer {
+  font-size: 80%;
+  color: #666;
+  border-top: 4px solid #eee;
+  margin-top: 2em;
+  overflow: hidden;
+}
+
+.site .footer .contact {
+  float: left;
+  margin-right: 3em;
+}
+
+.site .footer .contact a {
+  color: #8085C1;
+}
+
+.site .footer .rss {
+  margin-top: 1.1em;
+  margin-right: -.2em;
+  float: right;
+}
+
+.site .footer .rss img {
+  border: 0;
+}
+
+pre {
+  font-family: 'BenchNine', sans-serif;
+  overflow: auto;
+  margin: 1em auto;
+}
+
+code {
+  font-family: 'BenchNine', sans-serif;
+}
+
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+/* standard */
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  line-height: 1em;
+  padding: 0.2em 0.5em;
+}
+
+.post ul, .post ol {
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  font-size: 0.7em;
+
+}
+
+.post pre code {
+  border: none;
+}
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
+
+.post {
+  text-align: justify;
+}
+
+/************************************************************************/
+/*    Media Queries
+/*
+/************************************************************************/
+
+
+
+
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 130%;
+    padding: 0 4em;
+  }
+  .post code {
+    font-size: 85%;
+  }
+
+  pre code {
+    line-height: 1.6em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 125%;
+    padding: 0 1.5em;
+  }
+
+  .post code {
+    font-size: 80%;
+  }
+
+  pre code {
+    font-size: 80%;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 120%;
+    padding: 0 0.5em;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 1em;
+  }
+
+  .contact {
+    width: 100%;
+  }
+
+  .post code {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    padding: 0;
+  }
+}
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+@-ms-viewport {
+    width: device-width ;
+}
+@media screen and (max-width:320px) {
+  /* CSS for screens that are 320 pixels or less will be put in this section */
+}
+@media screen and (min-width:320px) and (max-width:640px) {
+  /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
+}
+/* code that is here, until the first @media block, will apply to any screen size */
+#somethingorother {
+  width: 800px ;
+}
+
+@media screen and (max-width: 320px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  #somethingorother {
+    width: 120px ;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+  #somethingorother {
+    width: 320px ;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #somethingorother {
+    width: 480px ;
+  }
+}
+
+/* code that is here will apply to any screen size */
+
+@media screen and (orientation:portrait) {
+  /* ... */
+}
+@media screen and (orientation: landscape) {
+  /* ... */
+}
+@media not (max-width: 639px) {
+/* CSS rules for any device that is wider than 639 pixels */
+}
+body {
+  display: flex;
+}
+
+div {
+  background: #f0f0f0;
+}
+
+@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #f0f0f0;
+  }
+}
+
+div {
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50px;
+}
+@media screen and (min-width: 481px) {
+  #products img {
+	float: left;
+	margin:0 6px 6px 0;
+  }
+  #products .more {
+	clear: left;
+  }
+  #products {
+	margin: 1em;
+  }
+  #testimonials {
+	margin: 1em 5%;
+	border-radious: 16px;
+  }
+}

@@ -1,0 +1,62 @@
+CACHE MANIFEST
+
+# Adds the ability to play the game offline.
+# The following comment needs to be updated whenever a change is made.
+# Run `rake appcache:update` to do so
+# Updated: 2019-01-13T21:16:00+01:00
+
+# Discord page
+discord.html
+
+# Maintenance page
+maintenance.html
+
+# Open source page
+open_source.html
+
+# Home page
+index.html
+
+# Game page
+game.html
+
+# CSS
+game_files/style/main.css
+game_files/style/old.css
+game_files/style/main.scss
+game_files/style/helpers.scss
+css/media-query.css
+css/main.css
+css/normalize.css
+
+# Fonts
+game_files/style/fonts/BenchNine.css
+game_files/style/fonts/BenchNine-Light.otf
+game_files/style/fonts/BenchNine-Regular.otf
+game_files/style/fonts/BenchNine-Bold.otf
+
+# JavaScript
+game_files/js/animframe_polyfill.js
+game_files/js/application.js
+game_files/js/bind_polyfill.js
+game_files/js/classlist_polyfill.js
+game_files/js/game_manager.js
+game_files/js/grid.js
+game_files/js/html_actuator.js
+game_files/js/keyboard_input_manager.js
+game_files/js/local_storage_manager.js
+game_files/js/mode_negative.js
+game_files/js/tile.js
+
+images/construction.png
+images/icon.png
+
+license_agreements/OPEN_SOURCE.txt
+license_agreements/LICENSE.txt
+
+README.md
+cache.appcache
+.gitattributes
+
+NETWORK:
+*
