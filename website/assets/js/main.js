@@ -2,7 +2,7 @@
 * Template Name: Regna - v4.8.1
 * Bootstrap version: 5.2.0
 * Bootstrap icons version: 1.9.1
-* Swiper version: 8.3.1
+* Swiper JS version: 8.3.2
 * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/

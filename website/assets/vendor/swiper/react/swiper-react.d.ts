@@ -49,6 +49,9 @@ interface SwiperProps extends SwiperOptions {
    * Event will be fired when swiper updates the hash
    */
   onHashSet?: (swiper: SwiperClass) => void;/**
+   * Event will be fired on key press
+   */
+  onKeyPress?: (swiper: SwiperClass, keyCode: string) => void;/**
    * Event will be fired in the beginning of lazy loading of image
    */
   onLazyImageLoad?: (swiper: SwiperClass, slideEl: HTMLElement, imageEl: HTMLElement) => void;
@@ -74,9 +77,6 @@ interface SwiperProps extends SwiperOptions {
    * Event will be fired on navigation next button click
    */
   onNavigationNext?: (swiper: SwiperClass) => void;/**
-   * Event will be fired on key press
-   */
-  onKeyPress?: (swiper: SwiperClass, keyCode: string) => void;/**
    * Event will be fired after pagination rendered
    */
   onPaginationRender?: (swiper: SwiperClass, paginationEl: HTMLElement) => void;

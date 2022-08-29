@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+<title>Cookie Clicker</title>
+
+<style>
+body,html
+{
+	position:absolute;
+	left:0px;top:0px;right:0px;bottom:0px;
+	padding:0px;margin:0px;
+	background:#000;
+	background:url(src/img/shadedBorders.png) left top/100% 100%,#111 url(src/img/bgBlue.jpg);
+	color:#fff;
+	text-shadow:0px -2px 4px rgba(255,255,200,0.4),0px 1px 0px rgba(100,100,100,1),0px 6px 8px rgba(0,0,0,1);
+	overflow:hidden;
+	pointer-events:none;
+}
+#dark,#dark2
+{
+	position:absolute;
+	left:0px;top:0px;right:0px;bottom:0px;
+	padding:0px;margin:0px;
+	background:#000;
+	z-index:100;
+	animation:darkFade 2s ease-in-out;
+	animation-fill-mode:both;
+	animation-delay:0.5s;
+}
+#dark2
+{
+	background:#f60;
+	mix-blend-mode:multiply;
+	z-index:99;
+}
+#center
+{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	position:absolute;
+	left:0px;top:0px;right:0px;bottom:0px;
+	perspective:500px;
+}
+#title
+{
+	font-size:8vmin;
+	font-family: 'Merriweather', Georgia,serif;
+	animation:titleRise 2s ease;
+	animation-fill-mode:both;
+	animation-delay:0.5s;
+	z-index:5;
+}
+#cookie
+{
+	position:absolute;
+	left:50%;top:50%;
+	width:36vmin;
+	margin-left:-18vmin;
+	margin-top:-18vmin;
+	z-index:2;
+	opacity:0.9;
+	filter:drop-shadow(0px 5px 20px #000);
+	animation:cookieRise 2s ease;
+	animation-fill-mode:both;
+	animation-delay:0.5s;
+}
+#logo
+{
+	width:16vmin;
+	position:absolute;
+	bottom:2vmin;
+	/*left:50%;
+	margin-left:-8vmin;*/
+	left:2vmin;
+	opacity:0.4;
+}
+#logo2
+{
+	width:16vmin;
+	position:absolute;
+	bottom:2vmin;
+	/*left:50%;
+	margin-left:-8vmin;*/
+	right:2vmin;
+	opacity:0.4;
+}
+
+@keyframes titleRise{
+	0% {transform:translate(0px,300px) rotateX(-180deg);opacity:0;letter-spacing:50px;}
+	20% {transform:translate(0px,0px) rotateX(0deg);opacity:1;letter-spacing:-3px;}
+	100% {transform:translate(0px,-10px) rotateX(10deg);opacity:0.5;letter-spacing:5px;}
+}
+@keyframes cookieRise{
+	0% {transform:translate(0px,150px) scale(2) rotate(-50deg);opacity:0;}
+	15% {transform:translate(0px,-0px) scale(0.95) rotate(1deg);opacity:0.9;}
+	30% {transform:translate(0px,-5px) scale(1) rotate(0deg);opacity:0.9;}
+	100% {transform:translate(0px,-10px) scale(1) rotate(0deg);opacity:0.9;}
+}
+@keyframes darkFade{
+	0% {opacity:1;}
+	15% {opacity:0;}
+	60% {opacity:0;}
+	0% {opacity:1;}
+}
+</style>
+
+  <!-- Favicons -->
+  <link href="src/img/favicon.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Edu VIC WA NT Beginner' rel='stylesheet'>
+
+  <!-- Bootstrap 5.2.0 coding -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/splash.css" rel="stylesheet">
+  
+  <meta http-equiv="refresh" content="2 url =
+    src/index.html" />
+
+</head>
+
+<body>
+<div id="dark"></div><div id="dark2"></div>
+
+<div id="center">
+	<img id="logo" src="src/img/dashnetLogo.png">
+	<img id="logo2" src="src/img/playsaurusLogo.png">
+	<img id="cookie" src="src/img/perfectCookie.png">
+	<div id="title">
+	<div><span style="font-size:120%;position:relative;top:0.5vmin;margin:0px -0.5vmin;">C</span><span style="position:relative;top:0.5vmin;margin:0px -0.5vmin;">o</span><span style="position:relative;top:-0.5vmin;margin:0px -0.5vmin;">o</span>k<span style="position:relative;top:0.5vmin;margin:0px -0.5vmin;">i</span>e Cl<span style="position:relative;top:0.5vmin;margin:0px -0.5vmin;">i</span>c<span style="position:relative;top:-0.5vmin;margin:0px -0.5vmin;">k</span><span style="position:relative;top:0.5vmin;margin:0px -0.5vmin;">e</span>r</div>
+	<div style="display:none;margin-right:-40%;letter-spacing:0px;font-size:30%;text-align:center;margin-top:-2vmin;opacity:0.9;">Steam</div>
+	</div>
+	
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/splashLoad.js"></script>
+  
+</div>
+</body>
+</html>

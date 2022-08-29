@@ -276,6 +276,10 @@ const Swiper = {
       type: Number,
       default: undefined
     },
+    loopedSlidesLimit: {
+      type: Boolean,
+      default: true
+    },
     loopFillGroupWithBlank: {
       type: Boolean,
       default: undefined

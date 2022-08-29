@@ -1,5 +1,5 @@
 /**
- * Swiper 8.3.1
+ * Swiper 8.3.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 23, 2022
+ * Released on: August 29, 2022
  */
 
 (function (global, factory) {
@@ -3134,25 +3134,21 @@
       swiper.loopedSlides = Math.ceil(parseFloat(params.loopedSlides || params.slidesPerView, 10));
       swiper.loopedSlides += params.loopAdditionalSlides;
 
-      if (swiper.loopedSlides > slides.length) {
+      if (swiper.loopedSlides > slides.length && swiper.params.loopedSlidesLimit) {
         swiper.loopedSlides = slides.length;
       }
 
       const prependSlides = [];
       const appendSlides = [];
       slides.each((el, index) => {
-        const slide = $(el);
-
-        if (index < swiper.loopedSlides) {
-          appendSlides.push(el);
-        }
-
-        if (index < slides.length && index >= slides.length - swiper.loopedSlides) {
-          prependSlides.push(el);
-        }
-
-        slide.attr('data-swiper-slide-index', index);
+        $(el).attr('data-swiper-slide-index', index);
       });
+
+      for (let i = 0; i < swiper.loopedSlides; i += 1) {
+        const index = i - Math.floor(i / slides.length) * slides.length;
+        appendSlides.push(slides.eq(index)[0]);
+        prependSlides.unshift(slides.eq(slides.length - index - 1)[0]);
+      }
 
       for (let i = 0; i < appendSlides.length; i += 1) {
         $selector.append($(appendSlides[i].cloneNode(true)).addClass(params.slideDuplicateClass));
@@ -3298,9 +3294,11 @@
       if (!data.isTouchEvent && 'button' in e && e.button > 0) return;
       if (data.isTouched && data.isMoved) return; // change target el for shadow root component
 
-      const swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== '';
+      const swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== ''; // eslint-disable-next-line
 
-      if (swipingClassHasValue && e.target && e.target.shadowRoot && event.path && event.path[0]) {
+      const eventPath = event.composedPath ? event.composedPath() : event.path ? event.path[0] : undefined;
+
+      if (swipingClassHasValue && e.target && e.target.shadowRoot && eventPath) {
         $targetEl = $(event.path[0]);
       }
 
@@ -4335,6 +4333,7 @@
       loop: false,
       loopAdditionalSlides: 0,
       loopedSlides: null,
+      loopedSlidesLimit: true,
       loopFillGroupWithBlank: false,
       loopPreventsSlide: true,
       // rewind
@@ -8381,6 +8380,13 @@
         const isActive = swiper.slides.indexOf(slideEl) === swiper.activeIndex;
         const isVisible = swiper.params.watchSlidesProgress && swiper.visibleSlides && swiper.visibleSlides.includes(slideEl);
         if (isActive || isVisible) return;
+
+        if (swiper.isHorizontal()) {
+          swiper.el.scrollLeft = 0;
+        } else {
+          swiper.el.scrollTop = 0;
+        }
+
         swiper.slideTo(swiper.slides.indexOf(slideEl), 0);
       };
 
@@ -8791,6 +8797,12 @@
       });
 
       function run() {
+        if (!swiper.size) {
+          swiper.autoplay.running = false;
+          swiper.autoplay.paused = false;
+          return;
+        }
+
         const $activeSlideEl = swiper.slides.eq(swiper.activeIndex);
         let delay = swiper.params.autoplay.delay;
 
@@ -10538,7 +10550,9 @@
         cardsEffect: {
           slideShadows: true,
           transformEl: null,
-          rotate: true
+          rotate: true,
+          perSlideRotate: 2,
+          perSlideOffset: 8
         }
       });
 
@@ -10572,8 +10586,8 @@
           let tY = 0;
           const tZ = -100 * Math.abs(progress);
           let scale = 1;
-          let rotate = -2 * progress;
-          let tXAdd = 8 - Math.abs(progress) * 0.75;
+          let rotate = -params.perSlideRotate * progress;
+          let tXAdd = params.perSlideOffset - Math.abs(progress) * 0.75;
           const slideIndex = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.from + i : i;
           const isSwipeToNext = (slideIndex === activeIndex || slideIndex === activeIndex - 1) && progress > 0 && progress < 1 && (isTouched || swiper.params.cssMode) && currentTranslate < startTranslate;
           const isSwipeToPrev = (slideIndex === activeIndex || slideIndex === activeIndex + 1) && progress < 0 && progress > -1 && (isTouched || swiper.params.cssMode) && currentTranslate > startTranslate;
@@ -10660,3 +10674,4 @@
     return Swiper;
 
 }));
+//# sourceMappingURL=swiper-bundle.js.map
