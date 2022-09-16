@@ -1,13 +1,12 @@
 import { getWindow } from 'ssr-window';
 import $ from '../../shared/dom.js';
 import { getTranslate } from '../../shared/utils.js';
-export default function Zoom(_ref) {
-  let {
-    swiper,
-    extendParams,
-    on,
-    emit
-  } = _ref;
+export default function Zoom({
+  swiper,
+  extendParams,
+  on,
+  emit
+}) {
   const window = getWindow();
   extendParams({
     zoom: {

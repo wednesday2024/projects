@@ -1,10 +1,9 @@
 import $ from '../../shared/dom.js';
-export default function Parallax(_ref) {
-  let {
-    swiper,
-    extendParams,
-    on
-  } = _ref;
+export default function Parallax({
+  swiper,
+  extendParams,
+  on
+}) {
   extendParams({
     parallax: {
       enabled: false
@@ -83,11 +82,7 @@ export default function Parallax(_ref) {
     });
   };
 
-  const setTransition = function (duration) {
-    if (duration === void 0) {
-      duration = swiper.params.speed;
-    }
-
+  const setTransition = (duration = swiper.params.speed) => {
     const {
       $el
     } = swiper;

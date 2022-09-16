@@ -1,5 +1,5 @@
 /**
- * Swiper 8.3.2
+ * Swiper 8.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: August 29, 2022
+ * Released on: September 16, 2022
  */
 
 (function (global, factory) {
@@ -2708,14 +2708,7 @@
       const skip = Math.min(swiper.params.slidesPerGroupSkip, slideIndex);
       let snapIndex = skip + Math.floor((slideIndex - skip) / swiper.params.slidesPerGroup);
       if (snapIndex >= snapGrid.length) snapIndex = snapGrid.length - 1;
-
-      if ((activeIndex || params.initialSlide || 0) === (previousIndex || 0) && runCallbacks) {
-        swiper.emit('beforeSlideChangeStart');
-      }
-
-      const translate = -snapGrid[snapIndex]; // Update progress
-
-      swiper.updateProgress(translate); // Normalize slideIndex
+      const translate = -snapGrid[snapIndex]; // Normalize slideIndex
 
       if (params.normalizeSlideIndex) {
         for (let i = 0; i < slidesGrid.length; i += 1) {
@@ -2746,6 +2739,12 @@
         }
       }
 
+      if (slideIndex !== (previousIndex || 0) && runCallbacks) {
+        swiper.emit('beforeSlideChangeStart');
+      } // Update progress
+
+
+      swiper.updateProgress(translate);
       let direction;
       if (slideIndex > activeIndex) direction = 'next';else if (slideIndex < activeIndex) direction = 'prev';else direction = 'reset'; // Update Index
 
@@ -3141,7 +3140,8 @@
       const prependSlides = [];
       const appendSlides = [];
       slides.each((el, index) => {
-        $(el).attr('data-swiper-slide-index', index);
+        const slide = $(el);
+        slide.attr('data-swiper-slide-index', index);
       });
 
       for (let i = 0; i < swiper.loopedSlides; i += 1) {
@@ -3296,10 +3296,10 @@
 
       const swipingClassHasValue = !!params.noSwipingClass && params.noSwipingClass !== ''; // eslint-disable-next-line
 
-      const eventPath = event.composedPath ? event.composedPath() : event.path ? event.path[0] : undefined;
+      const eventPath = event.composedPath ? event.composedPath() : event.path;
 
       if (swipingClassHasValue && e.target && e.target.shadowRoot && eventPath) {
-        $targetEl = $(event.path[0]);
+        $targetEl = $(eventPath[0]);
       }
 
       const noSwipingSelector = params.noSwipingSelector ? params.noSwipingSelector : `.${params.noSwipingClass}`;
@@ -4454,7 +4454,8 @@
               el: containerEl
             });
             swipers.push(new Swiper(newParams));
-          });
+          }); // eslint-disable-next-line no-constructor-return
+
           return swipers;
         } // Swiper Instance
 
@@ -4597,6 +4598,7 @@
         if (swiper.params.init) {
           swiper.init();
         } // Return app instance
+        // eslint-disable-next-line no-constructor-return
 
 
         return swiper;
@@ -8210,6 +8212,9 @@
           id: null
         }
       });
+      swiper.a11y = {
+        clicked: false
+      };
       let liveRegion = null;
 
       function notify(message) {
@@ -8374,7 +8379,16 @@
         addElControls($el, wrapperId);
       };
 
+      const handlePointerDown = () => {
+        swiper.a11y.clicked = true;
+      };
+
+      const handlePointerUp = () => {
+        swiper.a11y.clicked = false;
+      };
+
       const handleFocus = e => {
+        if (swiper.a11y.clicked) return;
         const slideEl = e.target.closest(`.${swiper.params.slideClass}`);
         if (!slideEl || !swiper.slides.includes(slideEl)) return;
         const isActive = swiper.slides.indexOf(slideEl) === swiper.activeIndex;
@@ -8462,6 +8476,8 @@
 
 
         swiper.$el.on('focus', handleFocus, true);
+        swiper.$el.on('pointerdown', handlePointerDown, true);
+        swiper.$el.on('pointerup', handlePointerUp, true);
       };
 
       function destroy() {
@@ -8492,6 +8508,8 @@
 
 
         swiper.$el.off('focus', handleFocus, true);
+        swiper.$el.off('pointerdown', handlePointerDown, true);
+        swiper.$el.off('pointerup', handlePointerUp, true);
       }
 
       on('beforeInit', () => {

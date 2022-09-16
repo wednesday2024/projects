@@ -3,13 +3,12 @@
 /* eslint no-use-before-define: "off" */
 import { getDocument } from 'ssr-window';
 import { nextTick } from '../../shared/utils.js';
-export default function Autoplay(_ref) {
-  let {
-    swiper,
-    extendParams,
-    on,
-    emit
-  } = _ref;
+export default function Autoplay({
+  swiper,
+  extendParams,
+  on,
+  emit
+}) {
   let timeout;
   swiper.autoplay = {
     running: false,

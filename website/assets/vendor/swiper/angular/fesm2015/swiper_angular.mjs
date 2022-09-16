@@ -37,6 +37,7 @@ const paramsList = [
     '_grid',
     '_slidesPerGroup',
     '_slidesPerGroupSkip',
+    '_slidesPerGroupAuto',
     '_centeredSlides',
     '_centeredSlidesBounds',
     '_slidesOffsetBefore',

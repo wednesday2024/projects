@@ -13,35 +13,19 @@ function extend(target, src) {
   });
 }
 
-function needsNavigation(params) {
-  if (params === void 0) {
-    params = {};
-  }
-
+function needsNavigation(params = {}) {
   return params.navigation && typeof params.navigation.nextEl === 'undefined' && typeof params.navigation.prevEl === 'undefined';
 }
 
-function needsPagination(params) {
-  if (params === void 0) {
-    params = {};
-  }
-
+function needsPagination(params = {}) {
   return params.pagination && typeof params.pagination.el === 'undefined';
 }
 
-function needsScrollbar(params) {
-  if (params === void 0) {
-    params = {};
-  }
-
+function needsScrollbar(params = {}) {
   return params.scrollbar && typeof params.scrollbar.el === 'undefined';
 }
 
-function uniqueClasses(classNames) {
-  if (classNames === void 0) {
-    classNames = '';
-  }
-
+function uniqueClasses(classNames = '') {
   const classes = classNames.split(' ').map(c => c.trim()).filter(c => !!c);
   const unique = [];
   classes.forEach(c => {

@@ -1,9 +1,5 @@
 import transitionEmit from './transitionEmit.js';
-export default function transitionEnd(runCallbacks, direction) {
-  if (runCallbacks === void 0) {
-    runCallbacks = true;
-  }
-
+export default function transitionEnd(runCallbacks = true, direction) {
   const swiper = this;
   const {
     params

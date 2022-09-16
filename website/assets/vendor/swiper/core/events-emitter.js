@@ -17,15 +17,11 @@ export default {
     if (!self.eventsListeners || self.destroyed) return self;
     if (typeof handler !== 'function') return self;
 
-    function onceHandler() {
+    function onceHandler(...args) {
       self.off(events, onceHandler);
 
       if (onceHandler.__emitterProxy) {
         delete onceHandler.__emitterProxy;
-      }
-
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
       }
 
       handler.apply(self, args);
@@ -79,17 +75,13 @@ export default {
     return self;
   },
 
-  emit() {
+  emit(...args) {
     const self = this;
     if (!self.eventsListeners || self.destroyed) return self;
     if (!self.eventsListeners) return self;
     let events;
     let data;
     let context;
-
-    for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-      args[_key2] = arguments[_key2];
-    }
 
     if (typeof args[0] === 'string' || Array.isArray(args[0])) {
       events = args[0];

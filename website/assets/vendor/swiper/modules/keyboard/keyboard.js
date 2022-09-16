@@ -1,13 +1,12 @@
 /* eslint-disable consistent-return */
 import { getWindow, getDocument } from 'ssr-window';
 import $ from '../../shared/dom.js';
-export default function Keyboard(_ref) {
-  let {
-    swiper,
-    extendParams,
-    on,
-    emit
-  } = _ref;
+export default function Keyboard({
+  swiper,
+  extendParams,
+  on,
+  emit
+}) {
   const document = getDocument();
   const window = getWindow();
   swiper.keyboard = {

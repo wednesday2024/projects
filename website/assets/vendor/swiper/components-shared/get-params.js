@@ -2,15 +2,7 @@ import Swiper from 'swiper';
 import { isObject, extend } from './utils.js';
 import { paramsList } from './params-list.js';
 
-function getParams(obj, splitEvents) {
-  if (obj === void 0) {
-    obj = {};
-  }
-
-  if (splitEvents === void 0) {
-    splitEvents = true;
-  }
-
+function getParams(obj = {}, splitEvents = true) {
   const params = {
     on: {}
   };

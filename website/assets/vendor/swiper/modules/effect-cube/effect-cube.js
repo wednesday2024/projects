@@ -1,11 +1,10 @@
 import $ from '../../shared/dom.js';
 import effectInit from '../../shared/effect-init.js';
-export default function EffectCube(_ref) {
-  let {
-    swiper,
-    extendParams,
-    on
-  } = _ref;
+export default function EffectCube({
+  swiper,
+  extendParams,
+  on
+}) {
   extendParams({
     cubeEffect: {
       slideShadows: true,

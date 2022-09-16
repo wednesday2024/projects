@@ -1,10 +1,9 @@
 import { getWindow } from 'ssr-window';
-export default function Resize(_ref) {
-  let {
-    swiper,
-    on,
-    emit
-  } = _ref;
+export default function Resize({
+  swiper,
+  on,
+  emit
+}) {
   const window = getWindow();
   let observer = null;
   let animationFrame = null;
@@ -25,12 +24,11 @@ export default function Resize(_ref) {
         } = swiper;
         let newWidth = width;
         let newHeight = height;
-        entries.forEach(_ref2 => {
-          let {
-            contentBoxSize,
-            contentRect,
-            target
-          } = _ref2;
+        entries.forEach(({
+          contentBoxSize,
+          contentRect,
+          target
+        }) => {
           if (target && target !== swiper.el) return;
           newWidth = contentRect ? contentRect.width : (contentBoxSize[0] || contentBoxSize).inlineSize;
           newHeight = contentRect ? contentRect.height : (contentBoxSize[0] || contentBoxSize).blockSize;

@@ -2,13 +2,12 @@
 import { getWindow } from 'ssr-window';
 import $ from '../../shared/dom.js';
 import { now, nextTick } from '../../shared/utils.js';
-export default function Mousewheel(_ref) {
-  let {
-    swiper,
-    extendParams,
-    on,
-    emit
-  } = _ref;
+export default function Mousewheel({
+  swiper,
+  extendParams,
+  on,
+  emit
+}) {
   const window = getWindow();
   extendParams({
     mousewheel: {
