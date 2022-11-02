@@ -1,73 +1,12 @@
-CyanogenMod 11
-==================
+CyanogenMod
+===============
 
 Visit http://github.com/CyanogenMod for full source and git access.
 
 Visit http://review.cyanogenmod.org for our Gerrit instance.
 
-CHANGELOG (notable new features, changes, upgrades, and fixes)
+CHANGELOG (notable new features)
 ---------
-### 11.0.0 2019-12-24
-*Fixed the Setup Wizard from crashing on first boot
-*Updated the CyanogenMod apps
-*Updated the security patch
-*Cleaned up the changelog
-*Increased the performance by adding some extra properties
-
-### 11.0.0 2019-10-05
-*Fixed the SystemUI crashing repeatedly after a reboot
-
-### 11.0.0 2019-10-04
-*Updated the security patch
-
-### 11.0.0 2019-08-21
-*New boot.img
-
-### 11.0.0 2019-08-18
-*Fixed the system issues
-
-### 11.0.0 2019-08-15
-*Updated webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-*Added the current and past changes into the system change-log again
-*Removed a few uneeded apps that takes up system resources that doesn't work anymore or doesn't meet the device requirements
-
-### 11.0.0 2019-07-19
-*Updated the webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-
-### 11.0.0 2019-07-04
-*Updated the webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-
-### 11.0.0 2018-12-03
-*Updated the webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-
-### 11.0.0 2018-09-16
-*Updated the webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-*Fixed some security issues within the system
-
-### 11.0.0 2018-09-05
-*Updated the webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-
-### 11.0.0 2018-03-12
-*Updated the webview stuff
-*Updated the security patch
-*Updated the CyanogenMod apps
-
-### 11.0.0 2018-01-25
-*Updated everything
-*This is the first release
-
 ### 11.0.0 M12
 * Common: Android 4.4.4 (Google)
 * Fix the POODLE vulnerability in SSLv3
