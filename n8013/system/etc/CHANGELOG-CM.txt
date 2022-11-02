@@ -1,33 +1,12 @@
-CyanogenMod 11
-==================
+CyanogenMod
+===============
 
 Visit http://github.com/CyanogenMod for full source and git access.
 
 Visit http://review.cyanogenmod.org for our Gerrit instance.
 
-CHANGELOG (notable new features, changes, upgrades, and fixes)
+CHANGELOG (notable new features)
 ---------
-### 11.0.0 2019-12-25
-* Fixed the Setup Wizard from crashing on first boot
-* Updated the CyanogenMod apps
-* Updated the security patch
-* Cleaned up the changelog
-* Increased the performance by adding some extra properties
-
-### 2019-10-26
-* Fix the wifi issues
-* Fix the bootloops
-* Clean up the change-log
-
-### 2019-10-19
-* Fix the bootloops
-* Attempt to fix the wifi issues
-
-### 2019-10-12
-* Updated the security patch
-* Updated the webviews
-* Updated the CyanogenMod apps
-
 ### 11.0.0 M12
 * Common: Android 4.4.4 (Google)
 * Fix the POODLE vulnerability in SSLv3
