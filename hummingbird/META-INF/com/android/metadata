@@ -1,3 +1,3 @@
-post-build=Android/cm_hummingbird/hummingbird:4.4.4/KTU84Q/eb385ffc96:userdebug/test-keys
-post-timestamp=1576110769
-pre-device=hummingbird
+post-build=samsung/espressowifixx/espressowifi:4.2.2/JDQ39/P3110XXDMH1:user/release-keys
+post-timestamp=1610303542
+pre-device=espressowifi
