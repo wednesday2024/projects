@@ -1,9 +1,9 @@
 @echo off
-title Extract and Repack images [v2.0]
+title Extract and Repack images [v3.0]
 setlocal EnableDelayedExpansion
 
 ::   System extractor
-::   Copyright (C) 2020  Ryzen5-3600 
+::   Copyright (C) 2022  Ryzen9-5950X-RTX3090 
 
 
 ::mode con:cols=82 lines=27
@@ -18,10 +18,7 @@ echo.
 echo #                   Extractor and Repacker    
 bin\cecho #               {0f}System extractor{#}
 echo.
-bin\cecho #                      {0a}(by: Ryzen5-3600){#} 
-echo.                                                                                    
-echo.
-bin\cecho #                      {0a}(based on matrix's system extractor){#}                                                                                     
+bin\cecho #                      {0a}(by: Ryzen9-5950X-RTX3090){#}                                                                                      
 echo.                                                                                    
 echo.
 bin\cecho                                                        {0b}%activity%{#} {0f}%recent%{#}
@@ -91,7 +88,7 @@ cls
                                    bin\cecho       {0c}"system.new.dat"{#} is not found
                                    echo.
                                    echo.
-                                   echo    Please copy system.new.dat to the current folder. Thank you.
+                                   echo    Please copy system.new.dat to the current folder. Press any key to return to the main menu.
                                    echo.
                                    set /a web=0
                                    pause>nul
@@ -102,7 +99,7 @@ cls
                                          bin\cecho      {0c}"system.transfer.list"{#} is not found
                                          echo.
                                          echo.
-                                         echo     Please copy system.transfer.list to the current folder. Thank you.
+                                         echo     Please copy system.transfer.list to the current folder. Press any key to return to the main menu.
                                          echo.
                                          set /a web=0
                                          pause>nul
@@ -151,7 +148,7 @@ goto ans%ERRORLEVEL%
                                    bin\cecho       {0c}"system.new.dat.br"{#} is not found
                                    echo.
                                    echo.
-                                   echo    Please copy system.new.dat.br to the current folder. Thank you.
+                                   echo    Please copy system.new.dat.br to the current folder. Press any key to return to the main menu.
                                    echo.
                                    set /a web=0
                                    pause>nul
@@ -162,7 +159,7 @@ goto ans%ERRORLEVEL%
                                          bin\cecho      {0c}"system.transfer.list"{#} is not found
                                          echo.
                                          echo.
-                                         echo     Please copy system.transfer.list to the current folder. Thank you.
+                                         echo     Please copy system.transfer.list to the current folder. Press any key to return to the main menu.
                                          echo.
                                          set /a web=0
                                          pause>nul
@@ -220,7 +217,7 @@ echo Converting "system.img.ext4" to "system"
                pause
                REN system.img.ext4 system.img
                bin\Imgextractor.exe system.img
-               echo  If the extraction failed then install Python and try again:)
+               echo  If the extraction failed then install Python and try again.
                del system.img
                del system.new.dat
                IF EXIST system.new.dat.br del system.new.dat.br
@@ -241,7 +238,7 @@ echo Converting "system.img.ext4" to "system"
                  set /a web=0
 pause
 goto home
-::/*                 END, LAST UPDATED ON TUE, SEPTEMBER 29, 2020                        */
+::/*                 END, LAST UPDATED ON FRI, NOVEMBER 11, 2022                        */
 
 
 ::                 CYANOGENMOD REPACK SCRIPT 
@@ -285,11 +282,11 @@ cls
    if not exist system md system
    echo.
    echo.  
-   echo    1 :- Copy all your sub folders/files (like /app,/bin,/lib build.prop etc.) 
+   echo    1 :- Copy all your sub folders/files (like /app, /bin, /lib, build.prop, etc.) 
    echo.  
    echo         to "system" folder
    echo.
-   echo    2 :- COPY file_contexts to the current folder. Thank you.                                                
+   echo    2 :- COPY file_contexts to the current folder.                                              
    echo.  
    echo.
    pause
@@ -362,7 +359,7 @@ cls
    echo  ///////////////////////////////////////////////////////////////////////////
    echo  /                                                                        /
    echo  /                                                                        /
-   echo  /  Copy all of your sub folders/files (like /app,/bin,/lib build.prop etc.) / 
+   echo  /  Copy all of your sub folders/files (like /app, /bin, /lib, build.prop, etc.) / 
    echo  /                                                                        /
    bin\cecho  /  to {0a}"system"{#} folder and press enter                            / 
    echo.                                                                          /
@@ -465,9 +462,9 @@ echo.
 echo.
 echo //////////////////////////////////////////////////////////////////
 echo.
-echo   You have to copy your folders that is /app ,/bin ,/lib 
+echo   You have to copy your folders that is /app, /bin, /lib 
 echo.
-echo   build.prop to SYSTEM folder ,hope you got it
+echo   build.prop to SYSTEM folder, hope you got it
 echo.
 echo.  and also copy file_contexts to current directory   
 echo. 
@@ -484,8 +481,8 @@ echo.
 echo.
 echo.
 echo.                                                         
-echo   Copy system.img to the current folder. Thank you. and make sure it is  
-echo   named as system.img                                   
+echo   Copy system.img to the current folder and make sure that it is  
+echo   named system.img                                   
 echo.                                                       
 echo    * Current Folder = Folder where you have placed extractor.bat
 echo.
@@ -493,7 +490,7 @@ echo.
 pause
 echo.
 if exist system.img echo     Found the system.img
-if not exist system.img (cls &echo. &echo system.img was not found , please try again with mentioned name &pause > NUL &goto :home)
+if not exist system.img (cls &echo. &echo system.img was not found, please try again with mentioned name &pause > NUL &goto :home)
 echo.
 echo  Please wait around 2 minutes for the process to finish. Thank you.
 ::FOR 
@@ -517,8 +514,8 @@ echo.
 echo.
 echo.
 echo.                                                         
-echo   Copy vendor.img to the current folder. Thank you. and make sure it is  
-echo   named as vendor.img                                   
+echo   Copy vendor.img to the current folder and make sure that it is  
+echo   named vendor.img                                   
 echo.                                                       
 echo    * Current Folder = Folder where you have placed extractor.bat
 echo.
@@ -526,7 +523,7 @@ echo.
 pause
 echo.
 if exist vendor.img echo     Found the vendor.img
-if not exist vendor.img (cls &echo. &echo vendor.img was not found , please try again with mentioned name &pause > NUL &goto :home)
+if not exist vendor.img (cls &echo. &echo vendor.img was not found, please try again with mentioned name &pause > NUL &goto :home)
 echo.
 echo  Please wait around 2 minutes for the process to finish. Thank you.
 ::FOR 
@@ -645,7 +642,7 @@ goto nextsign
 cls
 echo.
 echo.
-bin\cecho       {0c}NO ZIP FILE WAS FOUND, PLEASE COPY THE ZIP FILE TO THE DIRECTORY, AND TRY AGAIN. THANK YOU.{#}
+bin\cecho       {0c}No zip file was found, please COPY the zip file to the directory, and try again. Thank you.{#}
 echo.
 echo.
 pause
@@ -679,13 +676,10 @@ SET count=1
  echo.
  echo.
  echo.
- bin\cecho     {0f}Welcome To:{#} {0a}Ryzen5-3600's{#} {0f}System Extract and Repack tool{#}
+ bin\cecho     {0f}Welcome To:{#} {0a}Ryzen9-5950X-RTX3090's{#} {0f}System Extract and Repack tool{#}
  echo.
  echo.
- bin\cecho     {0f}Based on:{#} {0a}matrix's{#} {0f}System Extract and Repack tool{#}
- echo.
- echo.
- bin\cecho     {0f}loading{#} {0a}%%G{#}
+ bin\cecho     {0f}Loading...{#} {0a}%%G{#}
  echo.
  set /a count+=1 )
  goto check
@@ -750,7 +744,8 @@ bin\cecho       {0f}system.img{#} to the current folder, or rename your system i
 echo.
 bin\cecho       file to {0f}system.img{#}
 echo.
-bin\cecho       Thank you.{#}
+bin\cecho       Press any key to return to the main menu.
+echo.
 echo.
 echo.
 echo     \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -764,9 +759,9 @@ echo.
 echo      ////////////////////////////////////////////////////////////////
 echo.
 echo        Something is missing from the current folder. Please copy
-bin\cecho        {0c}"system.new.dat"{#} , {0c}"system.transfer.list"{#} and {0c}"file_contexts"{#}
+bin\cecho        {0c}"system.new.dat"{#}, {0c}"system.transfer.list"{#} and {0c}"file_contexts"{#}
 echo.
-echo        to the current folder. Thank you.
+echo        to the current folder. Press any key to return to the main menu.
 echo.
 echo      \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 echo.
@@ -778,7 +773,7 @@ cls
 echo.
 bin\cecho    {0a}"system.new.dat"{#} is not found
 echo.
-echo    Please copy system.new.dat to the current folder. Thank you.
+echo    Please copy system.new.dat to the current folder. Press any key to return to the main menu.
 echo.
 pause
 goto home
@@ -788,7 +783,7 @@ cls
 echo.
 bin\cecho    {0a}"system.transfer.list"{#} is not found
 echo.
-echo     Please copy system.transfer.list to the current folder. Thank you.
+echo     Please copy system.transfer.list to the current folder. Press any key to return to the main menu.
 echo.
 pause
 goto home
@@ -798,7 +793,7 @@ cls
 echo.
 bin\cecho    {0a}"file_contexts"{#} is not found
 echo.
-echo     Please copy file_contexts to the current folder. Thank you.
+echo     Please copy file_contexts to the current folder. Press any key to return to the main menu.
 echo.
 echo     Trouble in getting file_contexts
 echo.
@@ -812,7 +807,7 @@ cls
 echo.
 echo  It seems like the extractor not worked with your 
 echo  provided system folder.
-ECHO  IT MAY BE DUE TO A CORRUPTED SYSTEM.DAT OR UNKNOWN REASON
+echo  It may be due to a corrupted system.dat or unknown reason
 echo.
 pause
 goto home
@@ -856,11 +851,8 @@ goto home
 :datstop
 echo.
 echo.
-bin\cecho {0c}////////////////////////////////////////////////// {\n}/                                                / {\n}/   There is no system.img.ext4  found!          / {\n}/   this implies that this extractor             / {\n}/   not worked with your .DAT files              / {\n}/   Please contact me , matrix                   / {\n}/   and if possible please proide a              / {\n}/   file that contains following info.           / {\n}/   1. dat file size                             / {\n}/   2. screenshot(use wordpad, can store images) / {\n}/   3. mark and copy info on cmd extractor.      / {\n}/                                                / {\n}//////////////////////////////////////////////////{#}
-echo.
-echo.
 echo  Thanks, 
-echo    -Ryzen5-3600
+echo    -Ryzen9-5950X-RTX3090
 echo.
 pause
 goto home
@@ -878,7 +870,7 @@ echo  /    The program didn't work with your     /
 echo  /    zip file. Please use                  /
 echo  /    a simple name like                    /
 echo  /    Ex: something_maker.zip               /
-echo   Possible reason :  JAVA SE DEVELOPMENT KIT 7 OR HIGHER NOT INSTALLED
+echo   Possible reason :  Java SE development kit 7 or higher is not installed.
 echo  /                                          /
 echo  ////////////////////////////////////////////
 echo.

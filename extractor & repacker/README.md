@@ -2,7 +2,7 @@
 
 ## Description
 
-This extractor is for extracting system.new.dat in easy method without using commandline ,It is a set of commands which is written in batch script to speed up extraction of dat and IMG* files
+This extractor is for extracting system.new.dat in easy method without using commandline. It is a set of commands which is written in batch script to speed up extraction of dat and IMG* files.
 
 
 (*Every image files can't be extracted with this extractor, because the image binary has its limit)
@@ -10,7 +10,7 @@ This extractor is for extracting system.new.dat in easy method without using com
 
 ## Requirements
 
- * Python 2.7.x version must be installed , (latest build of 2.7.x, DO NOT USE PYTHON 3.x)
+ * Python 2.7.x version must be installed, (latest build of 2.7.x, DO NOT USE PYTHON 3.x)
 
  * Java Development kit or JAVA SDK must be installed for ZIP signing
 
@@ -26,7 +26,7 @@ This extractor is for extracting system.new.dat in easy method without using com
   
  * Image repack does not works and will be removed from next script 
  
- * This tool has been tested with Android 9 Pie, and it extracts the files successfully
+ * This tool has been tested with Android 9 Pie, and it extracts the files successfully.
 
 ## External help links 
 
@@ -35,11 +35,11 @@ This extractor is for extracting system.new.dat in easy method without using com
  
 ## DOWNLOAD
 
-     git clone https://github.com/Ryzen5-3600/project.git
+     git clone https://github.com/Ryzen9-5950X-RTX3090/project.git
      
 _OR_
                                                      
-     https://codeload.github.com/Ryzen5-3600/project/zip/master
+     https://codeload.github.com/Ryzen9-5950X-RTX3090/project/zip/master
  
 ## Contributors
  
@@ -53,4 +53,4 @@ _OR_
 
 - xpirit  (sdat2img.py script): https://github.com/xpirt/sdat2img
  
-- Ryzen5-3600
+- Ryzen9-5950X-RTX3090
