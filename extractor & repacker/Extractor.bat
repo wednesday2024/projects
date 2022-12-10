@@ -1,9 +1,9 @@
 @echo off
-title Extract and Repack images [v3.0]
+title Extract and Repack images [v4.0]
 setlocal EnableDelayedExpansion
 
 ::   System extractor
-::   Copyright (C) 2022  Ryzen9-5950X-RTX3090 
+::   Copyright (C) 2023  Ryzen9-5950X-RTX3090 
 
 
 ::mode con:cols=82 lines=27
@@ -238,7 +238,7 @@ echo Converting "system.img.ext4" to "system"
                  set /a web=0
 pause
 goto home
-::/*                 END, LAST UPDATED ON FRI, NOVEMBER 11, 2022                        */
+::/*                 END, LAST UPDATED ON SAT, DECEMBER 10, 2022                        */
 
 
 ::                 CYANOGENMOD REPACK SCRIPT 
