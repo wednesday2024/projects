@@ -261,4 +261,4 @@ endif;
 ## NOTE  
 
 **_And yes if you think this method is useless then please don't use it, I have tried my best to write this guide for the
-noobs, so that they can understand how to edit the updater-script._**  -secretwolf98
+noobs, so that they can understand how to edit the updater-script._**  -Ryzen5-3600

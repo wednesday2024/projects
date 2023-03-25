@@ -35,11 +35,11 @@ This extractor is for extracting system.new.dat in easy method without using com
  
 ## DOWNLOAD
 
-     git clone https://github.com/Ryzen9-5950X-RTX3090/project.git
+     git clone https://github.com/R5-3600/projects.git
      
 _OR_
                                                      
-     https://codeload.github.com/Ryzen9-5950X-RTX3090/project/zip/master
+     https://codeload.github.com/R5-3600/projects/zip/master
  
 ## Contributors
  
@@ -53,4 +53,4 @@ _OR_
 
 - xpirit  (sdat2img.py script): https://github.com/xpirt/sdat2img
  
-- Ryzen9-5950X-RTX3090
+- R5-3600

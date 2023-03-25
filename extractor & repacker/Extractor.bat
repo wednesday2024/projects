@@ -1,9 +1,9 @@
 @echo off
-title Extract and Repack images [v4.0]
+title Extract and Repack images [v4.1]
 setlocal EnableDelayedExpansion
 
 ::   System extractor
-::   Copyright (C) 2023  Ryzen9-5950X-RTX3090 
+::   Copyright (C) 2023  Ryzen5-3600 
 
 
 ::mode con:cols=82 lines=27
@@ -18,7 +18,7 @@ echo.
 echo #                   Extractor and Repacker    
 bin\cecho #               {0f}System extractor{#}
 echo.
-bin\cecho #                      {0a}(by: Ryzen9-5950X-RTX3090){#}                                                                                      
+bin\cecho #                      {0a}(by: Ryzen5-3600){#}                                                                                      
 echo.                                                                                    
 echo.
 bin\cecho                                                        {0b}%activity%{#} {0f}%recent%{#}
@@ -76,11 +76,11 @@ cls
     echo   /                                                  /
     bin\cecho   /  Copy {0a}"system.new.dat"{#} , {0a}"system.transfer.list"{#}  /
     echo.
-    echo   /  to the current folder. Thank you. or %cd%
+    echo   /  to the current folder or %cd%
     echo   /                                                  /
     echo   ////////////////////////////////////////////////////
     echo.
-    echo   Hit Enter to continue &pause>nul
+    echo   hit enter to continue. &pause>nul
     cls
       if not exist system.new.dat (cls
                                    echo.
@@ -676,7 +676,7 @@ SET count=1
  echo.
  echo.
  echo.
- bin\cecho     {0f}Welcome To:{#} {0a}Ryzen9-5950X-RTX3090's{#} {0f}System Extract and Repack tool{#}
+ bin\cecho     {0f}Welcome To:{#} {0a}Ryzen5-3600's{#} {0f}System Extract and Repack tool{#}
  echo.
  echo.
  bin\cecho     {0f}Loading...{#} {0a}%%G{#}
@@ -852,7 +852,7 @@ goto home
 echo.
 echo.
 echo  Thanks, 
-echo    -Ryzen9-5950X-RTX3090
+echo    -Ryzen5-3600
 echo.
 pause
 goto home
