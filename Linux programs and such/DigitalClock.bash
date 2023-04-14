@@ -5,12 +5,12 @@ do
         clear
         echo By: Ryzen5-3600
         echo
-        echo Last updated on: April 13, 2023
+        echo Last updated on: April 14, 2023
         echo
-        echo Version: 1.0.0
+        echo Version: 1.1.0
         echo
         echo View my other projects at: https://github.com/R5-3600
         echo
-        echo $(date +%T)
+        echo $(date +%r)
         sleep 1s
 done
