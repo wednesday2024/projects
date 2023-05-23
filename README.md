@@ -9,6 +9,6 @@ None for right now.
 
 Plans that are already in progress:
 
-[REDACTED]
+None for right now.
 
 
